@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.coolreecedev.navdrawpractice.MainActivity">
+
+    <item android:id="@+id/action_learn"
+        android:title="LEARN MORE"
+        />
+    <item android:id="@+id/action_account"
+          android:title="ACCOUNT"
+         />
+
+    <item android:id="@+id/action_contact"
+        android:title="CONTACT"
+        />
+
+    <item android:id="@+id/action_help"
+        android:title="HELP"
+        />
+    <item android:id="@+id/action_about"
+        android:title="ABOUT"
+        />
+
+    <item android:id="@+id/action_testimonials"
+        android:title="TESTIMONIALS"
+        />
+
+    <item android:id="@+id/action_photos"
+        android:title="PHOTOS"
+        />
+
+    <item android:id="@+id/action_blog"
+        android:title="BLOG"
+        />
+</menu>

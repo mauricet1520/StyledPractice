@@ -1,0 +1,914 @@
+{
+  "_embedded": {
+    "zipcodes": [
+      {
+        "zipCode": "30002",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30002"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30002"
+          }
+        }
+      },
+      {
+        "zipCode": "30008",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30008"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30008"
+          }
+        }
+      },
+      {
+        "zipCode": "30009",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30009"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30009"
+          }
+        }
+      },
+      {
+        "zipCode": "30021",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30021"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30021"
+          }
+        }
+      },
+      {
+        "zipCode": "30022",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30022"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30022"
+          }
+        }
+      },
+      {
+        "zipCode": "30030",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30030"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30030"
+          }
+        }
+      },
+      {
+        "zipCode": "30032",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30032"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30032"
+          }
+        }
+      },
+      {
+        "zipCode": "30033",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30033"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30033"
+          }
+        }
+      },
+      {
+        "zipCode": "30034",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30034"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30034"
+          }
+        }
+      },
+      {
+        "zipCode": "30035",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30035"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30035"
+          }
+        }
+      },
+      {
+        "zipCode": "30038",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30038"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30038"
+          }
+        }
+      },
+      {
+        "zipCode": "30060",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30060"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30060"
+          }
+        }
+      },
+      {
+        "zipCode": "30062",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30062"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30062"
+          }
+        }
+      },
+      {
+        "zipCode": "30063",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30063"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30063"
+          }
+        }
+      },
+      {
+        "zipCode": "30066",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30066"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30066"
+          }
+        }
+      },
+      {
+        "zipCode": "30067",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30067"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30067"
+          }
+        }
+      },
+      {
+        "zipCode": "30068",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30068"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30068"
+          }
+        }
+      },
+      {
+        "zipCode": "30069",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30069"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30069"
+          }
+        }
+      },
+      {
+        "zipCode": "30071",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30071"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30071"
+          }
+        }
+      },
+      {
+        "zipCode": "30072",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30072"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30072"
+          }
+        }
+      },
+      {
+        "zipCode": "30075",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30075"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30075"
+          }
+        }
+      },
+      {
+        "zipCode": "30076",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30076"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30076"
+          }
+        }
+      },
+      {
+        "zipCode": "30079",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30079"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30079"
+          }
+        }
+      },
+      {
+        "zipCode": "30080",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30080"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30080"
+          }
+        }
+      },
+      {
+        "zipCode": "30082",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30082"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30082"
+          }
+        }
+      },
+      {
+        "zipCode": "30083",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30083"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30083"
+          }
+        }
+      },
+      {
+        "zipCode": "30084",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30084"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30084"
+          }
+        }
+      },
+      {
+        "zipCode": "30088",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30088"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30088"
+          }
+        }
+      },
+      {
+        "zipCode": "30090",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30090"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30090"
+          }
+        }
+      },
+      {
+        "zipCode": "30092",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30092"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30092"
+          }
+        }
+      },
+      {
+        "zipCode": "30093",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30093"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30093"
+          }
+        }
+      },
+      {
+        "zipCode": "30126",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30126"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30126"
+          }
+        }
+      },
+      {
+        "zipCode": "30152",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30152"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30152"
+          }
+        }
+      },
+      {
+        "zipCode": "30288",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30288"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30288"
+          }
+        }
+      },
+      {
+        "zipCode": "30291",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30291"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30291"
+          }
+        }
+      },
+      {
+        "zipCode": "30297",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30297"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30297"
+          }
+        }
+      },
+      {
+        "zipCode": "30303",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30303"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30303"
+          }
+        }
+      },
+      {
+        "zipCode": "30304",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30304"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30304"
+          }
+        }
+      },
+      {
+        "zipCode": "30305",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30305"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30305"
+          }
+        }
+      },
+      {
+        "zipCode": "30306",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30306"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30306"
+          }
+        }
+      },
+      {
+        "zipCode": "30307",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30307"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30307"
+          }
+        }
+      },
+      {
+        "zipCode": "30308",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30308"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30308"
+          }
+        }
+      },
+      {
+        "zipCode": "30309",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30309"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30309"
+          }
+        }
+      },
+      {
+        "zipCode": "30310",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30310"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30310"
+          }
+        }
+      },
+      {
+        "zipCode": "30311",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30311"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30311"
+          }
+        }
+      },
+      {
+        "zipCode": "30312",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30312"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30312"
+          }
+        }
+      },
+      {
+        "zipCode": "30313",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30313"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30313"
+          }
+        }
+      },
+      {
+        "zipCode": "30314",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30314"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30314"
+          }
+        }
+      },
+      {
+        "zipCode": "30315",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30315"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30315"
+          }
+        }
+      },
+      {
+        "zipCode": "30316",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30316"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30316"
+          }
+        }
+      },
+      {
+        "zipCode": "30317",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30317"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30317"
+          }
+        }
+      },
+      {
+        "zipCode": "30318",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30318"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30318"
+          }
+        }
+      },
+      {
+        "zipCode": "30319",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30319"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30319"
+          }
+        }
+      },
+      {
+        "zipCode": "30322",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30322"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30322"
+          }
+        }
+      },
+      {
+        "zipCode": "30324",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30324"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30324"
+          }
+        }
+      },
+      {
+        "zipCode": "30327",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30327"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30327"
+          }
+        }
+      },
+      {
+        "zipCode": "30328",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30328"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30328"
+          }
+        }
+      },
+      {
+        "zipCode": "30329",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30329"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30329"
+          }
+        }
+      },
+      {
+        "zipCode": "30330",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30330"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30330"
+          }
+        }
+      },
+      {
+        "zipCode": "30331",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30331"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30331"
+          }
+        }
+      },
+      {
+        "zipCode": "30336",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30336"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30336"
+          }
+        }
+      },
+      {
+        "zipCode": "30337",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30337"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30337"
+          }
+        }
+      },
+      {
+        "zipCode": "30338",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30338"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30338"
+          }
+        }
+      },
+      {
+        "zipCode": "30339",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30339"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30339"
+          }
+        }
+      },
+      {
+        "zipCode": "30340",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30340"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30340"
+          }
+        }
+      },
+      {
+        "zipCode": "30341",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30341"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30341"
+          }
+        }
+      },
+      {
+        "zipCode": "30342",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30342"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30342"
+          }
+        }
+      },
+      {
+        "zipCode": "30344",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30344"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30344"
+          }
+        }
+      },
+      {
+        "zipCode": "30345",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30345"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30345"
+          }
+        }
+      },
+      {
+        "zipCode": "30346",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30346"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30346"
+          }
+        }
+      },
+      {
+        "zipCode": "30349",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30349"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30349"
+          }
+        }
+      },
+      {
+        "zipCode": "30350",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30350"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30350"
+          }
+        }
+      },
+      {
+        "zipCode": "30354",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30354"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30354"
+          }
+        }
+      },
+      {
+        "zipCode": "30360",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30360"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30360"
+          }
+        }
+      },
+      {
+        "zipCode": "30363",
+        "market": "Atlanta",
+        "_links": {
+          "self": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30363"
+          },
+          "activeZipCode": {
+            "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes/30363"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "https://styled-zipcode-validator.herokuapp.com/zipcodes"
+    },
+    "profile": {
+      "href": "https://styled-zipcode-validator.herokuapp.com/profile/zipcodes"
+    }
+  }
+}

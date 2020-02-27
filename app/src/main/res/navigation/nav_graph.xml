@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/zip_code_dest">
+
+    <fragment
+        android:id="@+id/zip_code_dest"
+        android:name="com.coolreecedev.styledpractice.ZipCodeFragment"
+        android:label="zip_code_fragment"
+        tools:layout="@layout/zip_code_fragment" />
+    <fragment
+        android:id="@+id/schedule_dest"
+        android:name="com.coolreecedev.styledpractice.ScheduleFragment"
+        android:label="fragment_schedule_list"
+        tools:layout="@layout/fragment_schedule_list" />
+</navigation>
