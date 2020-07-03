@@ -15,7 +15,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivateClientActivity"></activity>
+        <activity android:name=".BlogActivity"></activity>
+        <activity android:name=".FaqActivity" />
+        <activity android:name=".StylistActivity" />
+        <activity android:name=".TestimonalActivity" />
+        <activity android:name=".OurStoryActivity"
+            android:label="Our Story"/>
+        <activity android:name=".ActivateClientActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

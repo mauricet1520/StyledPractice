@@ -1,4 +1,4 @@
-package com.coolreecedev.styledpractice
+package com.coolreecedev.styledpractice.ui
 
 import android.content.Context
 import android.content.pm.PackageManager
@@ -12,8 +12,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
-import com.coolreecedev.styledpractice.data.ZipCode
-import com.coolreecedev.styledpractice.dummy.DummyContent
+import com.coolreecedev.styledpractice.util.LOG_TAG
+import com.coolreecedev.styledpractice.R
 import kotlinx.android.synthetic.main.zip_code_fragment.*
 import kotlinx.android.synthetic.main.zip_code_fragment.view.*
 
@@ -35,7 +35,9 @@ class ZipCodeFragment : Fragment() {
             Toast.makeText(context, "PERMISSION GRANTED",
                 Toast.LENGTH_SHORT).show()
         }else {
-            requestPermissions(arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE), REQUEST_CODE)
+            requestPermissions(arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                REQUEST_CODE
+            )
         }
         val view = inflater.inflate(R.layout.zip_code_fragment, container, false)
 
@@ -43,7 +45,7 @@ class ZipCodeFragment : Fragment() {
             var available = false
             editZipCodeId.text.let {
                 viewModel.getOneZipCode(editZipCodeId.text.toString())
-                viewModel.oneZipCodeData.observe(this, Observer {
+                viewModel.oneZipCodeData.observe(viewLifecycleOwner, Observer {
                         Log.i(LOG_TAG, "zip code: $it")
                     if (it != null) {
                         available = true

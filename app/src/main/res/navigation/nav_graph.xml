@@ -7,12 +7,30 @@
 
     <fragment
         android:id="@+id/zip_code_dest"
-        android:name="com.coolreecedev.styledpractice.ZipCodeFragment"
+        android:name="com.coolreecedev.styledpractice.ui.ZipCodeFragment"
         android:label="zip_code_fragment"
         tools:layout="@layout/zip_code_fragment" />
     <fragment
         android:id="@+id/schedule_dest"
-        android:name="com.coolreecedev.styledpractice.ScheduleFragment"
+        android:name="com.coolreecedev.styledpractice.ui.AvailableDateFragment"
         android:label="fragment_schedule_list"
-        tools:layout="@layout/fragment_schedule_list" />
+        tools:layout="@layout/fragment_schedule_list" >
+        <action
+            android:id="@+id/action_appointmentFragment"
+            app:destination="@id/appointmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentFragment"
+        android:name="com.coolreecedev.styledpractice.ui.AppointmentFragment"
+        android:label="fragment_appointment"
+        tools:layout="@layout/fragment_appointment" >
+        <action
+            android:id="@+id/action_appointmentFragment"
+            app:destination="@id/paymentTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentTypeFragment"
+        android:name="com.coolreecedev.styledpractice.PaymentTypeFragment"
+        android:label="fragment_payment_type"
+        tools:layout="@layout/fragment_payment_type" />
 </navigation>

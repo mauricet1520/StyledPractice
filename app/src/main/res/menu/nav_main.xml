@@ -3,33 +3,37 @@
       xmlns:tools="http://schemas.android.com/tools"
       tools:context="com.coolreecedev.navdrawpractice.MainActivity">
 
-    <item android:id="@+id/action_learn"
-        android:title="LEARN MORE"
+    <item android:id="@+id/action_our_story"
+        android:title="OUR STORY"
         />
     <item android:id="@+id/action_account"
-          android:title="ACCOUNT"
+          android:title="HOW IT WORKS"
          />
 
     <item android:id="@+id/action_contact"
-        android:title="CONTACT"
+        android:title="FAQ"
         />
 
-    <item android:id="@+id/action_help"
-        android:title="HELP"
+    <item android:id="@+id/action_contact_us"
+        android:title="CONTACT US"
         />
-    <item android:id="@+id/action_about"
-        android:title="ABOUT"
+    <item android:id="@+id/action_blog"
+        android:title="STYLE BLOG"
+        />
+
+    <item android:id="@+id/action_team"
+        android:title="STYLE TEAM"
+        />
+
+    <item android:id="@+id/action_follow_us"
+        android:title="FOLLOW US"
         />
 
     <item android:id="@+id/action_testimonials"
-        android:title="TESTIMONIALS"
+        android:title="SOCIAL TESTIMONIALS"
         />
 
-    <item android:id="@+id/action_photos"
-        android:title="PHOTOS"
-        />
-
-    <item android:id="@+id/action_blog"
-        android:title="BLOG"
+    <item android:id="@+id/action_settings"
+        android:title="SETTINGS"
         />
 </menu>

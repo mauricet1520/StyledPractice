@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 
 
-import com.coolreecedev.styledpractice.ScheduleFragment.OnListFragmentInteractionListener
+import com.coolreecedev.styledpractice.ui.AvailableDateFragment.OnListFragmentInteractionListener
+import com.coolreecedev.styledpractice.data.availabledate.AvailableDate
 import com.coolreecedev.styledpractice.dummy.DummyContent.DummyItem
 
 import kotlinx.android.synthetic.main.fragment_schedule.view.*
@@ -18,15 +19,16 @@ import kotlinx.android.synthetic.main.fragment_schedule.view.*
  * TODO: Replace the implementation with code for your data type.
  */
 class MyScheduleRecyclerViewAdapter(
-    private val mValues: List<DummyItem>,
-    private val mListener: OnListFragmentInteractionListener?
+    private val mValues: List<AvailableDate>,
+    private val mListener: OnListFragmentInteractionListener?,
+    private val itemListener: AvailableDateListener
 ) : RecyclerView.Adapter<MyScheduleRecyclerViewAdapter.ViewHolder>() {
 
     private val mOnClickListener: View.OnClickListener
 
     init {
         mOnClickListener = View.OnClickListener { v ->
-            val item = v.tag as DummyItem
+            val item = v.tag as AvailableDate
             // Notify the active callbacks interface (the activity, if the fragment is attached to
             // one) that an item has been selected.
             mListener?.onListFragmentInteraction(item)
@@ -41,12 +43,15 @@ class MyScheduleRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = mValues[position]
-        holder.mIdView.text = item.id
-        holder.mContentView.text = item.content
+        holder.mIdView.text = item._id
+        holder.mContentView.text = item.dayOfWeek
 
         with(holder.mView) {
             tag = item
-            setOnClickListener(mOnClickListener)
+            holder.mView.setOnClickListener {
+                itemListener.onAvailableDateItemClick(item)
+            }
+//            setOnClickListener(mOnClickListener)
         }
     }
 
@@ -59,5 +64,9 @@ class MyScheduleRecyclerViewAdapter(
         override fun toString(): String {
             return super.toString() + " '" + mContentView.text + "'"
         }
+    }
+
+    interface AvailableDateListener {
+        fun onAvailableDateItemClick(availableDate: AvailableDate)
     }
 }

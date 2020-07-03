@@ -1,4 +1,4 @@
-package com.coolreecedev.styledpractice.data
+package com.coolreecedev.styledpractice.data.zipcode
 
 import android.app.Application
 import android.content.Context
@@ -7,9 +7,9 @@ import android.util.Log
 import android.widget.Toast
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.MutableLiveData
-import com.coolreecedev.styledpractice.LOCAL_HOST
-import com.coolreecedev.styledpractice.LOG_TAG
-import com.coolreecedev.styledpractice.ZIP_CODE_VALIDATOR_URL
+import com.coolreecedev.styledpractice.util.LOG_TAG
+import com.coolreecedev.styledpractice.util.ZIP_CODE_VALIDATOR_URL
+import com.coolreecedev.styledpractice.data.database.StyleDatabase
 import com.google.gson.GsonBuilder
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -25,19 +25,22 @@ class ZipCodeRepository(val app: Application) {
 
     val zipCodeData = MutableLiveData<List<ZipCode>>()
     val oneZipCodeData = MutableLiveData<ZipCode>()
-    val zipCodeDao = StyleDatabase.getDatabase(app).zipcodeDao()
+    val zipCodeDao = StyleDatabase.getDatabase(
+        app
+    ).zipcodeDao()
     init {
 
         CoroutineScope(Dispatchers.IO).launch {
-            val data = zipCodeDao.getAll()
-            if (data.isEmpty()) {
-                callWebService()
-            }else {
-                zipCodeData.postValue(data)
-                withContext(Dispatchers.Main) {
-                    Toast.makeText(app, "Local Data", Toast.LENGTH_SHORT).show()
-                }
-            }
+            callWebService()
+//            val data = zipCodeDao.getAll()
+//            if (data.isEmpty()) {
+//                callWebService()
+//            }else {
+//                zipCodeData.postValue(data)
+//                withContext(Dispatchers.Main) {
+//                    Toast.makeText(app, "Local Data", Toast.LENGTH_SHORT).show()
+//                }
+//            }
         }
     }
 
@@ -52,7 +55,12 @@ class ZipCodeRepository(val app: Application) {
             }
 
              val client =  OkHttpClient.Builder()
-                .addInterceptor(BasicAuthInterceptor("", ""))
+                .addInterceptor(
+                    BasicAuthInterceptor(
+                        "Maurice",
+                        "Reece"
+                    )
+                )
                 .build()
 
             val gson = GsonBuilder()
@@ -101,7 +109,9 @@ class ZipCodeRepository(val app: Application) {
         }
     }
 
-    fun getOneZipCode(zipCode: String) : ZipCode {
+
+    //Calling the database
+    private fun getOneZipCode(zipCode: String) : ZipCode {
         return zipCodeDao.getOne(zipCode)
     }
 
@@ -115,10 +125,10 @@ class ZipCodeRepository(val app: Application) {
             }
 
             withContext(Dispatchers.Main) {
-                Log.i(LOG_TAG, "Calling Database: $zipCode")
+                Log.i(LOG_TAG, "Calling Local Database: $zipCode")
 //                Toast.makeText(app, "Calling Database $zipCode", Toast.LENGTH_SHORT).show()
             }
-            Log.i(LOG_TAG, "Finish Calling Database: $zipCode")
+            Log.i(LOG_TAG, "Finish Calling Local Database: $zipCode")
         }
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">StyledPractice</string>
+    <string name="app_name">Styled by Love E</string>
     <string name="action_settings">Settings</string>
 
     <string name="open_nav_drawer">Open navigation drawer</string>
@@ -8,4 +8,24 @@
     <string name="media_url_mp4">https://youtu.be/DLBrkcMBLh0</string>
     <string name="first_page_content">For $150 a month you can have your very own personal stylist to work with you one-on-one, bring clothing options* and provide an in-person consultation and fittings.</string>
     <string name="first_page_caption">Feel comfortable and confident in outfits chosen for you, delivered to your closet.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sit_back_and_relaz">Sit Back and Relax</string>
+    <string name="look_good_at_every_size_every_stage_every_transition">"Look Good at Every Size. Every Stage. Every Transition"</string>
+
+    <string name="our_story_content">
+Our Founder &amp; CEO Evonya Easley, is a certified personal stylist and published author with over a decade of experience in personal styling and the fashion industry.  Having worked with thosands of clients to achieve their personal best work appearing on NY Fashion Week, TBS, Fox, HLN, CNN, MSNBC, Vh-1, and Disney and more.  Styled by Love E was created to give everyone access to a premium personal style experience, giving you the ability to transform your life with your style.  Whether that be styling on demand or subscription our mobile app is for busy, professional men and women, where a personal stylist can be ordered to shop, deliver and style you.  Our expert stylists bring unique pieces that can be paired with your staples, so you can shine with confidence from the outside in, saving you time and making shopping convenient.  We believe in empowering men and women through their wardrobe; enabling you to show up in the world and be seen as your most confident selves in your professional and personal lives. \n
+
+We connecting directly with you so that you can be stylish, even if you don’t have the time.  You can spend time with family, not in your closet. When you do have the time, your clothes isn’t what you want to spend it on.  You have no time to figure out what to wear.  We allow you to keep your focus on what matters most to You.  We help your wardrobe match who you are on the inside.  We handle your wardrobe so you can have your time to focus on the things that only you can do…being a wife, being a mother, being a professional.  Be Confident, Feel Good, Look Good! \n
+
+Styled by Love E Give you the vehicle to show up as the best version of you! \n
+Style that is personal….personalizing Your style
+                  Style that gives you Confidence and ego boost to shine from the outside in and the ability to update your style thru all of your life transitions. \n
+                 We give you access to boutique styles without you having to spend the time or stress to find and travel to them.\n
+The ability to transform your life with your style &amp; show up how you want the world to see You!\n
+Luxury service…feel fabulous…exclusive treatment\n
+You are a VIP  - Very Individual Person – Your Style is individualized to You!\n
+</string>
+    <string name="dummy_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
 </resources>

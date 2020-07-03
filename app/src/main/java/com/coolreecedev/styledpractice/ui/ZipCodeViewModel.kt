@@ -1,14 +1,13 @@
-package com.coolreecedev.styledpractice
+package com.coolreecedev.styledpractice.ui
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.ViewModel
-import com.coolreecedev.styledpractice.data.ZipCode
-import com.coolreecedev.styledpractice.data.ZipCodeRepository
+import com.coolreecedev.styledpractice.data.zipcode.ZipCodeRepository
 
 class ZipCodeViewModel(app: Application) : AndroidViewModel(app) {
 
-    private val dataRepo = ZipCodeRepository(app)
+    private val dataRepo =
+        ZipCodeRepository(app)
     val zipCodeData = dataRepo.zipCodeData
     val oneZipCodeData = dataRepo.oneZipCodeData
 

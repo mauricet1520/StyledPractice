@@ -1,4 +1,4 @@
-package com.coolreecedev.styledpractice.data
+package com.coolreecedev.styledpractice.data.zipcode
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

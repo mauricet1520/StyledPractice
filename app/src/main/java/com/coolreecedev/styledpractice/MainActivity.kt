@@ -29,8 +29,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fab.setOnClickListener { view ->
             val intent = Intent(this, ActivateClientActivity::class.java)
             startActivity(intent)
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                .setAction("Action", null).show()
         }
 
         val navView = findViewById<NavigationView>(R.id.nav_view)
@@ -64,9 +62,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         drawerLayout.closeDrawer(GravityCompat.START)
-        if (item.itemId == R.id.action_about) {
-            Toast.makeText(this, "Hello About", Toast.LENGTH_SHORT).show()
+        if (item.itemId == R.id.action_our_story) {
+            startActivity(Intent(this, OurStoryActivity::class.java))
+        }else if (item.itemId == R.id.action_testimonials) {
+            startActivity(Intent(this, TestimonalActivity::class.java))
+        }else if (item.itemId == R.id.action_team) {
+            startActivity(Intent(this, StylistActivity::class.java))
+        }else if (item.itemId == R.id.action_contact) {
+            startActivity(Intent(this, FaqActivity::class.java))
+        }else if (item.itemId == R.id.action_blog) {
+            startActivity(Intent(this, BlogActivity::class.java))
         }
+
         return true
 
     }

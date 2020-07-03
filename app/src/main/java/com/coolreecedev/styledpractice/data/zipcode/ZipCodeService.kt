@@ -1,5 +1,6 @@
-package com.coolreecedev.styledpractice.data
+package com.coolreecedev.styledpractice.data.zipcode
 
+import com.coolreecedev.styledpractice.data.zipcode.ZipCode
 import retrofit2.Response
 import retrofit2.http.GET
 

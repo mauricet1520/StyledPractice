@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:checkable="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Media -->
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="194dp"-->
+<!--            app:srcCompat="@drawable/unsplash2"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:contentDescription="temporary"-->
+<!--            />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Title, secondary and supporting text -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="On-Demand"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="$100"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Quick on demand stylist at your service"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                />
+
+        </LinearLayout>
+
+        <!-- Buttons -->
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+<!--&lt;!&ndash;            <com.google.android.material.button.MaterialButton&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginEnd="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="Get Started"&ndash;&gt;-->
+<!--&lt;!&ndash;                style="?attr/borderlessButtonStyle"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginRight="8dp" />&ndash;&gt;-->
+<!--&lt;!&ndash;            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:backgroundTint="@color/colorSecondaryPrimary"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textColor="@android:color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/fab"&ndash;&gt;-->
+<!--&lt;!&ndash;                style="@style/AppTheme.MaterialButton"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:text="Get Styled" />&ndash;&gt;-->
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Subscribe"-->
+<!--                android:layout_marginEnd="8dp"-->
+
+<!--            style="?attr/borderlessButtonStyle"-->
+
+<!--            android:textColor="@color/colorSecondaryPrimary"-->
+<!--                android:layout_marginRight="8dp" />-->
+<!--        </LinearLayout>-->
+
+    </LinearLayout>
+
+<!--</com.google.android.material.card.MaterialCardView>-->
+
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:id="@+id/card2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="8dp"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:checkable="true"-->
+<!--        xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        xmlns:app="http://schemas.android.com/apk/res-auto">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            &lt;!&ndash; Media &ndash;&gt;-->
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="194dp"-->
+<!--                app:srcCompat="@drawable/blackwear"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:contentDescription="temporary"-->
+<!--                />-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="16dp">-->
+
+<!--                &lt;!&ndash; Title, secondary and supporting text &ndash;&gt;-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="On-Demand"-->
+<!--                    android:textAppearance="?attr/textAppearanceHeadline6"-->
+<!--                    />-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:text="$100"-->
+<!--                    android:textAppearance="?attr/textAppearanceBody2"-->
+<!--                    android:textColor="?android:attr/textColorSecondary"-->
+<!--                    />-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:text="Quick on demand stylist at your service"-->
+<!--                    android:textAppearance="?attr/textAppearanceBody2"-->
+<!--                    android:textColor="?android:attr/textColorSecondary"-->
+<!--                    />-->
+
+<!--            </LinearLayout>-->
+
+            <!-- Buttons -->
+            <!--        <LinearLayout-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_margin="8dp"-->
+            <!--            android:orientation="horizontal">-->
+            <!--            <com.google.android.material.button.MaterialButton-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginEnd="8dp"-->
+            <!--                android:text="Get Started"-->
+            <!--                style="?attr/borderlessButtonStyle"-->
+            <!--                android:layout_marginRight="8dp" />-->
+            <!--            <com.google.android.material.button.MaterialButton-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="Subscribe"-->
+            <!--                style="?attr/borderlessButtonStyle"-->
+            <!--                />-->
+            <!--        </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+    </com.google.android.material.card.MaterialCardView>

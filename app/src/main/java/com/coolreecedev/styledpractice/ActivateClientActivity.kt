@@ -1,21 +1,24 @@
 package com.coolreecedev.styledpractice
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.util.Log
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
-import com.coolreecedev.styledpractice.data.ZipCode
-import com.coolreecedev.styledpractice.dummy.DummyContent
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-import kotlinx.android.synthetic.main.zip_code_fragment.*
+import com.coolreecedev.styledpractice.data.availabledate.AvailableDate
+import com.coolreecedev.styledpractice.ui.AvailableDateFragment
+import com.coolreecedev.styledpractice.ui.AvailableDateViewModel
+import com.coolreecedev.styledpractice.ui.ZipCodeFragment
+import com.coolreecedev.styledpractice.util.LOG_TAG
 
 class ActivateClientActivity : AppCompatActivity(),
-    ScheduleFragment.OnListFragmentInteractionListener,
+    AvailableDateFragment.OnListFragmentInteractionListener,
     ZipCodeFragment.OnListFragmentInteractionListener {
     private val mListener: ZipCodeFragment.OnListFragmentInteractionListener? = null
+
+
 
     override fun onAttachFragment(fragment: Fragment) {
         if (fragment is ZipCodeFragment) {
@@ -50,9 +53,7 @@ class ActivateClientActivity : AppCompatActivity(),
         findNavController(R.id.nav_host).navigate(frag)
     }
 
-    override fun onListFragmentInteraction(item: DummyContent.DummyItem?) {
-        Toast.makeText(this, "Selected $item", Toast.LENGTH_SHORT).show()
-    }
+
 
     override fun onListFragmentInteraction(available: Boolean) {
         if (available) {
@@ -63,6 +64,13 @@ class ActivateClientActivity : AppCompatActivity(),
         else {
             Toast.makeText(this, "UnAvailable", Toast.LENGTH_SHORT).show()
         }
+
+
+    }
+
+    override fun onListFragmentInteraction(item: AvailableDate?) {
+        Log.i(LOG_TAG, "Available Date: $item")
+        findNavController(R.id.nav_host).navigate(R.id.action_appointmentFragment)
 
 
     }

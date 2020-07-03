@@ -21,30 +21,30 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:orientation="vertical"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="0dp"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-<!--                <TextView-->
-<!--                    android:id="@+id/textView0"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="8dp"-->
-<!--                    android:layout_marginLeft="8dp"-->
-<!--                    android:layout_marginTop="16dp"-->
-<!--                    android:layout_marginEnd="8dp"-->
-<!--                    android:layout_marginRight="8dp"-->
-<!--                    android:fontFamily="@font/roboto"-->
-<!--                    android:text="How it Works"-->
-<!--                    android:textColor="@color/colorPrimaryDark"-->
-<!--                    android:textSize="36sp"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+                <!--                <TextView-->
+                <!--                    android:id="@+id/textView0"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="8dp"-->
+                <!--                    android:layout_marginLeft="8dp"-->
+                <!--                    android:layout_marginTop="16dp"-->
+                <!--                    android:layout_marginEnd="8dp"-->
+                <!--                    android:layout_marginRight="8dp"-->
+                <!--                    android:fontFamily="@font/roboto"-->
+                <!--                    android:text="How it Works"-->
+                <!--                    android:textColor="@color/colorPrimaryDark"-->
+                <!--                    android:textSize="36sp"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent" />-->
 
 
                 <ImageView
@@ -58,7 +58,7 @@
                     android:layout_marginRight="8dp"
                     android:contentDescription="@string/hello_image"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/unsplash"
+                    android:src="@drawable/splash_screen"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -102,18 +102,20 @@
 
 
 
+
+
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_marginTop="8dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
 
 
                     <TextView
                         android:id="@+id/textView3"
-                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="56dp"
@@ -132,12 +134,12 @@
                         android:id="@+id/imageView2"
                         android:layout_width="match_parent"
                         android:layout_height="300dp"
-                        android:layout_marginTop="56dp"
-                        android:layout_marginBottom="24dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
+                        android:layout_marginTop="56dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
+                        android:layout_marginBottom="24dp"
                         android:contentDescription="@string/hello_image"
                         android:scaleType="centerCrop"
                         android:src="@drawable/unsplash2"
@@ -147,20 +149,19 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
                     <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginRight="32dp"
-                    android:fontFamily="@font/merriweather_light"
-                    android:gravity="center"
-                    android:text="Complete a brief body and style profile to help your stylist understand your preferences"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                   />
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginRight="32dp"
+                        android:fontFamily="@font/merriweather_light"
+                        android:gravity="center"
+                        android:text="Complete a brief body and style profile to help your stylist understand your preferences"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView6"
@@ -175,32 +176,30 @@
                         android:gravity="center"
                         android:text="Schedule your monthly appointment and let your expert stylist begin curating your personalized wardrobe"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        />
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
 
 
+                <!--                <include-->
+                <!--                    -->
+                <!--                    layout="@layout/how_it_works" />-->
 
-<!--                <include-->
-<!--                    -->
-<!--                    layout="@layout/how_it_works" />-->
-
-<!--                <include-->
-<!--                    layout="@layout/style_video_layout" />-->
+                <!--                <include-->
+                <!--                    layout="@layout/style_video_layout" />-->
 
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_marginTop="32dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:orientation="vertical">
 
 
                     <TextView
-                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="100dp"
@@ -218,15 +217,15 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="300dp"
-                        android:layout_marginTop="56dp"
-                        android:layout_marginBottom="24dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
+                        android:layout_marginTop="56dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
+                        android:layout_marginBottom="24dp"
                         android:contentDescription="@string/hello_image"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/unsplash3"
+                        android:src="@drawable/lets_chat"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -244,32 +243,29 @@
                         android:gravity="center"
                         android:text="Your stylist will call you after subscription completion to get to gain a better understanding of your wants and needs"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        />
-
-
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_marginTop="32dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:orientation="vertical">
 
 
                     <TextView
-                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="100dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
                         android:fontFamily="@font/roboto"
-                        android:text="Sit Back and Relax"
+                        android:text="@string/sit_back_and_relaz"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="36sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -280,15 +276,15 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="300dp"
-                        android:layout_marginTop="56dp"
-                        android:layout_marginBottom="24dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
+                        android:layout_marginTop="56dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
-                        android:contentDescription="@string/hello_image"
+                        android:layout_marginBottom="24dp"
+                        android:contentDescription="@string/sit_back_and_relaz"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/unsplash4"
+                        android:src="@drawable/sit_back"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -306,25 +302,22 @@
                         android:gravity="center"
                         android:text="Sit back and relax while your stylist shops"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        />
-
-
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_marginTop="32dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:orientation="vertical">
 
 
                     <TextView
-                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="100dp"
@@ -342,15 +335,15 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="300dp"
-                        android:layout_marginTop="56dp"
-                        android:layout_marginBottom="24dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
+                        android:layout_marginTop="56dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
+                        android:layout_marginBottom="24dp"
                         android:contentDescription="@string/hello_image"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/blackwear"
+                        android:src="@drawable/get_styled"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -368,8 +361,7 @@
                         android:gravity="center"
                         android:text="Choose from 6-10 clothing options that personalized stylist brings to your front door!"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        />
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -383,22 +375,21 @@
                         android:gravity="center"
                         android:text="Get fitted, styled, and fashion advice from personalized stylist!"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_marginTop="32dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:orientation="vertical">
 
 
                     <TextView
-                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="100dp"
@@ -415,16 +406,16 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="300dp"
-                        android:layout_marginTop="56dp"
-                        android:layout_marginBottom="24dp"
+                        android:layout_height="500dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
+                        android:layout_marginTop="56dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginRight="8dp"
+                        android:layout_marginBottom="24dp"
                         android:contentDescription="@string/hello_image"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/unsplash6"
+                        android:src="@drawable/feel"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -442,8 +433,7 @@
                         android:gravity="center"
                         android:text="Purchase the look you like and your stylist return the rest!"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        />
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -454,75 +444,72 @@
                 </LinearLayout>
 
 
-
-
             </LinearLayout>
 
-<!--        <ImageView-->
-<!--            android:id="@+id/imageView"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="240dp"-->
-<!--            android:layout_marginStart="8dp"-->
-<!--            android:layout_marginLeft="8dp"-->
-<!--            android:layout_marginTop="8dp"-->
-<!--            android:layout_marginEnd="8dp"-->
-<!--            android:layout_marginRight="8dp"-->
-<!--            android:contentDescription="@string/hello_image"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:src="@drawable/blackwear"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
+            <!--        <ImageView-->
+            <!--            android:id="@+id/imageView"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="240dp"-->
+            <!--            android:layout_marginStart="8dp"-->
+            <!--            android:layout_marginLeft="8dp"-->
+            <!--            android:layout_marginTop="8dp"-->
+            <!--            android:layout_marginEnd="8dp"-->
+            <!--            android:layout_marginRight="8dp"-->
+            <!--            android:contentDescription="@string/hello_image"-->
+            <!--            android:scaleType="centerCrop"-->
+            <!--            android:src="@drawable/blackwear"-->
+            <!--            app:layout_constraintEnd_toEndOf="parent"-->
+            <!--            app:layout_constraintStart_toStartOf="parent"-->
+            <!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-<!--        <TextView-->
-<!--            android:id="@+id/textView"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="32dp"-->
-<!--            android:layout_marginLeft="32dp"-->
-<!--            android:layout_marginTop="32dp"-->
-<!--            android:layout_marginEnd="32dp"-->
-<!--            android:layout_marginRight="32dp"-->
-<!--            android:fontFamily="@font/crimson_text_bold_italic"-->
-<!--            android:gravity="center"-->
-<!--            android:text="@string/first_page_caption"-->
-<!--            android:textSize="18sp"-->
-<!--            android:textStyle="bold|italic"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/imageView" />-->
+            <!--        <TextView-->
+            <!--            android:id="@+id/textView"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginStart="32dp"-->
+            <!--            android:layout_marginLeft="32dp"-->
+            <!--            android:layout_marginTop="32dp"-->
+            <!--            android:layout_marginEnd="32dp"-->
+            <!--            android:layout_marginRight="32dp"-->
+            <!--            android:fontFamily="@font/crimson_text_bold_italic"-->
+            <!--            android:gravity="center"-->
+            <!--            android:text="@string/first_page_caption"-->
+            <!--            android:textSize="18sp"-->
+            <!--            android:textStyle="bold|italic"-->
+            <!--            app:layout_constraintEnd_toEndOf="parent"-->
+            <!--            app:layout_constraintStart_toStartOf="parent"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/imageView" />-->
 
-<!--        <TextView-->
-<!--            android:id="@+id/textView2"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="32dp"-->
-<!--            android:layout_marginLeft="32dp"-->
-<!--            android:layout_marginTop="32dp"-->
-<!--            android:layout_marginEnd="32dp"-->
-<!--            android:layout_marginRight="32dp"-->
-<!--            android:fontFamily="@font/merriweather_light"-->
-<!--            android:gravity="center"-->
-<!--            android:text="@string/first_page_content"-->
-<!--            android:textSize="16sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/textView" />-->
+            <!--        <TextView-->
+            <!--            android:id="@+id/textView2"-->
+            <!--            android:layout_width="0dp"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginStart="32dp"-->
+            <!--            android:layout_marginLeft="32dp"-->
+            <!--            android:layout_marginTop="32dp"-->
+            <!--            android:layout_marginEnd="32dp"-->
+            <!--            android:layout_marginRight="32dp"-->
+            <!--            android:fontFamily="@font/merriweather_light"-->
+            <!--            android:gravity="center"-->
+            <!--            android:text="@string/first_page_content"-->
+            <!--            android:textSize="16sp"-->
+            <!--            android:textStyle="bold"-->
+            <!--            app:layout_constraintEnd_toEndOf="parent"-->
+            <!--            app:layout_constraintHorizontal_bias="0.0"-->
+            <!--            app:layout_constraintStart_toStartOf="parent"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/textView" />-->
 
-<!--            <include-->
-<!--                layout="@layout/how_it_works"-->
-<!--                app:layout_constraintHorizontal_bias="0.0"-->
-<!--                app:layout_constraintLeft_toLeftOf="parent"-->
-<!--                app:layout_constraintRight_toRightOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/textView2" />-->
+            <!--            <include-->
+            <!--                layout="@layout/how_it_works"-->
+            <!--                app:layout_constraintHorizontal_bias="0.0"-->
+            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/textView2" />-->
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

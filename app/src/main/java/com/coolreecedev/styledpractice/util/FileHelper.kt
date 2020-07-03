@@ -20,5 +20,13 @@ class FileHelper {
                 }
             }
         }
+
+        fun getPdfUrl(): String {
+            return "https://drive.google.com/file/d/1RDAk5NicYpjomlTGEh8ydSjIokiFchvW/view?usp=sharing"
+        }
+
+        fun getBlogUrl(): String {
+            return "https://loveefashion.com/myblog/"
+        }
     }
 }

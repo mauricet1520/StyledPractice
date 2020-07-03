@@ -1,9 +1,8 @@
-package com.coolreecedev.styledpractice.data
+package com.coolreecedev.styledpractice.data.zipcode
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import retrofit2.http.DELETE
 
 @Dao
 interface ZipCodeDao {
