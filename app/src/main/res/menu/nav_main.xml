@@ -14,9 +14,7 @@
         android:title="FAQ"
         />
 
-    <item android:id="@+id/action_contact_us"
-        android:title="CONTACT US"
-        />
+
     <item android:id="@+id/action_blog"
         android:title="STYLE BLOG"
         />
@@ -36,4 +34,20 @@
     <item android:id="@+id/action_settings"
         android:title="SETTINGS"
         />
+
+<!--    <group android:checkableBehavior="single">-->
+<!--        <item-->
+<!--            android:id="@+id/nav_home"-->
+<!--            android:icon="@drawable/ic_menu_camera"-->
+<!--            android:title="@string/menu_home" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_gallery"-->
+<!--            android:icon="@drawable/ic_menu_gallery"-->
+<!--            android:title="@string/menu_gallery" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_slideshow"-->
+<!--            android:icon="@drawable/ic_menu_slideshow"-->
+<!--            android:title="@string/menu_slideshow" />-->
+<!--    </group>-->
+
 </menu>

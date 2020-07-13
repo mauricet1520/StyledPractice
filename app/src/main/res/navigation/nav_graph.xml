@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/zip_code_dest">
+    app:startDestination="@id/screenSlidePageFragment">
 
     <fragment
         android:id="@+id/zip_code_dest"
@@ -33,4 +33,8 @@
         android:name="com.coolreecedev.styledpractice.PaymentTypeFragment"
         android:label="fragment_payment_type"
         tools:layout="@layout/fragment_payment_type" />
+    <fragment
+        android:id="@+id/screenSlidePageFragment"
+        android:name="com.coolreecedev.styledpractice.ScreenSlidePageFragment"
+        android:label="ScreenSlidePageFragment" />
 </navigation>

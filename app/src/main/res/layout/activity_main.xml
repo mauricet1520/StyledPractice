@@ -24,10 +24,10 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <include android:visibility="visible"
+        android:id="@+id/content_main"
         layout="@layout/content_main" />
 
-    <include android:visibility="invisible"
-        layout="@layout/learn_more" />
+
 
 
 
@@ -37,7 +37,7 @@
         app:backgroundTint="@color/colorSecondaryPrimary"
         android:layout_gravity="bottom|center"
         android:textColor="@android:color/white"
-            android:id="@+id/fab"
+        android:id="@+id/fab"
         style="@style/AppTheme.MaterialButton"
         android:layout_margin="@dimen/fab_margin"
     android:text="Get Styled" />

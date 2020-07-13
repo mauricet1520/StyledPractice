@@ -74,7 +74,7 @@
                     android:layout_marginRight="32dp"
                     android:fontFamily="@font/crimson_text_bold_italic"
                     android:gravity="center"
-                    android:text="@string/first_page_caption"
+                    android:text="Have the armor confidence that a good wardrobe brings You!"
                     android:textSize="18sp"
                     android:textStyle="bold|italic"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +92,7 @@
                     android:layout_marginRight="32dp"
                     android:fontFamily="@font/merriweather_light"
                     android:gravity="center"
-                    android:text="@string/first_page_content"
+                    android:text="Receive unique pieces from a expert stylist that you can pair with your wardrobe staples, (without all the time and stress of doing it yourself) that fits into your lifestyle needs!"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -159,7 +159,7 @@
                         android:layout_marginRight="32dp"
                         android:fontFamily="@font/merriweather_light"
                         android:gravity="center"
-                        android:text="Complete a brief body and style profile to help your stylist understand your preferences"
+                        android:text="Complete our brief body and style profile so our stylists understand your preferences."
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -174,7 +174,7 @@
                         android:layout_marginRight="32dp"
                         android:fontFamily="@font/merriweather_light"
                         android:gravity="center"
-                        android:text="Schedule your monthly appointment and let your expert stylist begin curating your personalized wardrobe"
+                        android:text=" Your Stylist will call you after you book your appointment to confirm your info and get any additional details to better understand your style needs, before shopping."
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -241,7 +241,7 @@
                         android:layout_marginRight="32dp"
                         android:fontFamily="@font/merriweather_light"
                         android:gravity="center"
-                        android:text="Your stylist will call you after subscription completion to get to gain a better understanding of your wants and needs"
+                        android:text="Your Stylist will call you after you book your appointment to confirm your info and get any additional details to better understand your style needs, before shopping."
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
