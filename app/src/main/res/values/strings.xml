@@ -41,4 +41,8 @@ You are a VIP  - Very Individual Person – Your Style is individualized to You!
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
+    <string name="_300_499">$300 - \n $499</string>
+    <string name="video_image">video_image</string>
+    <string name="watch_this_short_video_or_swipe_left_more_about_the_process">Watch this short video or swipe left more about the process</string>
+    <string name="have_the_armor_confidence_that_a_good_wardrobe_brings_you">Have the armor confidence that a good wardrobe brings You!</string>
 </resources>

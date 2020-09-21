@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //                learn_more.visibility = View.VISIBLE
 //                val navController = navView.findNavController()
 //                navController.navigate(R.id.zip_code_dest)
-                startActivity(Intent(this, LearnMoreActivity::class.java))
+                startActivity(Intent(this, AppNavActtivity::class.java))
             }
 
             return true

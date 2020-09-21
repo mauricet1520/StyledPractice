@@ -32,8 +32,8 @@ class ZipCodeFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(ZipCodeViewModel::class.java)
 
         if (ContextCompat.checkSelfPermission(requireContext(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(context, "PERMISSION GRANTED",
-                Toast.LENGTH_SHORT).show()
+            Log.i(
+                LOG_TAG, "PERMISSION GRANTED")
         }else {
             requestPermissions(arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE),
                 REQUEST_CODE
@@ -41,29 +41,45 @@ class ZipCodeFragment : Fragment() {
         }
         val view = inflater.inflate(R.layout.zip_code_fragment, container, false)
 
-        view.zip_code_fab.setOnClickListener {
-            var available = false
+        view.zipCodeimageButton.setOnClickListener {
             editZipCodeId.text.let {
-                viewModel.getOneZipCode(editZipCodeId.text.toString())
-                viewModel.oneZipCodeData.observe(viewLifecycleOwner, Observer {
+                viewModel.getFireBaseZipCode(editZipCodeId.text.toString())
+                viewModel.fireBaseZipCodeData.observe(viewLifecycleOwner, Observer {
                         Log.i(LOG_TAG, "zip code: $it")
-                    if (it != null) {
-                        available = true
-                        listener?.onListFragmentInteraction(available)
+                    if (it != null && it) {
+                        listener?.onListFragmentInteraction(it, null)
                     }else {
-                        listener?.onListFragmentInteraction(available)
+                        listener?.onListFragmentInteraction(it, editZipCodeId.text.toString())
                     }
                 })
             }
 
+
         }
+
+//        view.zip_code_fab.setOnClickListener {
+//            var available = false
+//            editZipCodeId.text.let {
+//                viewModel.getOneZipCode(editZipCodeId.text.toString())
+//                viewModel.oneZipCodeData.observe(viewLifecycleOwner, Observer {
+//                        Log.i(LOG_TAG, "zip code: $it")
+//                    if (it != null) {
+//                        available = true
+//                        listener?.onListFragmentInteraction(available)
+//                    }else {
+//                        listener?.onListFragmentInteraction(available)
+//                    }
+//                })
+//            }
+//
+//        }
 
         return view
     }
 
     interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun onListFragmentInteraction(available: Boolean)
+        fun onListFragmentInteraction(available: Boolean, zipCode: String?)
     }
 
     override fun onAttach(context: Context) {

@@ -3,6 +3,12 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/crimson_text_bold_italic</item>
         <item>@font/merriweather_light</item>
+        <item>@font/nunito</item>
+        <item>@font/nunito_black</item>
+        <item>@font/nunito_bold</item>
+        <item>@font/nunito_extrabold</item>
+        <item>@font/nunito_extralight</item>
+        <item>@font/nunito_sans_semibold</item>
         <item>@font/roboto</item>
         <item>@font/shrikhand</item>
     </array>

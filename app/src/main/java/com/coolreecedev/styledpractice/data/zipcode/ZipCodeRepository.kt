@@ -10,6 +10,7 @@ import androidx.lifecycle.MutableLiveData
 import com.coolreecedev.styledpractice.util.LOG_TAG
 import com.coolreecedev.styledpractice.util.ZIP_CODE_VALIDATOR_URL
 import com.coolreecedev.styledpractice.data.database.StyleDatabase
+import com.coolreecedev.styledpractice.util.FIRE_BASE_ZIP_CODE
 import com.google.gson.GsonBuilder
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -25,24 +26,15 @@ class ZipCodeRepository(val app: Application) {
 
     val zipCodeData = MutableLiveData<List<ZipCode>>()
     val oneZipCodeData = MutableLiveData<ZipCode>()
+    val fireBaseZipCodeData = MutableLiveData<Boolean>()
     val zipCodeDao = StyleDatabase.getDatabase(
         app
     ).zipcodeDao()
-    init {
-
-        CoroutineScope(Dispatchers.IO).launch {
-            callWebService()
-//            val data = zipCodeDao.getAll()
-//            if (data.isEmpty()) {
-//                callWebService()
-//            }else {
-//                zipCodeData.postValue(data)
-//                withContext(Dispatchers.Main) {
-//                    Toast.makeText(app, "Local Data", Toast.LENGTH_SHORT).show()
-//                }
-//            }
-        }
-    }
+//    init {
+//        CoroutineScope(Dispatchers.IO).launch {
+//            callWebService()
+//        }
+//    }
 
     @WorkerThread
     suspend fun callWebService() {
@@ -131,4 +123,38 @@ class ZipCodeRepository(val app: Application) {
             Log.i(LOG_TAG, "Finish Calling Local Database: $zipCode")
         }
     }
+
+    @WorkerThread
+    suspend fun callFireBaseWebService(zipCode: Int) {
+        if (networkAvailable()) {
+            Log.i(LOG_TAG, "Calling WebService: $FIRE_BASE_ZIP_CODE")
+
+            withContext(Dispatchers.Main) {
+                Toast.makeText(app, "Remote Data", Toast.LENGTH_SHORT).show()
+            }
+
+
+            val gson = GsonBuilder()
+                .setLenient()
+                .create()
+
+            val retrofit = Retrofit.Builder()
+                .baseUrl(FIRE_BASE_ZIP_CODE)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build()
+
+            val service = retrofit.create(ZipCodeService::class.java)
+            val serviceData = service.getFireBaseZipCode(zipCode).body()
+            Log.i(LOG_TAG, "Data: $serviceData")
+            fireBaseZipCodeData.postValue(serviceData)
+        }
+    }
+
+    fun getFireBaseZip(zipCode: String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            callFireBaseWebService(zipCode.toInt())
+        }
+    }
+
+
 }

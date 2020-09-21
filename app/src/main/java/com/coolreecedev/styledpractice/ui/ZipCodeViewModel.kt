@@ -10,6 +10,7 @@ class ZipCodeViewModel(app: Application) : AndroidViewModel(app) {
         ZipCodeRepository(app)
     val zipCodeData = dataRepo.zipCodeData
     val oneZipCodeData = dataRepo.oneZipCodeData
+    val fireBaseZipCodeData = dataRepo.fireBaseZipCodeData
 
     fun refreshData() {
         dataRepo.refreshData()
@@ -18,4 +19,10 @@ class ZipCodeViewModel(app: Application) : AndroidViewModel(app) {
     fun getOneZipCode(zipCode: String) {
         dataRepo.getOne(zipCode)
     }
+
+    fun getFireBaseZipCode(zipCode: String) {
+        dataRepo.getFireBaseZip(zipCode)
+    }
+
+
 }

@@ -1,31 +1,55 @@
 <!-- activity_screen_slide.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/logo_black"
+        />
 
 
 <androidx.viewpager2.widget.ViewPager2
+    android:layout_below="@id/imageView7"
     android:id="@+id/pager2"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />
 
-    <LinearLayout
-        android:id="@+id/layoutDots"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
+
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layoutDots"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal">-->
+
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:alpha=".5"-->
+<!--        android:layout_above="@id/layoutDots"-->
+<!--        android:background="@color/colorAccent" />-->
+
+    <com.google.android.material.tabs.TabLayout
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-    </LinearLayout>
-
-    <View
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:alpha=".5"
-        android:layout_above="@id/layoutDots"
-        android:background="@color/colorAccent" />
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"/>
 
     <Button
         android:id="@+id/btn_next"
@@ -35,11 +59,13 @@
         android:layout_alignParentRight="true"
         android:background="@null"
         android:text="Next"
+        android:onClick="getNextFragment"
         android:textColor="@color/colorAccent"
         />
 
     <Button
         android:id="@+id/btn_skip"
+        android:onClick="skipTutoriol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

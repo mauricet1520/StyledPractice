@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/screenSlidePageFragment">
+    app:startDestination="@id/firstScreenFragment">
 
     <fragment
         android:id="@+id/zip_code_dest"
@@ -37,4 +37,62 @@
         android:id="@+id/screenSlidePageFragment"
         android:name="com.coolreecedev.styledpractice.ScreenSlidePageFragment"
         android:label="ScreenSlidePageFragment" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.coolreecedev.styledpractice.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/budgetFragment"
+        android:name="com.coolreecedev.styledpractice.BudgetFragment"
+        android:label="fragment_budget"
+        tools:layout="@layout/fragment_budget" />
+    <fragment
+        android:id="@+id/firstScreenFragment"
+        android:name="com.coolreecedev.styledpractice.FirstScreenFragment"
+        android:label="FirstScreenFragment" />
+    <fragment
+        android:id="@+id/drawNavFragment"
+        android:name="com.coolreecedev.styledpractice.DrawNavFragment"
+        android:label="fragment_draw_nav"
+        tools:layout="@layout/fragment_draw_nav" />
+    <fragment
+        android:id="@+id/howItWorksFragment"
+        android:name="com.coolreecedev.styledpractice.HowItWorksFragment"
+        android:label="fragment_how_it_works"
+        tools:layout="@layout/fragment_how_it_works" />
+    <fragment
+        android:id="@+id/occasionFragment"
+        android:name="com.coolreecedev.styledpractice.OccasionFragment"
+        android:label="fragment_occasion"
+        tools:layout="@layout/fragment_occasion" />
+    <fragment
+        android:id="@+id/invalidZipCodeFragment"
+        android:name="com.coolreecedev.styledpractice.InvalidZipCodeFragment"
+        android:label="fragment_invalid_zip_code"
+        tools:layout="@layout/fragment_invalid_zip_code" >
+        <argument
+            android:name="zipCode"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/dateTimeFragment"
+        android:name="com.coolreecedev.styledpractice.DateTimeFragment"
+        android:label="fragment_date_time"
+        tools:layout="@layout/fragment_date_time" />
+    <fragment
+        android:id="@+id/scheduleDateFragment"
+        android:name="com.coolreecedev.styledpractice.ScheduleDateFragment"
+        android:label="fragment_schedule_date"
+        tools:layout="@layout/fragment_schedule_date" />
+    <fragment
+        android:id="@+id/pricingOptionsFragment"
+        android:name="com.coolreecedev.styledpractice.PricingOptionsFragment"
+        android:label="fragment_pricing_options"
+        tools:layout="@layout/fragment_pricing_options" />
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.coolreecedev.styledpractice.ConfirmationFragment"
+        android:label="fragment_confirmation"
+        tools:layout="@layout/fragment_confirmation" />
 </navigation>
