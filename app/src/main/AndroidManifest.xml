@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.coolreecedev.styledpractice">
 
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,10 +19,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AppNavActtivity"
-
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+        <activity android:name=".CameraActivity"></activity>
+        <activity
+            android:name=".AppNavActtivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".LearnMoreActivity" />
         <activity android:name=".BlogActivity" />
         <activity android:name=".FaqActivity" />
@@ -28,9 +31,9 @@
         <activity
             android:name=".OurStoryActivity"
             android:label="Our Story" />
-        <activity android:name=".ActivateClientActivity"
+        <activity
+            android:name=".ActivateClientActivity"
             android:theme="@style/AppTheme.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,9 +43,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

@@ -25,7 +25,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:onClick="selectRomperJumpsuit"
+        android:onClick="selectPatterns"
         android:background="@android:color/transparent"
         android:src="@drawable/next_button"
         app:layout_constraintBottom_toTopOf="@+id/imageView12"
@@ -69,6 +69,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@+id/zipCodeimageButton2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,14 +80,64 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/imageView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox7"
+                app:srcCompat="@drawable/dots" />
+
+            <CheckBox
+                android:id="@+id/checkBox9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="8dp"
+                android:text="Dots"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+
+            <ImageView
+                android:id="@+id/imageView24"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox6"
+                app:srcCompat="@drawable/stripes" />
+
+            <CheckBox
+                android:id="@+id/checkBox8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="4dp"
+                android:text="Stripes"
+                app:layout_constraintStart_toEndOf="@+id/checkBox7"
+                app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+
+            <ImageView
                 android:id="@+id/imageView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox3"
-                app:srcCompat="@drawable/floral" />
+                app:layout_constraintTop_toBottomOf="@+id/checkBox5"
+                app:srcCompat="@drawable/houndstooth" />
+
+            <CheckBox
+                android:id="@+id/checkBox7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="8dp"
+                android:text="Houndstooth"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView23" />
 
             <CheckBox
                 android:id="@+id/checkBox6"

@@ -276,7 +276,8 @@ class ActivateClientActivity : AppCompatActivity(),
     }
 
     fun selectBudget(view: View) {
-        navigateTo(R.id.paymentFragment)
+        val intent = Intent(this, CameraActivity::class.java)
+        startActivity(intent)
     }
 
     fun sendDateInfo(view: View) {
@@ -304,6 +305,14 @@ class ActivateClientActivity : AppCompatActivity(),
     fun chooseShirtsBlouse(view: View) {
         navigateTo(R.id.pantsSkirtFragment)
 
+    }
+
+    fun selectPatterns(view: View) {
+        navigateTo(R.id.colorsFragment)
+    }
+
+    fun selectColors(view: View) {
+        navigateTo(R.id.budgetFragment)
     }
 
 }

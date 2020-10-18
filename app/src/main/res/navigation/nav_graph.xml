@@ -134,4 +134,9 @@
         android:name="com.coolreecedev.styledpractice.BudgetFragment"
         android:label="fragment_budget2"
         tools:layout="@layout/fragment_budget2" />
+    <fragment
+        android:id="@+id/colorsFragment"
+        android:name="com.coolreecedev.styledpractice.ColorsFragment"
+        android:label="fragment_colors"
+        tools:layout="@layout/fragment_colors" />
 </navigation>

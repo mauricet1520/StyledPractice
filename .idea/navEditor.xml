@@ -141,6 +141,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="colorsFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-4825" />
+                            <option name="y" value="-1725" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="confirmationFragment">
                     <value>
                       <LayoutPositions>
