@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".BudgetFragment">
+    android:layout_height="match_parent">
 
 
     <TextView
@@ -136,20 +135,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/fab"
-        style="@style/AppTheme.MaterialButton"
+
+    <ImageButton
+        android:id="@+id/confirmationButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        android:layout_margin="@dimen/fab_margin"
-        android:layout_marginBottom="32dp"
-        android:text="Submit"
-        android:textColor="@android:color/white"
-        app:backgroundTint="@color/colorSecondaryPrimary"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:onClick="selectBudget"
+        android:src="@drawable/next_button"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView

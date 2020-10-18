@@ -49,7 +49,7 @@ class ZipCodeFragment : Fragment() {
                     if (it != null && it) {
                         listener?.onListFragmentInteraction(it, null)
                     }else {
-                        listener?.onListFragmentInteraction(it, editZipCodeId.text.toString())
+                        listener?.onListFragmentInteraction(true, editZipCodeId.text.toString())
                     }
                 })
             }

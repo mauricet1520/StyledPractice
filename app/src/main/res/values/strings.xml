@@ -36,6 +36,31 @@ You are a VIP  - Very Individual Person – Your Style is individualized to You!
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
 
+    <string-array name="spinner_top_info">
+        <item>"Select"</item>
+        <item>"XS"</item>
+        <item>"S"</item>
+        <item>"M"</item>
+        <item>"L"</item>
+        <item>"XL"</item>
+        <item>"XXL+"</item>
+    </string-array>
+
+    <string-array name="spinner_bottom_info">
+        <item>"Select"</item>
+        <item>"0"</item>
+        <item>"2"</item>
+        <item>"4"</item>
+        <item>"6"</item>
+        <item>"8"</item>
+        <item>"10"</item>
+        <item>"12"</item>
+        <item>"14"</item>
+        <item>"16"</item>
+        <item>"18+"</item>
+
+    </string-array>
+
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>

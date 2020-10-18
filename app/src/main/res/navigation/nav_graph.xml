@@ -94,5 +94,44 @@
         android:id="@+id/confirmationFragment"
         android:name="com.coolreecedev.styledpractice.ConfirmationFragment"
         android:label="fragment_confirmation"
-        tools:layout="@layout/fragment_confirmation" />
+        tools:layout="@layout/fragment_confirmation" >
+        <action
+            android:id="@+id/action_go_to_payment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clothesTypeFragment"
+        android:name="com.coolreecedev.styledpractice.ClothesTypeFragment"
+        android:label="fragment_clothes_type"
+        tools:layout="@layout/fragment_clothes_type" />
+    <fragment
+        android:id="@+id/womenClothingFragment"
+        android:name="com.coolreecedev.styledpractice.WomenClothingFragment"
+        android:label="fragment_women_clothing"
+        tools:layout="@layout/fragment_women_clothing" />
+    <fragment
+        android:id="@+id/pantsSkirtFragment"
+        android:name="com.coolreecedev.styledpractice.PantsSkirtFragment"
+        android:label="fragment_pants_skirt"
+        tools:layout="@layout/fragment_pants_skirt" />
+    <fragment
+        android:id="@+id/dressFragment"
+        android:name="com.coolreecedev.styledpractice.DressFragment"
+        android:label="fragment_dress"
+        tools:layout="@layout/fragment_dress" />
+    <fragment
+        android:id="@+id/romperJumperFragment"
+        android:name="com.coolreecedev.styledpractice.RomperJumperFragment"
+        android:label="fragment_romper_jumper"
+        tools:layout="@layout/fragment_romper_jumper" />
+    <fragment
+        android:id="@+id/printPatternsFragment"
+        android:name="com.coolreecedev.styledpractice.PrintPatternsFragment"
+        android:label="fragment_print_patterns"
+        tools:layout="@layout/fragment_print_patterns" />
+    <fragment
+        android:id="@+id/budgetFragment2"
+        android:name="com.coolreecedev.styledpractice.BudgetFragment"
+        android:label="fragment_budget2"
+        tools:layout="@layout/fragment_budget2" />
 </navigation>

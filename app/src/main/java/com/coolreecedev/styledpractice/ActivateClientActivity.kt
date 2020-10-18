@@ -46,7 +46,7 @@ class ActivateClientActivity : AppCompatActivity(),
     override fun onAttachFragment(fragment: Fragment) {
         if (fragment is ZipCodeFragment) {
             fragment.onAttach(this)
-        } else if (fragment is BudgetFragment) {
+        } else if (fragment is FirstScreenFragment) {
             fragment.onAttach(this)
         }
     }
@@ -89,7 +89,7 @@ class ActivateClientActivity : AppCompatActivity(),
 
 
     override fun onListFragmentInteraction(available: Boolean, zipCode: String?) {
-        if (available) {
+        if (available && zipCode != null) {
             Toast.makeText(this, "Available", Toast.LENGTH_SHORT).show()
 
             // Choose authentication providers
@@ -140,7 +140,7 @@ class ActivateClientActivity : AppCompatActivity(),
 
 
     override fun onListPaymentFragmentInteraction(success: Boolean) {
-        findNavController(R.id.nav_host).navigate(R.id.budgetFragment)
+//        findNavController(R.id.nav_host).navigate(R.id.budgetFragment)
     }
 
     override fun onListFragmentInteraction(item: AvailableDate?) {
@@ -268,6 +268,42 @@ class ActivateClientActivity : AppCompatActivity(),
 
     fun choosePricingOption(view: View) {
         navigateTo(R.id.scheduleDateFragment)
+    }
+
+
+    fun confirmAppointment(view: View) {
+        navigateTo(R.id.paymentFragment)
+    }
+
+    fun selectBudget(view: View) {
+        navigateTo(R.id.paymentFragment)
+    }
+
+    fun sendDateInfo(view: View) {
+        navigateTo(R.id.confirmationFragment)
+    }
+
+    fun confirm(view: View) {
+        navigateTo(R.id.clothesTypeFragment)
+    }
+    fun chooseClothesType(view: View) {
+        navigateTo(R.id.womenClothingFragment)
+    }
+
+    fun selectRomperJumpsuit(view: View) {
+        navigateTo(R.id.printPatternsFragment)
+    }
+    fun chooseDress(view: View) {
+        navigateTo(R.id.romperJumperFragment)
+
+    }
+    fun choosePantsSkirt(view: View) {
+        navigateTo(R.id.dressFragment)
+
+    }
+    fun chooseShirtsBlouse(view: View) {
+        navigateTo(R.id.pantsSkirtFragment)
+
     }
 
 }
