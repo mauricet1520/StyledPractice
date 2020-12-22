@@ -47,9 +47,9 @@ class ZipCodeFragment : Fragment() {
                 viewModel.fireBaseZipCodeData.observe(viewLifecycleOwner, Observer {
                         Log.i(LOG_TAG, "zip code: $it")
                     if (it != null && it) {
-                        listener?.onListFragmentInteraction(it, null)
+                        listener?.onListFragmentInteraction(it, editZipCodeId.text.toString())
                     }else {
-                        listener?.onListFragmentInteraction(true, editZipCodeId.text.toString())
+                        listener?.onListFragmentInteraction(it, editZipCodeId.text.toString())
                     }
                 })
             }

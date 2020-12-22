@@ -9,7 +9,11 @@
         android:id="@+id/zip_code_dest"
         android:name="com.coolreecedev.styledpractice.ui.ZipCodeFragment"
         android:label="zip_code_fragment"
-        tools:layout="@layout/zip_code_fragment" />
+        tools:layout="@layout/zip_code_fragment" >
+        <action
+            android:id="@+id/action_zip_code_dest_to_occasionFragment"
+            app:destination="@id/occasionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/schedule_dest"
         android:name="com.coolreecedev.styledpractice.ui.AvailableDateFragment"
@@ -65,7 +69,16 @@
         android:id="@+id/occasionFragment"
         android:name="com.coolreecedev.styledpractice.OccasionFragment"
         android:label="fragment_occasion"
-        tools:layout="@layout/fragment_occasion" />
+        tools:layout="@layout/fragment_occasion" >
+        <argument
+            android:name="occasion"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="zipCode"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
     <fragment
         android:id="@+id/invalidZipCodeFragment"
         android:name="com.coolreecedev.styledpractice.InvalidZipCodeFragment"
@@ -110,11 +123,6 @@
         android:label="fragment_women_clothing"
         tools:layout="@layout/fragment_women_clothing" />
     <fragment
-        android:id="@+id/pantsSkirtFragment"
-        android:name="com.coolreecedev.styledpractice.PantsSkirtFragment"
-        android:label="fragment_pants_skirt"
-        tools:layout="@layout/fragment_pants_skirt" />
-    <fragment
         android:id="@+id/dressFragment"
         android:name="com.coolreecedev.styledpractice.DressFragment"
         android:label="fragment_dress"
@@ -139,4 +147,52 @@
         android:name="com.coolreecedev.styledpractice.ColorsFragment"
         android:label="fragment_colors"
         tools:layout="@layout/fragment_colors" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.coolreecedev.styledpractice.SettingsFragment"
+        android:label="fragment_settings_list"
+        tools:layout="@layout/fragment_settings_list" />
+    <fragment
+        android:id="@+id/accountSettingsFragment"
+        android:name="com.coolreecedev.styledpractice.AccountSettingsFragment"
+        android:label="fragment_account_settings"
+        tools:layout="@layout/fragment_account_settings" />
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.coolreecedev.styledpractice.AddressFragment"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address" />
+    <fragment
+        android:id="@+id/womenPickClothingFragment"
+        android:name="com.coolreecedev.styledpractice.WomenPickClothingFragment"
+        android:label="fragment_women_pick_clothing"
+        tools:layout="@layout/fragment_women_pick_clothing" />
+    <fragment
+        android:id="@+id/womenPickClothingTwoFragment"
+        android:name="com.coolreecedev.styledpractice.WomenPickClothingTwoFragment"
+        android:label="fragment_women_pick_clothing_two"
+        tools:layout="@layout/fragment_women_pick_clothing_two" />
+    <fragment
+        android:id="@+id/bodyTypeFragment"
+        android:name="com.coolreecedev.styledpractice.BodyTypeFragment"
+        android:label="fragment_body_type"
+        tools:layout="@layout/fragment_body_type" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.coolreecedev.styledpractice.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" />
+    <fragment
+        android:id="@+id/editStyleFragment"
+        android:name="com.coolreecedev.styledpractice.EditStyleFragment"
+        android:label="fragment_edit_style"
+        tools:layout="@layout/fragment_edit_style" />
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/pantsSkirtFragment">
+        <fragment
+            android:id="@+id/pantsSkirtFragment"
+            android:name="com.coolreecedev.styledpractice.PantsSkirtFragment"
+            android:label="fragment_pants_skirt"
+            tools:layout="@layout/fragment_pants_skirt" />
+    </navigation>
 </navigation>

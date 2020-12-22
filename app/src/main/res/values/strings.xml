@@ -47,7 +47,7 @@ You are a VIP  - Very Individual Person – Your Style is individualized to You!
     </string-array>
 
     <string-array name="spinner_bottom_info">
-        <item>"Select"</item>
+        <item>"Choose Size"</item>
         <item>"0"</item>
         <item>"2"</item>
         <item>"4"</item>
@@ -71,4 +71,6 @@ You are a VIP  - Very Individual Person – Your Style is individualized to You!
     <string name="watch_this_short_video_or_swipe_left_more_about_the_process">Watch this short video or swipe left more about the process</string>
     <string name="have_the_armor_confidence_that_a_good_wardrobe_brings_you">Have the armor confidence that a good wardrobe brings You!</string>
     <string name="take_photo">Take A Photo</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
 </resources>

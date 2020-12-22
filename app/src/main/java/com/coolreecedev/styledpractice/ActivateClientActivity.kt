@@ -24,6 +24,7 @@ import androidx.navigation.fragment.findNavController
 import com.coolreecedev.styledpractice.data.availabledate.AvailableDate
 import com.coolreecedev.styledpractice.ui.AvailableDateFragment
 import com.coolreecedev.styledpractice.ui.ZipCodeFragment
+import com.coolreecedev.styledpractice.ui.ZipCodeFragmentDirections
 import com.coolreecedev.styledpractice.util.LOG_TAG
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
@@ -113,8 +114,10 @@ class ActivateClientActivity : AppCompatActivity(),
                     // FirebaseUser.getToken() instead.
                     val uid = user.uid
 
-                    navigateTo(R.id.occasionFragment)
+                    Log.i(LOG_TAG, "Navigating to Occasion Fragment")
 
+                    val action = ZipCodeFragmentDirections.actionZipCodeDestToOccasionFragment(null, zipCode)
+                    navigateTo(action.actionId)
                 }
             } else {
                 // No user is signed in
@@ -272,7 +275,7 @@ class ActivateClientActivity : AppCompatActivity(),
 
 
     fun confirmAppointment(view: View) {
-        navigateTo(R.id.paymentFragment)
+        navigateTo(R.id.addressFragment)
     }
 
     fun selectBudget(view: View) {
@@ -288,7 +291,7 @@ class ActivateClientActivity : AppCompatActivity(),
         navigateTo(R.id.clothesTypeFragment)
     }
     fun chooseClothesType(view: View) {
-        navigateTo(R.id.womenClothingFragment)
+        navigateTo(R.id.bodyTypeFragment)
     }
 
     fun selectRomperJumpsuit(view: View) {
@@ -313,6 +316,34 @@ class ActivateClientActivity : AppCompatActivity(),
 
     fun selectColors(view: View) {
         navigateTo(R.id.budgetFragment)
+    }
+
+    fun goToSettings(view: View) {
+        navigateTo(R.id.accountSettingsFragment)
+    }
+
+    fun confirmAddress(view: View) {
+        navigateTo(R.id.paymentFragment)
+    }
+
+    fun confirmDressSkirts(view: View) {
+        navigateTo(R.id.womenPickClothingTwoFragment)
+    }
+
+    fun confirmShirtJumpsuit(view: View) {
+        navigateTo(R.id.printPatternsFragment)
+    }
+
+    fun confirmBodyType(view: View) {
+        navigateTo(R.id.womenPickClothingFragment)
+    }
+
+    fun editAccount(view: View) {
+        navigateTo(R.id.editFragment)
+    }
+
+    fun editStyle(view: View) {
+        navigateTo(R.id.editStyleFragment)
     }
 
 }

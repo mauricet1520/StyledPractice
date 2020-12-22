@@ -152,6 +152,16 @@
                 android:textColor="@android:color/white"
                 android:textSize="36sp" />
 
+            <TextView
+                android:onClick="goToSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="SETTINGS"
+                android:textColor="@android:color/white"
+                android:textSize="36sp" />
+
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
