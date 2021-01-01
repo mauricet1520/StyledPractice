@@ -77,14 +77,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/nunito_black"
-                android:text="Vitural Style Session"
+                android:text="Virtual Style Session"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
             <ImageButton
-                android:id="@+id/imageButton7"
+                android:id="@+id/virtualStyleButton"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:background="@color/fui_transparent"
@@ -101,10 +101,10 @@
                 android:fontFamily="@font/nunito_sans_semibold"
                 android:text="$90"
                 android:textSize="42sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageButton7"
-                app:layout_constraintEnd_toEndOf="@+id/imageButton7"
+                app:layout_constraintBottom_toBottomOf="@+id/virtualStyleButton"
+                app:layout_constraintEnd_toEndOf="@+id/virtualStyleButton"
                 app:layout_constraintHorizontal_bias="0.493"
-                app:layout_constraintStart_toStartOf="@+id/imageButton7"
+                app:layout_constraintStart_toStartOf="@+id/virtualStyleButton"
                 app:layout_constraintTop_toBottomOf="@+id/textView31"
                 app:layout_constraintVertical_bias="0.393" />
 
@@ -117,7 +117,7 @@
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton7" />
+                app:layout_constraintTop_toBottomOf="@+id/virtualStyleButton" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -143,7 +143,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton10"
+                android:id="@+id/shopClosetButton"
                 android:layout_width="300dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="16dp"
@@ -180,7 +180,7 @@
                 android:textSize="42sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton10" />
+                app:layout_constraintTop_toBottomOf="@+id/shopClosetButton" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -206,7 +206,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton20"
+                android:id="@+id/singleStyleButton"
                 android:layout_width="300dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="16dp"
@@ -243,7 +243,7 @@
                 android:textSize="42sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton20" />
+                app:layout_constraintTop_toBottomOf="@+id/singleStyleButton" />
 
 
 
@@ -272,7 +272,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton30"
+                android:id="@+id/styleSubscriptionButton"
                 android:layout_width="300dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="16dp"
@@ -309,7 +309,7 @@
                 android:textSize="42sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton30" />
+                app:layout_constraintTop_toBottomOf="@+id/styleSubscriptionButton" />
 
             <ImageView
                 android:id="@+id/imageView12"

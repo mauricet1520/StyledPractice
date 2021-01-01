@@ -116,8 +116,8 @@ class ActivateClientActivity : AppCompatActivity(),
 
                     Log.i(LOG_TAG, "Navigating to Occasion Fragment")
 
-                    val action = ZipCodeFragmentDirections.actionZipCodeDestToOccasionFragment(null, zipCode)
-                    navigateTo(action.actionId)
+                    val action = ZipCodeFragmentDirections.actionZipCodeDestToOccasionFragment("empty", zipCode)
+                    findNavController(R.id.nav_host).navigate(action)
                 }
             } else {
                 // No user is signed in
@@ -136,6 +136,7 @@ class ActivateClientActivity : AppCompatActivity(),
         } else {
             val bundle = Bundle()
             bundle.putString("zipCode", zipCode)
+            bundle.putString("occasion", "")
             Toast.makeText(this, "UnAvailable", Toast.LENGTH_SHORT).show()
             findNavController(R.id.nav_host).navigate(R.id.invalidZipCodeFragment, bundle)
         }
@@ -215,9 +216,9 @@ class ActivateClientActivity : AppCompatActivity(),
         findNavController(R.id.nav_host).navigate(R.id.zip_code_dest)
     }
 
-    fun chooseOccasion(view: View) {
-        navigateTo(R.id.pricingOptionsFragment)
-    }
+//    fun chooseOccasion(view: View) {
+//        navigateTo(R.id.pricingOptionsFragment)
+//    }
 
     fun chooseDate(view: View) {
         val newFragment: DialogFragment = DatePickerFragment()
@@ -228,41 +229,41 @@ class ActivateClientActivity : AppCompatActivity(),
     fun chooseTime(view: View) {
         var timeSlotText = ""
         when (view) {
-            view.button-> {
-                button.background  = resources.getDrawable(R.color.colorAccent)
-                button2.background = resources.getDrawable(R.drawable.button_border)
-                button3.background = resources.getDrawable(R.drawable.button_border)
-                button4.background = resources.getDrawable(R.drawable.button_border)
-                button7.background = resources.getDrawable(R.drawable.button_border)
-                timeSlotText = button.text.toString()
+            view.eightTenButton-> {
+                eightTenButton.background  = resources.getDrawable(R.color.colorAccent)
+                elevenOneButton.background = resources.getDrawable(R.drawable.button_border)
+                twoFourButton.background = resources.getDrawable(R.drawable.button_border)
+                fiveSevenButton.background = resources.getDrawable(R.drawable.button_border)
+                sevenNineButton.background = resources.getDrawable(R.drawable.button_border)
+                timeSlotText = eightTenButton.text.toString()
             }
-            view.button2->{
-                button2.setBackgroundColor(resources.getColor(R.color.colorAccent))
-                button.background = resources.getDrawable(R.drawable.button_border)
-                button3.background = resources.getDrawable(R.drawable.button_border)
-                button4.background = resources.getDrawable(R.drawable.button_border)
-                button7.background = resources.getDrawable(R.drawable.button_border)
-                timeSlotText = button2.text.toString()
+            view.elevenOneButton->{
+                elevenOneButton.setBackgroundColor(resources.getColor(R.color.colorAccent))
+                eightTenButton.background = resources.getDrawable(R.drawable.button_border)
+                twoFourButton.background = resources.getDrawable(R.drawable.button_border)
+                fiveSevenButton.background = resources.getDrawable(R.drawable.button_border)
+                sevenNineButton.background = resources.getDrawable(R.drawable.button_border)
+                timeSlotText = elevenOneButton.text.toString()
             }
-            view.button3->{
-                button3.setBackgroundColor(resources.getColor(R.color.colorAccent))
-                button2.background = resources.getDrawable(R.drawable.button_border)
-                button.background = resources.getDrawable(R.drawable.button_border)
-                button4.background = resources.getDrawable(R.drawable.button_border)
-                button7.background = resources.getDrawable(R.drawable.button_border)
-                timeSlotText = button3.text.toString()
+            view.twoFourButton->{
+                twoFourButton.setBackgroundColor(resources.getColor(R.color.colorAccent))
+                elevenOneButton.background  = resources.getDrawable(R.drawable.button_border)
+                eightTenButton.background = resources.getDrawable(R.drawable.button_border)
+                fiveSevenButton.background = resources.getDrawable(R.drawable.button_border)
+                sevenNineButton.background = resources.getDrawable(R.drawable.button_border)
+                timeSlotText = twoFourButton.text.toString()
             }
-            view.button4->{
-                button4.setBackgroundColor(resources.getColor(R.color.colorAccent))
-                button2.background = resources.getDrawable(R.drawable.button_border)
-                button3.background = resources.getDrawable(R.drawable.button_border)
-                button.background = resources.getDrawable(R.drawable.button_border)
-                button7.background = resources.getDrawable(R.drawable.button_border)
-                timeSlotText = button4.text.toString()
+            view.fiveSevenButton->{
+                fiveSevenButton.setBackgroundColor(resources.getColor(R.color.colorAccent))
+                elevenOneButton.background  = resources.getDrawable(R.drawable.button_border)
+                eightTenButton.background = resources.getDrawable(R.drawable.button_border)
+                twoFourButton.background = resources.getDrawable(R.drawable.button_border)
+                sevenNineButton.background = resources.getDrawable(R.drawable.button_border)
+                timeSlotText = fiveSevenButton.text.toString()
             }
-            view.button7->{
-                button7.background  = resources.getDrawable(R.color.colorAccent)
-                timeSlotText = button7.text.toString()
+            view.sevenNineButton->{
+                sevenNineButton.background  = resources.getDrawable(R.color.colorAccent)
+                timeSlotText = sevenNineButton.text.toString()
             }
         }
         Toast.makeText(this, timeSlotText, Toast.LENGTH_SHORT).show()

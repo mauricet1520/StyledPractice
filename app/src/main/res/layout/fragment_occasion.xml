@@ -129,7 +129,7 @@
 
 
                 <ImageButton
-                    android:id="@+id/imageButton12"
+                    android:id="@+id/everydayImageButton"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
@@ -164,6 +164,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/everydayCasualImageButton"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
@@ -194,6 +195,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/interviewImageButton"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
@@ -224,6 +226,8 @@
 
 
                 <ImageButton
+
+                    android:id="@+id/birthDayPartyImageButton"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
@@ -252,6 +256,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/anniversaryImageButton"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
@@ -280,6 +285,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/dinnerPartyImageButton"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
@@ -308,6 +314,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/cocktailPartImageButton"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
@@ -338,6 +345,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/companyPartyImageButton"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
@@ -394,6 +402,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/weddingImageButton"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
@@ -422,6 +431,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/theaterNightImageButton"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
@@ -450,6 +460,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/religiousCeremonyImageButton"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
@@ -478,6 +489,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/funeralImageButton"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"

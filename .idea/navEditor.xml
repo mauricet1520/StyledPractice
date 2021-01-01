@@ -182,8 +182,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-985" />
-                            <option name="y" value="1085" />
+                            <option name="x" value="-25" />
+                            <option name="y" value="-165" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -336,6 +336,15 @@
                             <option name="y" value="1242" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_occasionFragment_to_pricingOptionsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -368,8 +377,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-531" />
-                            <option name="y" value="-1256" />
+                            <option name="x" value="-1381" />
+                            <option name="y" value="1234" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -404,8 +413,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-804" />
-                            <option name="y" value="-879" />
+                            <option name="x" value="-1109" />
+                            <option name="y" value="1235" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -500,6 +509,15 @@
                             <option name="x" value="-1987" />
                             <option name="y" value="1233" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_zip_code_dest_to_occasionFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

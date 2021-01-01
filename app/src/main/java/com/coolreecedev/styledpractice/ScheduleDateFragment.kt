@@ -1,17 +1,16 @@
 package com.coolreecedev.styledpractice
 
+import com.coolreecedev.styledpractice.data.Appointment
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.fragment_schedule_date.*
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.util.*
+import androidx.navigation.fragment.navArgs
+import com.coolreecedev.styledpractice.databinding.FragmentScheduleDateBinding
+import com.coolreecedev.styledpractice.util.LOG_TAG
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,12 +26,17 @@ class ScheduleDateFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private var appointment: Appointment? = null
+
+    private lateinit var binding: FragmentScheduleDateBinding
+    private val args: ScheduleDateFragmentArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+//            appointment = it.getParcelable("appointment")
         }
     }
 
@@ -41,15 +45,19 @@ class ScheduleDateFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val view = inflater.inflate(R.layout.fragment_schedule_date, container, false)
+        binding = FragmentScheduleDateBinding.inflate(inflater, container, false)
+        Log.i(LOG_TAG, "SelectedDate Fragment: occasion: ${appointment?.occasion}")
+
+
 
         if (param1 != null) {
-            val text_date = view.findViewById<TextView>(R.id.text_date)
-            val button = view.findViewById<Button>(R.id.button)
-            val button2 = view.findViewById<Button>(R.id.button2)
-            val button3 = view.findViewById<Button>(R.id.button3)
-            val button4 = view.findViewById<Button>(R.id.button4)
-            val button7 = view.findViewById<Button>(R.id.button7)
+
+            val text_date = binding.textDate
+            val button = binding.eightTenButton
+            val button2 = binding.elevenOneButton
+            val button3 = binding.twoFourButton
+            val button4 = binding.fiveSevenButton
+            val button7 = binding.sevenNineButton
             text_date.text = param2
             text_date.visibility = View.VISIBLE
 
@@ -84,7 +92,7 @@ class ScheduleDateFragment : Fragment() {
                 }
             }
         }
-        return view
+        return binding.root
     }
 
     companion object {
