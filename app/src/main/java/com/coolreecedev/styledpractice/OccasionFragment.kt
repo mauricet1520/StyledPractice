@@ -10,7 +10,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.coolreecedev.styledpractice.data.Appointment
 import com.coolreecedev.styledpractice.databinding.FragmentOccasionBinding
-import com.coolreecedev.styledpractice.ui.ZipCodeFragmentDirections
 import com.coolreecedev.styledpractice.util.LOG_TAG
 
 /**
@@ -33,7 +32,11 @@ class OccasionFragment : Fragment() {
         with(binding.anniversaryImageButton) {
             setOnClickListener {
                 Log.i(LOG_TAG, "occasion: Anniversary")
-                val appointment = Appointment(occasion = "Anniversary", zip = args.zipCode)
+                val appointment =
+                    Appointment(
+                        occasion = "Anniversary",
+                        zip = args.zipCode
+                    )
                 val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
                 findNavController().navigate(action)
             }
@@ -42,7 +45,11 @@ class OccasionFragment : Fragment() {
         with(binding.weddingImageButton) {
             setOnClickListener {
                 Log.i(LOG_TAG, "occasion: Wedding")
-                val appointment = Appointment(occasion = "Wedding",  zip = args.zipCode)
+                val appointment =
+                    Appointment(
+                        occasion = "Wedding",
+                        zip = args.zipCode
+                    )
                 val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
                 findNavController().navigate(action)
             }
@@ -51,7 +58,11 @@ class OccasionFragment : Fragment() {
         with(binding.cocktailPartImageButton) {
             setOnClickListener {
                 Log.i(LOG_TAG, "occasion: CocktailParty")
-                val appointment = Appointment(occasion = "CocktailParty",  zip = args.zipCode)
+                val appointment =
+                    Appointment(
+                        occasion = "CocktailParty",
+                        zip = args.zipCode
+                    )
                 val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
                 findNavController().navigate(action)
             }
@@ -60,7 +71,11 @@ class OccasionFragment : Fragment() {
         with(binding.companyPartyImageButton) {
             setOnClickListener {
                 Log.i(LOG_TAG, "occasion: CompanyParty")
-                val appointment = Appointment(occasion = "CompanyParty", zip = args.zipCode)
+                val appointment =
+                    Appointment(
+                        occasion = "CompanyParty",
+                        zip = args.zipCode
+                    )
                 val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
                 findNavController().navigate(action)
             }
@@ -69,7 +84,11 @@ class OccasionFragment : Fragment() {
         with(binding.religiousCeremonyImageButton) {
             setOnClickListener {
                 Log.i(LOG_TAG, "occasion: ReligiousCeremony")
-                val appointment = Appointment(occasion = "ReligiousCeremony", zip = args.zipCode)
+                val appointment =
+                    Appointment(
+                        occasion = "ReligiousCeremony",
+                        zip = args.zipCode
+                    )
                 val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
                 findNavController().navigate(action)
             }
@@ -78,7 +97,11 @@ class OccasionFragment : Fragment() {
         with(binding.theaterNightImageButton) {
             setOnClickListener {
                 Log.i(LOG_TAG, "occasion: TheaterNight")
-                val appointment = Appointment(occasion = "TheaterNight", zip = args.zipCode)
+                val appointment =
+                    Appointment(
+                        occasion = "TheaterNight",
+                        zip = args.zipCode
+                    )
                 val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
                 findNavController().navigate(action)
             }
@@ -87,7 +110,10 @@ class OccasionFragment : Fragment() {
         with(binding.birthDayPartyImageButton) {
             setOnClickListener {
                 Log.i(LOG_TAG, "occasion: BirthDayParty")
-                val appointment = Appointment(occasion = "BirthDayParty")
+                val appointment =
+                    Appointment(
+                        occasion = "BirthDayParty"
+                    )
                 val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
                 findNavController().navigate(action)
             }
@@ -96,7 +122,11 @@ class OccasionFragment : Fragment() {
         with(binding.everydayCasualImageButton) {
             setOnClickListener {
                 Log.i(LOG_TAG, "occasion: EverydayCasual")
-                val appointment = Appointment(occasion = "EverydayCasual", zip = args.zipCode)
+                val appointment =
+                    Appointment(
+                        occasion = "EverydayCasual",
+                        zip = args.zipCode
+                    )
                 val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
                 findNavController().navigate(action)
             }
@@ -105,7 +135,11 @@ class OccasionFragment : Fragment() {
         with(binding.everydayImageButton) {
             setOnClickListener {
                 Log.i(LOG_TAG, "occasion: EverydayWork")
-                val appointment = Appointment(occasion = "EverydayWork", zip = args.zipCode)
+                val appointment =
+                    Appointment(
+                        occasion = "EverydayWork",
+                        zip = args.zipCode
+                    )
                 val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
                 findNavController().navigate(action)
             }
@@ -114,7 +148,11 @@ class OccasionFragment : Fragment() {
         with(binding.dinnerPartyImageButton) {
             setOnClickListener {
                 Log.i(LOG_TAG, "occasion: DinnerParty")
-                val appointment = Appointment(occasion = "DinnerParty", zip = args.zipCode)
+                val appointment =
+                    Appointment(
+                        occasion = "DinnerParty",
+                        zip = args.zipCode
+                    )
                 val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
                 findNavController().navigate(action)
             }
@@ -123,7 +161,11 @@ class OccasionFragment : Fragment() {
         with(binding.funeralImageButton) {
             setOnClickListener {
                 Log.i(LOG_TAG, "occasion: Funeral")
-                val appointment = Appointment(occasion = "Funeral", zip = args.zipCode)
+                val appointment =
+                    Appointment(
+                        occasion = "Funeral",
+                        zip = args.zipCode
+                    )
                 val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
                 findNavController().navigate(action)
             }
@@ -132,7 +174,11 @@ class OccasionFragment : Fragment() {
         with(binding.interviewImageButton) {
             setOnClickListener {
                 Log.i(LOG_TAG, "occasion: Interview")
-                val appointment = Appointment(occasion = "Interview" ,zip = args.zipCode)
+                val appointment =
+                    Appointment(
+                        occasion = "Interview",
+                        zip = args.zipCode
+                    )
                 val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
                 findNavController().navigate(action)
             }

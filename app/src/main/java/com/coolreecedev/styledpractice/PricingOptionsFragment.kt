@@ -52,11 +52,13 @@ class PricingOptionsFragment : Fragment() {
             setOnClickListener {
                 Log.i(LOG_TAG, "setmore_service_name: VirtualStyle")
                 it.setBackgroundColor(resources.getColor(R.color.colorPrimaryDark))
-                val appointment = Appointment(
-                    occasion = args.appointment?.occasion,
-                    zip = args.appointment?.zip,
-                    setmore_service_key = "s0f27750942522cbbc953aa6ea01daf169f4c5d4c"
-                )
+                val appointment =
+                    Appointment(
+                        occasion = args.appointment?.occasion,
+                        zip = args.appointment?.zip,
+                        setmore_service_key = "s0f27750942522cbbc953aa6ea01daf169f4c5d4c",
+                        setmore_service_name = "Virtual Service"
+                    )
 
                 val action =
                     PricingOptionsFragmentDirections.actionPricingOptionsFragmentToScheduleDateFragment(
@@ -70,11 +72,13 @@ class PricingOptionsFragment : Fragment() {
             setOnClickListener {
                 Log.i(LOG_TAG, "setmore_service_name: Shop you closet")
                 it.setBackgroundColor(resources.getColor(R.color.colorPrimaryDark))
-                val appointment = Appointment(
-                    occasion = args.appointment?.occasion,
-                    zip = args.appointment?.zip,
-                    setmore_service_key = "s735b953ea6365d8a320e45fd13ec1dc2bd6a0401"
-                )
+                val appointment =
+                    Appointment(
+                        occasion = args.appointment?.occasion,
+                        zip = args.appointment?.zip,
+                        setmore_service_key = "s735b953ea6365d8a320e45fd13ec1dc2bd6a0401",
+                        setmore_service_name = "Shop Your Closet"
+                    )
 
                 val action =
                     PricingOptionsFragmentDirections.actionPricingOptionsFragmentToScheduleDateFragment(
@@ -88,11 +92,13 @@ class PricingOptionsFragment : Fragment() {
                 setOnClickListener {
                     Log.i(LOG_TAG, "setmore_service_name: Shop & Style")
                     it.setBackgroundColor(resources.getColor(R.color.colorPrimaryDark))
-                    val appointment = Appointment(
-                        occasion = args.appointment?.occasion,
-                        zip = args.appointment?.zip,
-                        setmore_service_key = "s5c2c44e31f92d7086b35e71316c72a1454778402"
-                    )
+                    val appointment =
+                        Appointment(
+                            occasion = args.appointment?.occasion,
+                            zip = args.appointment?.zip,
+                            setmore_service_key = "s5c2c44e31f92d7086b35e71316c72a1454778402",
+                            setmore_service_name = "Shop & Style"
+                        )
 
                     val action =
                         PricingOptionsFragmentDirections.actionPricingOptionsFragmentToScheduleDateFragment(
@@ -106,11 +112,13 @@ class PricingOptionsFragment : Fragment() {
                 setOnClickListener {
                     Log.i(LOG_TAG, "setmore_service_name: Style Subscription")
                     it.setBackgroundColor(resources.getColor(R.color.colorPrimaryDark))
-                    val appointment = Appointment(
-                        occasion = args.appointment?.occasion,
-                        zip = args.appointment?.zip,
-                        setmore_service_key = "s293a092281466b5127666d4c50be75bbd17a49f1"
-                    )
+                    val appointment =
+                        Appointment(
+                            occasion = args.appointment?.occasion,
+                            zip = args.appointment?.zip,
+                            setmore_service_key = "s293a092281466b5127666d4c50be75bbd17a49f1",
+                            setmore_service_name = "Seasonal Style"
+                        )
 
                     val action =
                         PricingOptionsFragmentDirections.actionPricingOptionsFragmentToScheduleDateFragment(

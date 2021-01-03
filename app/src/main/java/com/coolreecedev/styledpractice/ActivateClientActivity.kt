@@ -1,26 +1,21 @@
 package com.coolreecedev.styledpractice
 
-import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener
 import android.app.Dialog
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
 import android.widget.DatePicker
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import com.coolreecedev.styledpractice.data.availabledate.AvailableDate
 import com.coolreecedev.styledpractice.ui.AvailableDateFragment
 import com.coolreecedev.styledpractice.ui.ZipCodeFragment
@@ -31,7 +26,6 @@ import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_schedule_date.*
 import kotlinx.android.synthetic.main.fragment_schedule_date.view.*
-import java.time.LocalDate
 import java.util.*
 
 class ActivateClientActivity : AppCompatActivity(),
@@ -229,41 +223,41 @@ class ActivateClientActivity : AppCompatActivity(),
     fun chooseTime(view: View) {
         var timeSlotText = ""
         when (view) {
-            view.eightTenButton-> {
-                eightTenButton.background  = resources.getDrawable(R.color.colorAccent)
+            view.fourSixButton-> {
+                fourSixButton.background  = resources.getDrawable(R.color.colorAccent)
                 elevenOneButton.background = resources.getDrawable(R.drawable.button_border)
                 twoFourButton.background = resources.getDrawable(R.drawable.button_border)
                 fiveSevenButton.background = resources.getDrawable(R.drawable.button_border)
-                sevenNineButton.background = resources.getDrawable(R.drawable.button_border)
-                timeSlotText = eightTenButton.text.toString()
+                sixEightButton.background = resources.getDrawable(R.drawable.button_border)
+                timeSlotText = fourSixButton.text.toString()
             }
             view.elevenOneButton->{
                 elevenOneButton.setBackgroundColor(resources.getColor(R.color.colorAccent))
-                eightTenButton.background = resources.getDrawable(R.drawable.button_border)
+                fourSixButton.background = resources.getDrawable(R.drawable.button_border)
                 twoFourButton.background = resources.getDrawable(R.drawable.button_border)
                 fiveSevenButton.background = resources.getDrawable(R.drawable.button_border)
-                sevenNineButton.background = resources.getDrawable(R.drawable.button_border)
+                sixEightButton.background = resources.getDrawable(R.drawable.button_border)
                 timeSlotText = elevenOneButton.text.toString()
             }
             view.twoFourButton->{
                 twoFourButton.setBackgroundColor(resources.getColor(R.color.colorAccent))
                 elevenOneButton.background  = resources.getDrawable(R.drawable.button_border)
-                eightTenButton.background = resources.getDrawable(R.drawable.button_border)
+                fourSixButton.background = resources.getDrawable(R.drawable.button_border)
                 fiveSevenButton.background = resources.getDrawable(R.drawable.button_border)
-                sevenNineButton.background = resources.getDrawable(R.drawable.button_border)
+                sixEightButton.background = resources.getDrawable(R.drawable.button_border)
                 timeSlotText = twoFourButton.text.toString()
             }
             view.fiveSevenButton->{
                 fiveSevenButton.setBackgroundColor(resources.getColor(R.color.colorAccent))
                 elevenOneButton.background  = resources.getDrawable(R.drawable.button_border)
-                eightTenButton.background = resources.getDrawable(R.drawable.button_border)
+                fourSixButton.background = resources.getDrawable(R.drawable.button_border)
                 twoFourButton.background = resources.getDrawable(R.drawable.button_border)
-                sevenNineButton.background = resources.getDrawable(R.drawable.button_border)
+                sixEightButton.background = resources.getDrawable(R.drawable.button_border)
                 timeSlotText = fiveSevenButton.text.toString()
             }
-            view.sevenNineButton->{
-                sevenNineButton.background  = resources.getDrawable(R.color.colorAccent)
-                timeSlotText = sevenNineButton.text.toString()
+            view.sixEightButton->{
+                sixEightButton.background  = resources.getDrawable(R.color.colorAccent)
+                timeSlotText = sixEightButton.text.toString()
             }
         }
         Toast.makeText(this, timeSlotText, Toast.LENGTH_SHORT).show()
@@ -376,7 +370,7 @@ class DatePickerFragment : DialogFragment(),
         }
 
         Log.i(LOG_TAG, "Date selected: ${month.inc()}/$day/$year")
-        findNavController().navigate(R.id.scheduleDateFragment, vargs)
+//        findNavController().navigate(R.id.scheduleDateFragment, vargs)
     }
 }
 

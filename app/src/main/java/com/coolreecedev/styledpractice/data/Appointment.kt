@@ -21,6 +21,7 @@ data class Appointment(
     var image_url: String? = null,
 
     var setmore_appointment_key: String? = null,
+    var setmore_service_name: String? = null,
     var setmore_label: String? = null,
     var setmore_staff_key: String? = null,
     var setmore_service_key: String? = null,
@@ -50,6 +51,7 @@ data class Appointment(
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
+        parcel.readString(),
         parcel.readString()
     ) {
     }
@@ -69,6 +71,7 @@ data class Appointment(
         parcel.writeStringList(product_ids)
         parcel.writeString(image_url)
         parcel.writeString(setmore_appointment_key)
+        parcel.writeString(setmore_service_name)
         parcel.writeString(setmore_label)
         parcel.writeString(setmore_staff_key)
         parcel.writeString(setmore_service_key)

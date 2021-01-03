@@ -10,7 +10,7 @@ import androidx.lifecycle.MutableLiveData
 import com.coolreecedev.styledpractice.util.LOG_TAG
 import com.coolreecedev.styledpractice.util.ZIP_CODE_VALIDATOR_URL
 import com.coolreecedev.styledpractice.data.database.StyleDatabase
-import com.coolreecedev.styledpractice.util.FIRE_BASE_ZIP_CODE
+import com.coolreecedev.styledpractice.util.STRIPE_STYLED_BASE_URL
 import com.google.gson.GsonBuilder
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -127,7 +127,7 @@ class ZipCodeRepository(val app: Application) {
     @WorkerThread
     suspend fun callFireBaseWebService(zipCode: Int) {
         if (networkAvailable()) {
-            Log.i(LOG_TAG, "Calling WebService: $FIRE_BASE_ZIP_CODE")
+            Log.i(LOG_TAG, "Calling WebService: $STRIPE_STYLED_BASE_URL")
 
             withContext(Dispatchers.Main) {
                 Toast.makeText(app, "Remote Data", Toast.LENGTH_SHORT).show()
@@ -139,7 +139,7 @@ class ZipCodeRepository(val app: Application) {
                 .create()
 
             val retrofit = Retrofit.Builder()
-                .baseUrl(FIRE_BASE_ZIP_CODE)
+                .baseUrl(STRIPE_STYLED_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build()
 
