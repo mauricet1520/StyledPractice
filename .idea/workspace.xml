@@ -13,11 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f6a6955-2739-46d5-9ff0-a69a94ad24fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/appointment/AppointmentRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/appointment/AppointmentService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/appointment/AppointmentViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/appointment/Staff.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/appointment/StaffTimeSlots.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/appointment/CreateAppointmentRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/appointment/CreateCustomerRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/appointment/StyledCustomerAppointmentRequest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -30,13 +28,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ActivateClientActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ActivateClientActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/OccasionFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/OccasionFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/PricingOptionsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/PricingOptionsFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ScheduleDateFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ScheduleDateFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/Appointment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/Appointment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/zipcode/ZipCodeRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/zipcode/ZipCodeRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/util/Global.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/util/Global.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_schedule_date.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_schedule_date.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +37,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="R58MA2P5GEX" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3_API_28" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -90,8 +83,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="R58MA2P5GEX" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-01T16:22:51.460Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3_API_28" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-03T21:36:08.382Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -111,6 +104,9 @@
     </key>
     <key name="android.template.336722764">
       <recent name="com.coolreecedev.styledpractice" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="com.coolreecedev.styledpractice.data.appointment" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.coolreecedev.styledpractice" />
@@ -330,22 +326,22 @@
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state x="440" y="7" key="CommitChangelistDialog2/78.0.1458.864@78.0.1458.864" timestamp="1603028316137" />
-    <state width="1398" height="308" key="GridCell.Tab.0.bottom" timestamp="1609692904967">
+    <state width="1398" height="308" key="GridCell.Tab.0.bottom" timestamp="1609773640401">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
-    <state width="1398" height="308" key="GridCell.Tab.0.bottom/78.0.1458.864@78.0.1458.864" timestamp="1609692904967" />
-    <state width="1398" height="308" key="GridCell.Tab.0.center" timestamp="1609692904966">
+    <state width="1398" height="308" key="GridCell.Tab.0.bottom/78.0.1458.864@78.0.1458.864" timestamp="1609773640401" />
+    <state width="1398" height="308" key="GridCell.Tab.0.center" timestamp="1609773640401">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
-    <state width="1398" height="308" key="GridCell.Tab.0.center/78.0.1458.864@78.0.1458.864" timestamp="1609692904966" />
-    <state width="1398" height="308" key="GridCell.Tab.0.left" timestamp="1609692904966">
+    <state width="1398" height="308" key="GridCell.Tab.0.center/78.0.1458.864@78.0.1458.864" timestamp="1609773640401" />
+    <state width="1398" height="308" key="GridCell.Tab.0.left" timestamp="1609773640401">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
-    <state width="1398" height="308" key="GridCell.Tab.0.left/78.0.1458.864@78.0.1458.864" timestamp="1609692904966" />
-    <state width="1398" height="308" key="GridCell.Tab.0.right" timestamp="1609692904966">
+    <state width="1398" height="308" key="GridCell.Tab.0.left/78.0.1458.864@78.0.1458.864" timestamp="1609773640401" />
+    <state width="1398" height="308" key="GridCell.Tab.0.right" timestamp="1609773640401">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
-    <state width="1398" height="308" key="GridCell.Tab.0.right/78.0.1458.864@78.0.1458.864" timestamp="1609692904966" />
+    <state width="1398" height="308" key="GridCell.Tab.0.right/78.0.1458.864@78.0.1458.864" timestamp="1609773640401" />
     <state width="1398" height="268" key="GridCell.Tab.1.bottom" timestamp="1609610774508">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
@@ -386,18 +382,18 @@
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state x="498" y="164" width="637" height="536" key="find.popup/78.0.1458.864@78.0.1458.864" timestamp="1601315195900" />
-    <state width="348" height="94" key="javadoc.popup.new" timestamp="1609695367136">
+    <state width="348" height="94" key="javadoc.popup.new" timestamp="1609774184994">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
-    <state width="348" height="94" key="javadoc.popup.new/78.0.1458.864@78.0.1458.864" timestamp="1609695367136" />
+    <state width="348" height="94" key="javadoc.popup.new/78.0.1458.864@78.0.1458.864" timestamp="1609774184994" />
     <state x="151" y="329" width="672" height="677" key="run.anything.popup" timestamp="1609521467265">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state x="151" y="329" width="672" height="677" key="run.anything.popup/78.0.1458.864@78.0.1458.864" timestamp="1609521467265" />
-    <state x="382" y="231" width="672" height="564" key="search.everywhere.popup" timestamp="1609690504626">
+    <state x="382" y="231" width="672" height="564" key="search.everywhere.popup" timestamp="1609729967235">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
-    <state x="382" y="231" width="672" height="564" key="search.everywhere.popup/78.0.1458.864@78.0.1458.864" timestamp="1609690504626" />
+    <state x="382" y="231" width="672" height="564" key="search.everywhere.popup/78.0.1458.864@78.0.1458.864" timestamp="1609729967235" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -70,7 +70,7 @@ class PricingOptionsFragment : Fragment() {
 
         with(binding.shopClosetButton) {
             setOnClickListener {
-                Log.i(LOG_TAG, "setmore_service_name: Shop you closet")
+                Log.i(LOG_TAG, "setmore_service_name: Shop Your Closet")
                 it.setBackgroundColor(resources.getColor(R.color.colorPrimaryDark))
                 val appointment =
                     Appointment(
