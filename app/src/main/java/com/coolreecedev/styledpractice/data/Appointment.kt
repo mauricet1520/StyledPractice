@@ -28,7 +28,8 @@ data class Appointment(
     var setmore_customer_key: String? = null,
     var stylist_id: String? = null,
     var customer_id: String? = null,
-    var status: String? = null
+    var status: String? = null,
+    var user_appointment_time: String? = null
 ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
@@ -43,6 +44,7 @@ data class Appointment(
         parcel.readString(),
         parcel.readString(),
         parcel.createStringArrayList(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -79,6 +81,7 @@ data class Appointment(
         parcel.writeString(stylist_id)
         parcel.writeString(customer_id)
         parcel.writeString(status)
+        parcel.writeString(user_appointment_time)
     }
 
     override fun describeContents(): Int {

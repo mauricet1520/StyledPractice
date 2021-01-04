@@ -21,6 +21,7 @@ import com.coolreecedev.styledpractice.data.appointment.AppointmentViewModel
 import com.coolreecedev.styledpractice.databinding.FragmentScheduleDateBinding
 import com.coolreecedev.styledpractice.util.LOG_TAG
 import androidx.lifecycle.Observer
+import androidx.navigation.findNavController
 import com.coolreecedev.styledpractice.data.appointment.StaffTimeSlots
 
 import java.util.*
@@ -175,6 +176,7 @@ class ScheduleDateFragment : Fragment() {
         Log.i(LOG_TAG, "Setting Appointment time to ${this.text}")
         appointment?.start_time = startTime
         appointment?.end_time = endTime
+        appointment?.user_appointment_time = "$param3 ${this.text}"
         val staffTimeSlots = staffMembers.random()
         if (staffTimeSlots.sevenToNineTimeSlotsAvailable) {
             Log.i(
@@ -214,6 +216,11 @@ class ScheduleDateFragment : Fragment() {
         Log.i(LOG_TAG, "Appointment start_time: ${appointment?.start_time}")
         Log.i(LOG_TAG, "Appointment end_time: ${appointment?.end_time}")
         Log.i(LOG_TAG, "Appointment occasion: ${appointment?.occasion}")
+        val action =
+            ScheduleDateFragmentDirections.actionScheduleDateFragmentToConfirmationFragment(
+                appointment
+            )
+        findNavController().navigate(action)
     }
 
     private fun showTime(param1: String?, param2: String?) {

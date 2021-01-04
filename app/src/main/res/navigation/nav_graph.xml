@@ -52,7 +52,13 @@
         android:id="@+id/paymentFragment"
         android:name="com.coolreecedev.styledpractice.PaymentFragment"
         android:label="fragment_payment"
-        tools:layout="@layout/fragment_payment" />
+        tools:layout="@layout/fragment_payment" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
     <fragment
         android:id="@+id/budgetFragment"
         android:name="com.coolreecedev.styledpractice.BudgetFragment"
@@ -112,6 +118,9 @@
             android:name="appointment"
             app:argType="com.coolreecedev.styledpractice.data.Appointment"
             app:nullable="true" />
+        <action
+            android:id="@+id/action_scheduleDateFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment" />
     </fragment>
     <fragment
         android:id="@+id/pricingOptionsFragment"
@@ -132,9 +141,14 @@
         android:name="com.coolreecedev.styledpractice.ConfirmationFragment"
         android:label="fragment_confirmation"
         tools:layout="@layout/fragment_confirmation" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
         <action
-            android:id="@+id/action_go_to_payment"
-            app:destination="@id/paymentFragment" />
+            android:id="@+id/action_confirmationFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
     </fragment>
     <fragment
         android:id="@+id/clothesTypeFragment"
@@ -185,7 +199,16 @@
         android:id="@+id/addressFragment"
         android:name="com.coolreecedev.styledpractice.AddressFragment"
         android:label="fragment_address"
-        tools:layout="@layout/fragment_address" />
+        tools:layout="@layout/fragment_address" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_addressFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/womenPickClothingFragment"
         android:name="com.coolreecedev.styledpractice.WomenPickClothingFragment"

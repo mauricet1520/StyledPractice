@@ -24,6 +24,7 @@ import com.coolreecedev.styledpractice.util.LOG_TAG
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
+import com.stripe.android.Stripe
 import kotlinx.android.synthetic.main.fragment_schedule_date.*
 import kotlinx.android.synthetic.main.fragment_schedule_date.view.*
 import java.util.*
@@ -35,6 +36,8 @@ class ActivateClientActivity : AppCompatActivity(),
     private val mListener: ZipCodeFragment.OnListFragmentInteractionListener? = null
     var RC_SIGN_IN = 1
     private lateinit var auth: FirebaseAuth
+    private lateinit var stripe: Stripe
+
 
 
 
@@ -50,6 +53,8 @@ class ActivateClientActivity : AppCompatActivity(),
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_activate_client)
+        stripe = Stripe(applicationContext, "pk_test_dGcgdptaqW6r4MnnqAZdktZ3")
+
 
 
         findNavController(R.id.nav_host).navigate(R.id.firstScreenFragment)
