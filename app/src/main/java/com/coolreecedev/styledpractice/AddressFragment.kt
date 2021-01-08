@@ -51,7 +51,7 @@ class AddressFragment : Fragment() {
                 appointment?.state = binding.stateEditText.text.toString()
                 val action =
                     AddressFragmentDirections.actionAddressFragmentToPaymentFragment(
-                        appointment
+                        appointment = appointment, customer = args.customer
                     )
                 findNavController().navigate(action)
             }

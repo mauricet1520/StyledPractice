@@ -17,6 +17,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.coolreecedev.styledpractice.data.availabledate.AvailableDate
+import com.coolreecedev.styledpractice.data.customer.Customer
 import com.coolreecedev.styledpractice.ui.AvailableDateFragment
 import com.coolreecedev.styledpractice.ui.ZipCodeFragment
 import com.coolreecedev.styledpractice.ui.ZipCodeFragmentDirections
@@ -115,7 +116,9 @@ class ActivateClientActivity : AppCompatActivity(),
 
                     Log.i(LOG_TAG, "Navigating to Occasion Fragment")
 
-                    val action = ZipCodeFragmentDirections.actionZipCodeDestToOccasionFragment("empty", zipCode)
+                    val action = ZipCodeFragmentDirections.actionZipCodeDestToOccasionFragment(zipCode = zipCode,
+                    customer = Customer(uid = uid, first_name = name, email = email)
+                    )
                     findNavController(R.id.nav_host).navigate(action)
                 }
             } else {
@@ -215,9 +218,6 @@ class ActivateClientActivity : AppCompatActivity(),
         findNavController(R.id.nav_host).navigate(R.id.zip_code_dest)
     }
 
-//    fun chooseOccasion(view: View) {
-//        navigateTo(R.id.pricingOptionsFragment)
-//    }
 
     fun chooseDate(view: View) {
         val newFragment: DialogFragment = DatePickerFragment()

@@ -23,6 +23,7 @@ import com.coolreecedev.styledpractice.util.LOG_TAG
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
 import com.coolreecedev.styledpractice.data.appointment.StaffTimeSlots
+import com.coolreecedev.styledpractice.data.customer.Customer
 
 import java.util.*
 
@@ -34,6 +35,7 @@ private var param1: String? = null
 private var param2: String? = null
 private var param3: String? = null
 private var appointment: Appointment? = null
+private var customer: Customer? = null
 
 /**
  * A simple [Fragment] subclass.
@@ -56,6 +58,7 @@ class ScheduleDateFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
             appointment = it.getParcelable("appointment")
+            customer = it.getParcelable("customer")
         }
     }
 
@@ -66,11 +69,17 @@ class ScheduleDateFragment : Fragment() {
 
         viewModel = ViewModelProviders.of(this).get(AppointmentViewModel::class.java)
 
+
         binding = FragmentScheduleDateBinding.inflate(inflater, container, false)
         Log.i(LOG_TAG, "SelectedDate Fragment: occasion: ${appointment?.occasion}")
         Log.i(LOG_TAG, "SelectedDate Fragment: service name: ${appointment?.setmore_service_name}")
         Log.i(LOG_TAG, "SelectedDate Fragment: param2: $param2")
         Log.i(LOG_TAG, "SelectedDate Fragment: param1: $param1")
+        Log.i(LOG_TAG, "SelectedDate Fragment: customer Id: ${customer?.uid}")
+        Log.i(LOG_TAG, "SelectedDate Fragment: customer firstName: ${customer?.first_name}")
+        Log.i(LOG_TAG, "SelectedDate Fragment: param1: $param1")
+
+
 
         with(binding.elevenOneButton) {
             setOnClickListener {
@@ -216,9 +225,10 @@ class ScheduleDateFragment : Fragment() {
         Log.i(LOG_TAG, "Appointment start_time: ${appointment?.start_time}")
         Log.i(LOG_TAG, "Appointment end_time: ${appointment?.end_time}")
         Log.i(LOG_TAG, "Appointment occasion: ${appointment?.occasion}")
+
         val action =
             ScheduleDateFragmentDirections.actionScheduleDateFragmentToConfirmationFragment(
-                appointment
+                appointment, customer = customer
             )
         findNavController().navigate(action)
     }
@@ -342,6 +352,8 @@ class ScheduleDateFragment : Fragment() {
                     vargs.putString(ARG_PARAM1, "Saturday")
                     vargs.putString(ARG_PARAM2, "$dayDate/$monthDate/$year")
                     vargs.putParcelable("appointment", appointment)
+                    vargs.putParcelable("customer", customer)
+
                 }
                 Calendar.SUNDAY -> {
                     param1 = "Sunday"
@@ -350,6 +362,7 @@ class ScheduleDateFragment : Fragment() {
                     vargs.putString(ARG_PARAM1, "Sunday")
                     vargs.putString(ARG_PARAM2, "$dayDate/$monthDate/$year")
                     vargs.putParcelable("appointment", appointment)
+                    vargs.putParcelable("customer", customer)
 
                 }
                 else -> {
@@ -359,6 +372,8 @@ class ScheduleDateFragment : Fragment() {
                     vargs.putString(ARG_PARAM1, "Weekday ")
                     vargs.putString(ARG_PARAM2, "$dayDate/$monthDate/$year")
                     vargs.putParcelable("appointment", appointment)
+                    vargs.putParcelable("customer", customer)
+
                 }
             }
             Log.i(LOG_TAG, "Date selected: $dayDate/$monthDate/$year")

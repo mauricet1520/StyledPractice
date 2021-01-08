@@ -6,9 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.coolreecedev.styledpractice.data.Appointment
+import com.coolreecedev.styledpractice.data.customer.Customer
 import com.coolreecedev.styledpractice.databinding.FragmentOccasionBinding
 import com.coolreecedev.styledpractice.util.LOG_TAG
 
@@ -26,7 +28,9 @@ class OccasionFragment : Fragment() {
     ): View? {
         binding = FragmentOccasionBinding.inflate(inflater, container, false)
         Log.i(LOG_TAG, "zipCode: ${args.zipCode}")
-        Log.i(LOG_TAG, "occasion: ${args.occasion}")
+        Log.i(LOG_TAG, "first_name: ${args.customer?.first_name}")
+        Log.i(LOG_TAG, "first_name: ${args.customer?.email}")
+        Log.i(LOG_TAG, "first_name: ${args.customer?.uid}")
 
 
         with(binding.anniversaryImageButton) {
@@ -37,8 +41,7 @@ class OccasionFragment : Fragment() {
                         occasion = "Anniversary",
                         zip = args.zipCode
                     )
-                val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
-                findNavController().navigate(action)
+                displayPricingOptionsFragment(appointment = appointment, customer = args.customer!!)
             }
         }
 
@@ -50,8 +53,8 @@ class OccasionFragment : Fragment() {
                         occasion = "Wedding",
                         zip = args.zipCode
                     )
-                val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
-                findNavController().navigate(action)
+                displayPricingOptionsFragment(appointment = appointment, customer = args.customer!!)
+
             }
         }
 
@@ -63,8 +66,8 @@ class OccasionFragment : Fragment() {
                         occasion = "CocktailParty",
                         zip = args.zipCode
                     )
-                val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
-                findNavController().navigate(action)
+                displayPricingOptionsFragment(appointment = appointment, customer = args.customer!!)
+
             }
         }
 
@@ -76,8 +79,7 @@ class OccasionFragment : Fragment() {
                         occasion = "CompanyParty",
                         zip = args.zipCode
                     )
-                val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
-                findNavController().navigate(action)
+                displayPricingOptionsFragment(appointment = appointment, customer = args.customer!!)
             }
         }
 
@@ -89,8 +91,8 @@ class OccasionFragment : Fragment() {
                         occasion = "ReligiousCeremony",
                         zip = args.zipCode
                     )
-                val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
-                findNavController().navigate(action)
+                displayPricingOptionsFragment(appointment = appointment, customer = args.customer!!)
+
             }
         }
 
@@ -102,8 +104,7 @@ class OccasionFragment : Fragment() {
                         occasion = "TheaterNight",
                         zip = args.zipCode
                     )
-                val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
-                findNavController().navigate(action)
+                displayPricingOptionsFragment(appointment = appointment, customer = args.customer!!)
             }
         }
 
@@ -114,8 +115,7 @@ class OccasionFragment : Fragment() {
                     Appointment(
                         occasion = "BirthDayParty"
                     )
-                val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
-                findNavController().navigate(action)
+                displayPricingOptionsFragment(appointment = appointment, customer = args.customer!!)
             }
         }
 
@@ -127,8 +127,8 @@ class OccasionFragment : Fragment() {
                         occasion = "EverydayCasual",
                         zip = args.zipCode
                     )
-                val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
-                findNavController().navigate(action)
+                displayPricingOptionsFragment(appointment = appointment, customer = args.customer!!)
+
             }
         }
 
@@ -140,8 +140,8 @@ class OccasionFragment : Fragment() {
                         occasion = "EverydayWork",
                         zip = args.zipCode
                     )
-                val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
-                findNavController().navigate(action)
+                displayPricingOptionsFragment(appointment = appointment, customer = args.customer!!)
+
             }
         }
 
@@ -153,8 +153,8 @@ class OccasionFragment : Fragment() {
                         occasion = "DinnerParty",
                         zip = args.zipCode
                     )
-                val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
-                findNavController().navigate(action)
+                displayPricingOptionsFragment(appointment = appointment, customer = args.customer!!)
+
             }
         }
 
@@ -166,8 +166,8 @@ class OccasionFragment : Fragment() {
                         occasion = "Funeral",
                         zip = args.zipCode
                     )
-                val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
-                findNavController().navigate(action)
+                displayPricingOptionsFragment(appointment = appointment, customer = args.customer!!)
+
             }
         }
 
@@ -179,14 +179,26 @@ class OccasionFragment : Fragment() {
                         occasion = "Interview",
                         zip = args.zipCode
                     )
-                val action = OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(appointment)
-                findNavController().navigate(action)
+                displayPricingOptionsFragment(appointment = appointment, customer = args.customer!!)
+
             }
         }
 
 
         // Inflate the layout for this fragment
         return binding.root
+    }
+
+    private fun ImageButton.displayPricingOptionsFragment(
+        appointment: Appointment,
+        customer: Customer
+    ) {
+        val action =
+            OccasionFragmentDirections.actionOccasionFragmentToPricingOptionsFragment(
+                appointment,
+                customer
+            )
+        findNavController().navigate(action)
     }
 
 }

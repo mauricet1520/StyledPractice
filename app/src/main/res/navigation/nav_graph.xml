@@ -58,6 +58,14 @@
             app:argType="com.coolreecedev.styledpractice.data.Appointment"
             app:nullable="true"
             android:defaultValue="@null" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_paymentFragment_to_clothesTypeFragment"
+            app:destination="@id/clothesTypeFragment" />
     </fragment>
     <fragment
         android:id="@+id/budgetFragment"
@@ -84,16 +92,22 @@
         android:label="fragment_occasion"
         tools:layout="@layout/fragment_occasion" >
         <argument
-            android:name="occasion"
-            app:argType="string"
-            app:nullable="true" />
-        <argument
             android:name="zipCode"
             app:argType="string"
             app:nullable="true" />
         <action
             android:id="@+id/action_occasionFragment_to_pricingOptionsFragment"
             app:destination="@id/pricingOptionsFragment" />
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/invalidZipCodeFragment"
@@ -121,6 +135,11 @@
         <action
             android:id="@+id/action_scheduleDateFragment_to_confirmationFragment"
             app:destination="@id/confirmationFragment" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/pricingOptionsFragment"
@@ -135,6 +154,11 @@
         <action
             android:id="@+id/action_pricingOptionsFragment_to_scheduleDateFragment"
             app:destination="@id/scheduleDateFragment" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/confirmationFragment"
@@ -149,12 +173,28 @@
         <action
             android:id="@+id/action_confirmationFragment_to_addressFragment"
             app:destination="@id/addressFragment" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/clothesTypeFragment"
         android:name="com.coolreecedev.styledpractice.ClothesTypeFragment"
         android:label="fragment_clothes_type"
-        tools:layout="@layout/fragment_clothes_type" />
+        tools:layout="@layout/fragment_clothes_type" >
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
     <fragment
         android:id="@+id/womenClothingFragment"
         android:name="com.coolreecedev.styledpractice.WomenClothingFragment"
@@ -208,6 +248,11 @@
         <action
             android:id="@+id/action_addressFragment_to_paymentFragment"
             app:destination="@id/paymentFragment" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/womenPickClothingFragment"

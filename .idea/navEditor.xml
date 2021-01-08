@@ -105,6 +105,15 @@
                             <option name="y" value="1253" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_addressFragment_to_paymentFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -170,8 +179,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-1534" />
-                            <option name="y" value="-1382" />
+                            <option name="x" value="143" />
+                            <option name="y" value="1222" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -197,6 +206,15 @@
                             <option name="x" value="-823" />
                             <option name="y" value="1240" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_confirmationFragment_to_addressFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

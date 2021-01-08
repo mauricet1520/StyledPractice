@@ -9,8 +9,10 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.coolreecedev.styledpractice.data.Appointment
+import com.coolreecedev.styledpractice.data.customer.Customer
 import com.coolreecedev.styledpractice.databinding.FragmentPricingOptionsBinding
 import com.coolreecedev.styledpractice.util.LOG_TAG
+import com.coolreecedev.styledpractice.util.VIRTUAL_SERVICE
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -40,22 +42,26 @@ class PricingOptionsFragment : Fragment() {
 
         binding = FragmentPricingOptionsBinding.inflate(inflater, container, false)
         Log.i(LOG_TAG, "occasion: ${args.appointment?.occasion}")
+        Log.i(LOG_TAG, "customer uid: ${args.customer?.uid}")
+        Log.i(LOG_TAG, "customer firstName: ${args.customer?.first_name}")
 
         with(binding.virtualStyleButton) {
             setOnClickListener {
                 Log.i(LOG_TAG, "setmore_service_name: VirtualStyle")
                 it.setBackgroundColor(resources.getColor(R.color.colorPrimaryDark))
+                val service = VIRTUAL_SERVICE
+                val serviceKey = "s0f27750942522cbbc953aa6ea01daf169f4c5d4c"
                 val appointment =
                     Appointment(
                         occasion = args.appointment?.occasion,
                         zip = args.appointment?.zip,
                         setmore_service_key = "s0f27750942522cbbc953aa6ea01daf169f4c5d4c",
-                        setmore_service_name = "Virtual Service"
+                        setmore_service_name = service
                     )
 
                 val action =
                     PricingOptionsFragmentDirections.actionPricingOptionsFragmentToScheduleDateFragment(
-                        appointment
+                        appointment = appointment, customer = args.customer
                     )
                 findNavController().navigate(action)
             }
@@ -75,7 +81,7 @@ class PricingOptionsFragment : Fragment() {
 
                 val action =
                     PricingOptionsFragmentDirections.actionPricingOptionsFragmentToScheduleDateFragment(
-                        appointment
+                        appointment = appointment, customer = args.customer
                     )
                 findNavController().navigate(action)
             }
@@ -95,7 +101,7 @@ class PricingOptionsFragment : Fragment() {
 
                     val action =
                         PricingOptionsFragmentDirections.actionPricingOptionsFragmentToScheduleDateFragment(
-                            appointment
+                            appointment = appointment, customer = args.customer
                         )
                     findNavController().navigate(action)
                 }
@@ -115,7 +121,7 @@ class PricingOptionsFragment : Fragment() {
 
                     val action =
                         PricingOptionsFragmentDirections.actionPricingOptionsFragmentToScheduleDateFragment(
-                            appointment
+                            appointment = appointment, customer = args.customer
                         )
                     findNavController().navigate(action)
                 }

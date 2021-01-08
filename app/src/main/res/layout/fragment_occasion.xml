@@ -133,11 +133,10 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
-                    android:onClick="chooseOccasion"
                     android:background="@android:color/transparent"
                     android:scaleType="fitXY"
                     android:src="@drawable/everyday_work"
-                    tools:ignore="OnClick" />
+                    />
 
 
             </LinearLayout>
