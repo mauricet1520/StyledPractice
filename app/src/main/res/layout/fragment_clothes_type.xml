@@ -19,13 +19,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/zipCodeimageButton2"
+        android:id="@+id/chooseClothesTypeId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:onClick="chooseClothesType"
         android:background="@android:color/transparent"
         android:src="@drawable/next_button"
         app:layout_constraintBottom_toTopOf="@+id/imageView12"
@@ -72,24 +71,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:id="@+id/clothingRadioGroup"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="13dp"
-        android:text="Women's"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
-        android:text="Men's"
-        app:layout_constraintStart_toEndOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15">
+
+        <RadioButton
+            android:id="@+id/womenClothingType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:paddingRight="24dp"
+            android:text="Women's" />
+
+        <RadioButton
+            android:id="@+id/menClothingType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Men's" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

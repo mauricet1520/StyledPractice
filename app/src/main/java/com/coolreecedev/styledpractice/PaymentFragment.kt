@@ -89,11 +89,11 @@ class PaymentFragment : Fragment() {
                 state = it.state,
                 stylist_id = it.setmore_staff_key
             )
-//            Log.i(LOG_TAG, "Appointment Id ${it.appointment_id}")
-//            if (it !=null)
-//            customer?.appointment_ids = arrayListOf()
-//            customer?.appointment_ids?.add(it.appointment_id!!)
-//            customer?.setmore_customer_id = it.customer_id
+            Log.i(LOG_TAG, "Appointment Id ${it.appointment_id}")
+            if (it !=null)
+            customer?.appointment_ids = arrayListOf()
+            customer?.appointment_ids?.add(it.appointment_id!!)
+            customer?.setmore_customer_id = it.setmore_customer_key
 
             val action =
                 PaymentFragmentDirections.actionPaymentFragmentToClothesTypeFragment(

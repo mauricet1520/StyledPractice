@@ -6,6 +6,25 @@
     app:startDestination="@id/firstScreenFragment">
 
     <fragment
+        android:id="@+id/pantsSkirtFragment"
+        android:name="com.coolreecedev.styledpractice.PantsSkirtFragment"
+        android:label="fragment_pants_skirt"
+        tools:layout="@layout/fragment_pants_skirt" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_pantsSkirtFragment_to_dressFragment"
+            app:destination="@id/dressFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/zip_code_dest"
         android:name="com.coolreecedev.styledpractice.ui.ZipCodeFragment"
         android:label="zip_code_fragment"
@@ -194,27 +213,77 @@
             app:argType="com.coolreecedev.styledpractice.data.Appointment"
             app:nullable="true"
             android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_clothesTypeFragment_to_bodyTypeFragment"
+            app:destination="@id/bodyTypeFragment" />
     </fragment>
     <fragment
         android:id="@+id/womenClothingFragment"
         android:name="com.coolreecedev.styledpractice.WomenClothingFragment"
         android:label="fragment_women_clothing"
-        tools:layout="@layout/fragment_women_clothing" />
+        tools:layout="@layout/fragment_women_clothing" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_womenClothingFragment_to_pantsSkirtFragment"
+            app:destination="@id/pantsSkirtFragment" />
+    </fragment>
     <fragment
         android:id="@+id/dressFragment"
         android:name="com.coolreecedev.styledpractice.DressFragment"
         android:label="fragment_dress"
-        tools:layout="@layout/fragment_dress" />
+        tools:layout="@layout/fragment_dress" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_dressFragment_to_romperJumperFragment"
+            app:destination="@id/romperJumperFragment" />
+    </fragment>
     <fragment
         android:id="@+id/romperJumperFragment"
         android:name="com.coolreecedev.styledpractice.RomperJumperFragment"
         android:label="fragment_romper_jumper"
-        tools:layout="@layout/fragment_romper_jumper" />
+        tools:layout="@layout/fragment_romper_jumper" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
     <fragment
         android:id="@+id/printPatternsFragment"
         android:name="com.coolreecedev.styledpractice.PrintPatternsFragment"
         android:label="fragment_print_patterns"
-        tools:layout="@layout/fragment_print_patterns" />
+        tools:layout="@layout/fragment_print_patterns" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_printPatternsFragment_to_colorsFragment"
+            app:destination="@id/colorsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/budgetFragment2"
         android:name="com.coolreecedev.styledpractice.BudgetFragment"
@@ -224,7 +293,21 @@
         android:id="@+id/colorsFragment"
         android:name="com.coolreecedev.styledpractice.ColorsFragment"
         android:label="fragment_colors"
-        tools:layout="@layout/fragment_colors" />
+        tools:layout="@layout/fragment_colors" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_colorsFragment_to_budgetFragment"
+            app:destination="@id/budgetFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.coolreecedev.styledpractice.SettingsFragment"
@@ -258,17 +341,48 @@
         android:id="@+id/womenPickClothingFragment"
         android:name="com.coolreecedev.styledpractice.WomenPickClothingFragment"
         android:label="fragment_women_pick_clothing"
-        tools:layout="@layout/fragment_women_pick_clothing" />
+        tools:layout="@layout/fragment_women_pick_clothing" >
+        <action
+            android:id="@+id/action_womenPickClothingFragment_to_printPatternsFragment"
+            app:destination="@id/printPatternsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/womenPickClothingTwoFragment"
         android:name="com.coolreecedev.styledpractice.WomenPickClothingTwoFragment"
         android:label="fragment_women_pick_clothing_two"
-        tools:layout="@layout/fragment_women_pick_clothing_two" />
+        tools:layout="@layout/fragment_women_pick_clothing_two" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_womenPickClothingTwoFragment_to_womenPickClothingFragment"
+            app:destination="@id/womenPickClothingFragment" />
+    </fragment>
     <fragment
         android:id="@+id/bodyTypeFragment"
         android:name="com.coolreecedev.styledpractice.BodyTypeFragment"
         android:label="fragment_body_type"
-        tools:layout="@layout/fragment_body_type" />
+        tools:layout="@layout/fragment_body_type" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_bodyTypeFragment_to_womenPickClothingTwoFragment"
+            app:destination="@id/womenPickClothingTwoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/editFragment"
         android:name="com.coolreecedev.styledpractice.EditFragment"

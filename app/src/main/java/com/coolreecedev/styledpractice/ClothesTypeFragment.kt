@@ -24,8 +24,26 @@ class ClothesTypeFragment : Fragment() {
 
         binding = FragmentClothesTypeBinding.inflate(inflater, container, false)
 
+        with(binding.clothingRadioGroup) {
+            setOnCheckedChangeListener { group, checkedId ->
+
+                when (checkedId) {
+                    R.id.menClothingType -> Log.i(LOG_TAG, "Clothing Type: Men's")
+                    R.id.womenClothingType -> {
+                        Log.i(LOG_TAG, "Clothing Type: Women's")
+                        args.customer?.clothing_type = "womens"
+
+                    }
+                    else -> Log.i(LOG_TAG, "Empty")
+                }
+            }
+
+        }
+
         Log.i(LOG_TAG, "ClothesTypeFragment appointmentId: ${args.appointment?.appointment_id}")
         Log.i(LOG_TAG, "ClothesTypeFragment uid: ${args.customer?.uid}")
+
+
         return binding.root
     }
 
