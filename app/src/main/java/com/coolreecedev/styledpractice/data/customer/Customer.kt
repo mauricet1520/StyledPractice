@@ -23,7 +23,7 @@ data class Customer(
 
     var image_url: String? = null,
     var height: String? = null,
-    var body_type: List<String>? = null,
+    var body_type: MutableList<String>? = mutableListOf(),
     var clothing_type: String? = null,
 
     var bottom_size: String? = null,
@@ -36,7 +36,8 @@ data class Customer(
     var shirt_size: String? = null,
 
     var preferred_stores: List<String>? = null,
-    var colors: List<String>? = null
+    var colors: MutableList<String>? = mutableListOf(),
+    var print_patterns: MutableList<String>? = mutableListOf()
 ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
@@ -65,6 +66,7 @@ data class Customer(
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
+        parcel.createStringArrayList(),
         parcel.createStringArrayList(),
         parcel.createStringArrayList()
     ) {
@@ -99,6 +101,7 @@ data class Customer(
         parcel.writeString(shirt_size)
         parcel.writeStringList(preferred_stores)
         parcel.writeStringList(colors)
+        parcel.writeStringList(print_patterns)
     }
 
     override fun describeContents(): Int {

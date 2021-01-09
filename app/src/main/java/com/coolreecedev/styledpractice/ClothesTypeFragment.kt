@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.coolreecedev.styledpractice.databinding.FragmentClothesTypeBinding
 import com.coolreecedev.styledpractice.databinding.FragmentGetStyledBinding
@@ -28,16 +30,32 @@ class ClothesTypeFragment : Fragment() {
             setOnCheckedChangeListener { group, checkedId ->
 
                 when (checkedId) {
-                    R.id.menClothingType -> Log.i(LOG_TAG, "Clothing Type: Men's")
+                    R.id.menClothingType -> {
+                        Log.i(LOG_TAG, "Clothing Type: Men's")
+                        args.customer?.clothing_type = "men's"
+                    }
                     R.id.womenClothingType -> {
                         Log.i(LOG_TAG, "Clothing Type: Women's")
-                        args.customer?.clothing_type = "womens"
-
+                        args.customer?.clothing_type = "women's"
                     }
                     else -> Log.i(LOG_TAG, "Empty")
                 }
             }
+        }
 
+        with(binding.chooseClothesTypeId) {
+            setOnClickListener {
+                if (args.customer?.clothing_type != null) {
+                    val action =
+                        ClothesTypeFragmentDirections.actionClothesTypeFragmentToBodyTypeFragment(
+                            appointment = args.appointment,
+                            customer = args.customer
+                        )
+                    findNavController().navigate(action)
+                } else {
+                    Toast.makeText(context, "Please Select Men's or Women's", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
 
         Log.i(LOG_TAG, "ClothesTypeFragment appointmentId: ${args.appointment?.appointment_id}")

@@ -57,23 +57,6 @@ class ZipCodeFragment : Fragment() {
 
         }
 
-//        view.zip_code_fab.setOnClickListener {
-//            var available = false
-//            editZipCodeId.text.let {
-//                viewModel.getOneZipCode(editZipCodeId.text.toString())
-//                viewModel.oneZipCodeData.observe(viewLifecycleOwner, Observer {
-//                        Log.i(LOG_TAG, "zip code: $it")
-//                    if (it != null) {
-//                        available = true
-//                        listener?.onListFragmentInteraction(available)
-//                    }else {
-//                        listener?.onListFragmentInteraction(available)
-//                    }
-//                })
-//            }
-//
-//        }
-
         return view
     }
 
@@ -95,12 +78,4 @@ class ZipCodeFragment : Fragment() {
         super.onDetach()
         listener = null
     }
-
-
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        // TODO: Use the ViewModel
-    }
-
 }

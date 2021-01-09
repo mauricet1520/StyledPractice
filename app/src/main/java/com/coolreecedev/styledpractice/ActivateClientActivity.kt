@@ -117,7 +117,7 @@ class ActivateClientActivity : AppCompatActivity(),
                     Log.i(LOG_TAG, "Navigating to Occasion Fragment")
 
                     val action = ZipCodeFragmentDirections.actionZipCodeDestToOccasionFragment(zipCode = zipCode,
-                    customer = Customer(uid = uid, first_name = name, email = email)
+                    customer = Customer(uid = uid, first_name = name, email = email, zip = zipCode)
                     )
                     findNavController(R.id.nav_host).navigate(action)
                 }
@@ -283,16 +283,6 @@ class ActivateClientActivity : AppCompatActivity(),
         startActivity(intent)
     }
 
-    fun sendDateInfo(view: View) {
-        navigateTo(R.id.confirmationFragment)
-    }
-
-    fun confirm(view: View) {
-        navigateTo(R.id.clothesTypeFragment)
-    }
-    fun chooseClothesType(view: View) {
-        navigateTo(R.id.bodyTypeFragment)
-    }
 
     fun selectRomperJumpsuit(view: View) {
         navigateTo(R.id.printPatternsFragment)
@@ -308,10 +298,6 @@ class ActivateClientActivity : AppCompatActivity(),
     fun chooseShirtsBlouse(view: View) {
         navigateTo(R.id.pantsSkirtFragment)
 
-    }
-
-    fun selectPatterns(view: View) {
-        navigateTo(R.id.colorsFragment)
     }
 
     fun selectColors(view: View) {

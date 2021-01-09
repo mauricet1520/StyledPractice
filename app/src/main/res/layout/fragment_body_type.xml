@@ -20,14 +20,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/zipCodeimageButton2"
+        android:id="@+id/womenPickClothingNextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
-        android:onClick="confirmBodyType"
         android:src="@drawable/next_button"
         app:layout_constraintBottom_toTopOf="@+id/imageView12"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +70,7 @@
         android:layout_marginTop="68dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/zipCodeimageButton2"
+        app:layout_constraintBottom_toTopOf="@+id/womenPickClothingNextButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
@@ -90,13 +89,13 @@
                 android:layout_marginBottom="24dp"
                 android:fontFamily="@font/nunito_black"
                 android:text="Petite"
-                app:layout_constraintBottom_toTopOf="@+id/imageButton9"
+                app:layout_constraintBottom_toTopOf="@+id/slimId"
                 app:layout_constraintEnd_toStartOf="@+id/textView55"
                 app:layout_constraintStart_toEndOf="@+id/textView49"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton8"
+                android:id="@+id/petiteId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -118,14 +117,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton9"
+                android:id="@+id/slimId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:background="@color/fui_transparent"
                 android:src="@drawable/petite"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton11"
-                app:layout_constraintStart_toEndOf="@+id/imageButton8"
+                app:layout_constraintEnd_toStartOf="@+id/pearId"
+                app:layout_constraintStart_toEndOf="@+id/petiteId"
                 app:layout_constraintTop_toBottomOf="@+id/textView54" />
 
             <TextView
@@ -137,12 +136,12 @@
                 android:layout_marginBottom="24dp"
                 android:fontFamily="@font/nunito_black"
                 android:text="Pear"
-                app:layout_constraintBottom_toTopOf="@+id/imageButton11"
+                app:layout_constraintBottom_toTopOf="@+id/pearId"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton11"
+                android:id="@+id/pearId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -161,10 +160,10 @@
                 android:fontFamily="@font/nunito_black"
                 android:text="Maternity"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton8" />
+                app:layout_constraintTop_toBottomOf="@+id/petiteId" />
 
             <ImageButton
-                android:id="@+id/imageButton13"
+                android:id="@+id/maternityId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -183,17 +182,17 @@
                 android:text="Full Figured"
                 app:layout_constraintEnd_toStartOf="@+id/textView58"
                 app:layout_constraintStart_toEndOf="@+id/textView56"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton9" />
+                app:layout_constraintTop_toBottomOf="@+id/slimId" />
 
             <ImageButton
-                android:id="@+id/imageButton14"
+                android:id="@+id/fullFiguredId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:background="@color/fui_transparent"
                 android:src="@drawable/full_figured"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton15"
-                app:layout_constraintStart_toEndOf="@+id/imageButton13"
+                app:layout_constraintEnd_toStartOf="@+id/curvyId"
+                app:layout_constraintStart_toEndOf="@+id/maternityId"
                 app:layout_constraintTop_toBottomOf="@+id/textView57" />
 
             <TextView
@@ -205,12 +204,12 @@
                 android:layout_marginBottom="24dp"
                 android:fontFamily="@font/nunito_black"
                 android:text="Curvy"
-                app:layout_constraintBottom_toTopOf="@+id/imageButton15"
+                app:layout_constraintBottom_toTopOf="@+id/curvyId"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton11" />
+                app:layout_constraintTop_toBottomOf="@+id/pearId" />
 
             <ImageButton
-                android:id="@+id/imageButton15"
+                android:id="@+id/curvyId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -229,10 +228,10 @@
                 android:fontFamily="@font/nunito_black"
                 android:text="Average"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton13" />
+                app:layout_constraintTop_toBottomOf="@+id/maternityId" />
 
             <ImageButton
-                android:id="@+id/imageButton16"
+                android:id="@+id/averageId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -251,17 +250,17 @@
                 android:fontFamily="@font/nunito_black"
                 android:text="Athletic"
                 app:layout_constraintStart_toEndOf="@+id/textView59"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton14" />
+                app:layout_constraintTop_toBottomOf="@+id/fullFiguredId" />
 
             <ImageButton
-                android:id="@+id/imageButton17"
+                android:id="@+id/athleticId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="104dp"
                 android:layout_marginTop="24dp"
                 android:background="@color/fui_transparent"
                 android:src="@drawable/athletic"
-                app:layout_constraintStart_toEndOf="@+id/imageButton16"
+                app:layout_constraintStart_toEndOf="@+id/averageId"
                 app:layout_constraintTop_toBottomOf="@+id/textView63" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

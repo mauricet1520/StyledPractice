@@ -1,59 +1,82 @@
 package com.coolreecedev.styledpractice
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
+import com.coolreecedev.styledpractice.databinding.FragmentColorsBinding
+import com.coolreecedev.styledpractice.databinding.FragmentPrintPatternsBinding
+import com.coolreecedev.styledpractice.util.LOG_TAG
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ColorsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ColorsFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentColorsBinding
+    private val args: ColorsFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_colors, container, false)
+        binding = FragmentColorsBinding.inflate(inflater, container, false)
+
+        Log.i(LOG_TAG, "appointment: ${args.appointment}")
+        Log.i(LOG_TAG, "customer: ${args.customer}")
+
+        with(binding.colorsNextButton) {
+            setOnClickListener {
+                if (args.customer?.colors.isNullOrEmpty()) {
+                    android.widget.Toast.makeText(context, "Please select one or more colors", android.widget.Toast.LENGTH_LONG).show()
+                }else {
+                    val intent = Intent(context, CameraActivity::class.java)
+                    startActivity(intent)                }
+            }
+        }
+
+        with(binding.blacksCheckBox) {
+            getValueIfChecked("blacks")
+        }
+        with(binding.redsCheckbox) {
+            getValueIfChecked("reds")
+        }
+
+        with(binding.brownsCheckBox10) {
+            getValueIfChecked("browns")
+        }
+
+        with(binding.neutralCheckbox) {
+            getValueIfChecked("neutral")
+        }
+
+        with(binding.brightsCheckBox) {
+            getValueIfChecked("brights")
+        }
+
+        with(binding.jewelCheckbox) {
+            getValueIfChecked("jewel")
+        }
+
+        with(binding.pastelCheckbox) {
+            getValueIfChecked("pastel")
+        }
+
+        with(binding.greensCheckBox) {
+            getValueIfChecked("greens")
+        }
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ColorsFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ColorsFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    private fun CheckBox.getValueIfChecked(colors: String) {
+        setOnClickListener {
+            if (isChecked) {
+                args.customer?.colors?.add(colors)
             }
+        }
     }
 }

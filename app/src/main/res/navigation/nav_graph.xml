@@ -345,6 +345,16 @@
         <action
             android:id="@+id/action_womenPickClothingFragment_to_printPatternsFragment"
             app:destination="@id/printPatternsFragment" />
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/womenPickClothingTwoFragment"

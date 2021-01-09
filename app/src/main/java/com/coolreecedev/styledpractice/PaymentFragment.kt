@@ -75,22 +75,22 @@ class PaymentFragment : Fragment() {
         appointmentViewModel.appointmentData.observe(viewLifecycleOwner, Observer {
             val customer = args.customer
 
-            val appointment = Appointment(
-                appointment_id = it.appointment_id,
-                setmore_appointment_key = it.setmore_appointment_key,
-                setmore_customer_key = it.setmore_customer_key,
-                setmore_label = it.setmore_label,
-                setmore_service_key = it.setmore_service_key,
-                setmore_staff_key = it.setmore_staff_key,
-                start_time = it.start_time,
-                end_time = it.end_time,
-                street_address = it.street_address,
-                city = it.city,
-                state = it.state,
-                stylist_id = it.setmore_staff_key
-            )
+            val appointment = args.appointment
+
+            appointment?.appointment_id = it.appointment_id
+            appointment?.setmore_appointment_key = it.setmore_appointment_key
+            appointment?.setmore_customer_key = it.setmore_customer_key
+            appointment?.setmore_label = it.setmore_label
+            appointment?.setmore_service_key = it.setmore_service_key
+            appointment?.setmore_staff_key = it.setmore_staff_key
+            appointment?.start_time = it.start_time
+            appointment?.end_time = it.end_time
+            appointment?.street_address = it.street_address
+            appointment?.city = it.city
+            appointment?.state = it.state
+            appointment?.stylist_id = it.setmore_staff_key
+
             Log.i(LOG_TAG, "Appointment Id ${it.appointment_id}")
-            if (it !=null)
             customer?.appointment_ids = arrayListOf()
             customer?.appointment_ids?.add(it.appointment_id!!)
             customer?.setmore_customer_id = it.setmore_customer_key
@@ -158,7 +158,6 @@ class PaymentFragment : Fragment() {
                                 postal_code = args.customer?.zip,
                                 city = args.customer?.city,
                                 state = args.customer?.state
-
                             ),
                             createAppointmentRequest = CreateAppointmentRequest(
                                 staff_key = args.appointment?.setmore_staff_key,

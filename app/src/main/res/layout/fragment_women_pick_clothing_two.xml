@@ -34,13 +34,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/zipCodeimageButton2"
+        android:id="@+id/womenPickClothingTwoNextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:onClick="confirmShirtJumpsuit"
         android:background="@android:color/transparent"
         android:src="@drawable/next_button"
         app:layout_constraintBottom_toTopOf="@+id/imageView12"
@@ -113,12 +112,12 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/shirtsSpinnerId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
-        android:entries="@array/spinner_bottom_info"
+        android:entries="@array/spinner_top_info"
         android:spinnerMode="dialog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView17" />
@@ -144,7 +143,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/rompersSpinnerId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
