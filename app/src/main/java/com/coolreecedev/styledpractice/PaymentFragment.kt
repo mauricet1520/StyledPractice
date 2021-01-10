@@ -38,9 +38,6 @@ class PaymentFragment : Fragment() {
     private val args: PaymentFragmentArgs by navArgs()
     private lateinit var stripe: Stripe
 
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

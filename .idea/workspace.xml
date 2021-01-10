@@ -13,59 +13,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f6a6955-2739-46d5-9ff0-a69a94ad24fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_api_phone_17_4_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_18_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_18_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_18_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_safetynet_17_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_annotations_16_0_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_20_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_19_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_ktx_19_5_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_components_16_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_16_3_5_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_storage_19_2_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_storage_ktx_19_2_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_api_phone_17_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_17_6_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_17_6_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_17_6_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_18_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_17_6_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_17_6_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_18_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_17_6_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_18_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_auto_value_auto_value_annotations_1_6_5_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_17_6_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_18_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_19_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_19_3_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_components_16_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_16_3_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_16_0_0_aar.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/customer/CustomerRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/customer/CustomerService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/customer/CustomerViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/BudgetFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/BudgetFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CameraActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CameraActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ColorsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ColorsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_budget.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_budget.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/PaymentFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/PaymentFragment.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +96,9 @@
     </key>
     <key name="CreateKotlinClassDialog.RecentsKey">
       <recent name="com.coolreecedev.styledpractice.data.appointment" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.coolreecedev.styledpractice.data.customer" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.coolreecedev.styledpractice" />
@@ -367,25 +324,25 @@
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state x="440" y="7" key="CommitChangelistDialog2/78.0.1458.864@78.0.1458.864" timestamp="1603028316137" />
-    <state width="1413" height="314" key="GridCell.Tab.0.bottom" timestamp="1610248800714">
+    <state width="1413" height="314" key="GridCell.Tab.0.bottom" timestamp="1610250091937">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
-    <state width="1413" height="314" key="GridCell.Tab.0.bottom/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610248800714" />
+    <state width="1413" height="314" key="GridCell.Tab.0.bottom/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610250091937" />
     <state width="1398" height="295" key="GridCell.Tab.0.bottom/78.0.1458.864@78.0.1458.864" timestamp="1610078334146" />
-    <state width="1413" height="314" key="GridCell.Tab.0.center" timestamp="1610248800714">
+    <state width="1413" height="314" key="GridCell.Tab.0.center" timestamp="1610250091937">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
-    <state width="1413" height="314" key="GridCell.Tab.0.center/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610248800714" />
+    <state width="1413" height="314" key="GridCell.Tab.0.center/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610250091937" />
     <state width="1398" height="295" key="GridCell.Tab.0.center/78.0.1458.864@78.0.1458.864" timestamp="1610078334146" />
-    <state width="1413" height="314" key="GridCell.Tab.0.left" timestamp="1610248800713">
+    <state width="1413" height="314" key="GridCell.Tab.0.left" timestamp="1610250091937">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
-    <state width="1413" height="314" key="GridCell.Tab.0.left/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610248800713" />
+    <state width="1413" height="314" key="GridCell.Tab.0.left/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610250091937" />
     <state width="1398" height="295" key="GridCell.Tab.0.left/78.0.1458.864@78.0.1458.864" timestamp="1610078334146" />
-    <state width="1413" height="314" key="GridCell.Tab.0.right" timestamp="1610248800714">
+    <state width="1413" height="314" key="GridCell.Tab.0.right" timestamp="1610250091937">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
-    <state width="1413" height="314" key="GridCell.Tab.0.right/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610248800714" />
+    <state width="1413" height="314" key="GridCell.Tab.0.right/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610250091937" />
     <state width="1398" height="295" key="GridCell.Tab.0.right/78.0.1458.864@78.0.1458.864" timestamp="1610078334146" />
     <state width="1398" height="268" key="GridCell.Tab.1.bottom" timestamp="1609862030718">
       <screen x="78" y="0" width="1458" height="864" />
@@ -419,28 +376,29 @@
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state x="623" y="210" key="chooseDestDirectoryDialog/78.0.1458.864@78.0.1458.864" timestamp="1608004231821" />
-    <state x="503" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1610070753654">
+    <state x="503" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1610293708156">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
+    <state x="503" y="256" key="com.intellij.ide.util.TipDialog/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610293708156" />
     <state x="503" y="256" key="com.intellij.ide.util.TipDialog/78.0.1458.864@78.0.1458.864" timestamp="1610070753654" />
     <state x="498" y="164" width="637" height="536" key="find.popup" timestamp="1609863052644">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state x="498" y="164" width="637" height="536" key="find.popup/78.0.1458.864@78.0.1458.864" timestamp="1609863052644" />
-    <state width="348" height="94" key="javadoc.popup.new" timestamp="1610248848622">
+    <state width="348" height="94" key="javadoc.popup.new" timestamp="1610294517151">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
-    <state width="348" height="94" key="javadoc.popup.new/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610248848622" />
+    <state width="348" height="94" key="javadoc.popup.new/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610294517151" />
     <state width="348" height="94" key="javadoc.popup.new/78.0.1458.864@78.0.1458.864" timestamp="1610079606075" />
     <state x="151" y="329" width="672" height="677" key="run.anything.popup" timestamp="1610153772114">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state x="151" y="329" width="672" height="677" key="run.anything.popup/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610153772114" />
     <state x="151" y="329" width="672" height="677" key="run.anything.popup/78.0.1458.864@78.0.1458.864" timestamp="1610076574302" />
-    <state x="382" y="231" width="672" height="564" key="search.everywhere.popup" timestamp="1610248807261">
+    <state x="382" y="231" width="672" height="564" key="search.everywhere.popup" timestamp="1610294354482">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
-    <state x="382" y="231" width="672" height="564" key="search.everywhere.popup/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610248807261" />
+    <state x="382" y="231" width="672" height="564" key="search.everywhere.popup/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610294354482" />
     <state x="382" y="231" width="672" height="564" key="search.everywhere.popup/78.0.1458.864@78.0.1458.864" timestamp="1610079575109" />
   </component>
   <component name="XDebuggerManager">
