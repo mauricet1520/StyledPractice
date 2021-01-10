@@ -17,23 +17,7 @@
 
     </ImageView>
 
-    <ImageButton
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="25dp"
-        android:background="@android:color/transparent"
-        android:onClick="showHamburger"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_menu_black_40dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-    </ImageButton>
 
 
     <TextView
@@ -43,10 +27,10 @@
         android:layout_marginTop="32dp"
         android:text="$500+"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+        app:layout_constraintBottom_toBottomOf="@+id/fiveHundredButton"
+        app:layout_constraintEnd_toEndOf="@+id/fiveHundredButton"
+        app:layout_constraintStart_toStartOf="@+id/fiveHundredButton"
+        app:layout_constraintTop_toTopOf="@+id/fiveHundredButton" />
 
     <TextView
         android:id="@+id/textView23"
@@ -55,10 +39,10 @@
         android:layout_marginTop="32dp"
         android:text="$300"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton6"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton6"
-        app:layout_constraintStart_toStartOf="@+id/imageButton6"
-        app:layout_constraintTop_toTopOf="@+id/imageButton6" />
+        app:layout_constraintBottom_toBottomOf="@+id/threeHundredButton"
+        app:layout_constraintEnd_toEndOf="@+id/threeHundredButton"
+        app:layout_constraintStart_toStartOf="@+id/threeHundredButton"
+        app:layout_constraintTop_toTopOf="@+id/threeHundredButton" />
 
     <TextView
         android:id="@+id/textView24"
@@ -67,10 +51,10 @@
         android:layout_marginTop="32dp"
         android:text="@string/_300_499"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton5"
-        app:layout_constraintStart_toStartOf="@+id/imageButton5"
-        app:layout_constraintTop_toTopOf="@+id/imageButton5" />
+        app:layout_constraintBottom_toBottomOf="@+id/threeToFourHundredButton"
+        app:layout_constraintEnd_toEndOf="@+id/threeToFourHundredButton"
+        app:layout_constraintStart_toStartOf="@+id/threeToFourHundredButton"
+        app:layout_constraintTop_toTopOf="@+id/threeToFourHundredButton" />
 
     <TextView
         android:id="@+id/textView11"
@@ -123,7 +107,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/fiveHundredButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -134,11 +118,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:layout_constraintStart_toEndOf="@+id/threeToFourHundredButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/threeToFourHundredButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -147,20 +131,20 @@
         android:layout_marginRight="8dp"
         android:background="@drawable/shopping_bag"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/fiveHundredButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButton6"
+        app:layout_constraintStart_toEndOf="@+id/threeHundredButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/threeHundredButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:background="@drawable/shopping_bag"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintEnd_toStartOf="@+id/threeToFourHundredButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

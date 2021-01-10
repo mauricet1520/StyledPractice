@@ -117,7 +117,7 @@ class ActivateClientActivity : AppCompatActivity(),
                     Log.i(LOG_TAG, "Navigating to Occasion Fragment")
 
                     val action = ZipCodeFragmentDirections.actionZipCodeDestToOccasionFragment(zipCode = zipCode,
-                    customer = Customer(uid = uid, first_name = name, email = email, zip = zipCode)
+                    customer = Customer(uid = uid, first_name = name, email = email, zip = zipCode, image_url = "${uid}.jpg")
                     )
                     findNavController(R.id.nav_host).navigate(action)
                 }

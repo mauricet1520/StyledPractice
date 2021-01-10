@@ -32,9 +32,14 @@ class ColorsFragment : Fragment() {
             setOnClickListener {
                 if (args.customer?.colors.isNullOrEmpty()) {
                     android.widget.Toast.makeText(context, "Please select one or more colors", android.widget.Toast.LENGTH_LONG).show()
-                }else {
-                    val intent = Intent(context, CameraActivity::class.java)
-                    startActivity(intent)                }
+                } else {
+                    val action =
+                        ColorsFragmentDirections.actionColorsFragmentToBudgetFragment(
+                            appointment = args.appointment,
+                            customer = args.customer
+                        )
+                    findNavController().navigate(action)
+                }
             }
         }
 

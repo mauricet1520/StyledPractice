@@ -12,8 +12,16 @@ import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.coolreecedev.styledpractice.util.LOG_TAG
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.ktx.storage
 import kotlinx.android.synthetic.main.activity_camera.*
 import java.io.File
+import java.io.FileInputStream
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.ExecutorService
@@ -25,6 +33,8 @@ class CameraActivity : AppCompatActivity() {
     private var imageCapture: ImageCapture? = null
     private var imageAnalyzer: ImageAnalysis? = null
     private var camera: Camera? = null
+    lateinit var storage: FirebaseStorage
+    lateinit var user: FirebaseUser
 
     private lateinit var outputDirectory: File
     private lateinit var cameraExecutor: ExecutorService
@@ -32,6 +42,9 @@ class CameraActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camera)
+        user = FirebaseAuth.getInstance().currentUser!!
+
+        storage = FirebaseStorage.getInstance()
 
         if (allPermissionsGranted()) {
             startCamera()
@@ -90,9 +103,7 @@ class CameraActivity : AppCompatActivity() {
         // Create timestamped output file to hold the image
         val photoFile = File(
             outputDirectory,
-            SimpleDateFormat(
-                FILENAME_FORMAT, Locale.US
-            ).format(System.currentTimeMillis()) + ".jpg"
+            user.uid + ".jpg"
         )
 
         // Create output options object which contains file + metadata
@@ -109,8 +120,33 @@ class CameraActivity : AppCompatActivity() {
                 }
 
                 override fun onImageSaved(output: ImageCapture.OutputFileResults) {
+
                     val savedUri = Uri.fromFile(photoFile)
-//                    saveToFireBase(savedUri)
+
+                    if (user != null) {
+
+                        val storageRef = storage.reference
+
+
+                        val imagesRef: StorageReference? =
+                            storageRef.child("customer/images/${savedUri.lastPathSegment}")
+
+
+                        val uploadTask = imagesRef?.putFile(savedUri)
+                        uploadTask?.addOnFailureListener {
+                            // Handle unsuccessful uploads
+                            Log.e(LOG_TAG, "Imaged failed to saved in FB", it)
+
+                        }?.addOnSuccessListener { taskSnapshot ->
+                            Log.i(LOG_TAG, "Imaged saved in FB")
+                            // taskSnapshot.metadata contains file metadata such as size, content-type, etc.
+                            // ...
+                        }
+                    } else {
+                        Log.i(LOG_TAG, "user is null")
+                    }
+
+
 
                     val msg = "Photo capture succeeded: $savedUri"
                     Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
