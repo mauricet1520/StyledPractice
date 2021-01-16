@@ -53,6 +53,7 @@ class PricingOptionsFragment : Fragment() {
                 val serviceKey = "s0f27750942522cbbc953aa6ea01daf169f4c5d4c"
                 val appointment =
                     Appointment(
+                        cost = 9000,
                         occasion = args.appointment?.occasion,
                         zip = args.appointment?.zip,
                         setmore_service_key = "s0f27750942522cbbc953aa6ea01daf169f4c5d4c",
@@ -73,6 +74,7 @@ class PricingOptionsFragment : Fragment() {
                 it.setBackgroundColor(resources.getColor(R.color.colorPrimaryDark))
                 val appointment =
                     Appointment(
+                        cost = 12500,
                         occasion = args.appointment?.occasion,
                         zip = args.appointment?.zip,
                         setmore_service_key = "s735b953ea6365d8a320e45fd13ec1dc2bd6a0401",
@@ -93,6 +95,7 @@ class PricingOptionsFragment : Fragment() {
                     it.setBackgroundColor(resources.getColor(R.color.colorPrimaryDark))
                     val appointment =
                         Appointment(
+                            cost = 17500,
                             occasion = args.appointment?.occasion,
                             zip = args.appointment?.zip,
                             setmore_service_key = "s5c2c44e31f92d7086b35e71316c72a1454778402",
@@ -113,6 +116,7 @@ class PricingOptionsFragment : Fragment() {
                     it.setBackgroundColor(resources.getColor(R.color.colorPrimaryDark))
                     val appointment =
                         Appointment(
+                            cost = 50000,
                             occasion = args.appointment?.occasion,
                             zip = args.appointment?.zip,
                             setmore_service_key = "s293a092281466b5127666d4c50be75bbd17a49f1",

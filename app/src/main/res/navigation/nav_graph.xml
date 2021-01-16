@@ -427,4 +427,9 @@
         android:name="com.coolreecedev.styledpractice.AppointmentLookupFragment"
         android:label="fragment_appointment_lookup"
         tools:layout="@layout/fragment_appointment_lookup" />
+    <fragment
+        android:id="@+id/bodyTypeMenFragment"
+        android:name="com.coolreecedev.styledpractice.BodyTypeMenFragment"
+        android:label="fragment_body_type_men"
+        tools:layout="@layout/fragment_body_type_men" />
 </navigation>
