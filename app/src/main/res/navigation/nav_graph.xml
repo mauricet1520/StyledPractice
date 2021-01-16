@@ -422,4 +422,9 @@
             android:label="fragment_pants_skirt"
             tools:layout="@layout/fragment_pants_skirt" />
     </navigation>
+    <fragment
+        android:id="@+id/appointmentLookupFragment"
+        android:name="com.coolreecedev.styledpractice.AppointmentLookupFragment"
+        android:label="fragment_appointment_lookup"
+        tools:layout="@layout/fragment_appointment_lookup" />
 </navigation>

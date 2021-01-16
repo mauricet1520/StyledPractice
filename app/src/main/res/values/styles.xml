@@ -23,6 +23,7 @@
     </style>
 
     <style name="AppTheme.MaterialButton" parent="Widget.MaterialComponents.ExtendedFloatingActionButton">
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
 

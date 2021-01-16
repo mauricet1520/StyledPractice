@@ -11,6 +11,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.DatePicker
+import android.widget.HorizontalScrollView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
@@ -332,7 +333,16 @@ class ActivateClientActivity : AppCompatActivity(),
         navigateTo(R.id.editStyleFragment)
     }
 
+    fun viewAccount(view: View) {
+        navigateTo(R.id.appointmentLookupFragment)
+    }
+
+    fun navigatePreviousScreen(view: View) {
+        findNavController(R.id.nav_host).navigateUp()
+    }
+
 }
+
 
 class DatePickerFragment : DialogFragment(),
     OnDateSetListener {
@@ -364,4 +374,6 @@ class DatePickerFragment : DialogFragment(),
 //        findNavController().navigate(R.id.scheduleDateFragment, vargs)
     }
 }
+
+
 

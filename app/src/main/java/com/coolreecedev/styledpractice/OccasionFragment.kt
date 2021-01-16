@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.HorizontalScrollView
 import android.widget.ImageButton
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
@@ -31,6 +32,20 @@ class OccasionFragment : Fragment() {
         Log.i(LOG_TAG, "first_name: ${args.customer?.first_name}")
         Log.i(LOG_TAG, "first_name: ${args.customer?.email}")
         Log.i(LOG_TAG, "first_name: ${args.customer?.uid}")
+
+        with(binding.imageView14) {
+            setOnClickListener {
+                moveOccasionRight()
+            }
+        }
+
+
+        with(binding.imageView26) {
+            setOnClickListener {
+                moveOccasionLeft()
+            }
+        }
+
 
 
         with(binding.anniversaryImageButton) {
@@ -187,6 +202,18 @@ class OccasionFragment : Fragment() {
 
         // Inflate the layout for this fragment
         return binding.root
+    }
+
+    private fun moveOccasionRight() {
+        with(binding.horizontalScrollView) {
+            this.pageScroll(HorizontalScrollView.FOCUS_RIGHT)
+        }
+    }
+
+    private fun moveOccasionLeft() {
+        with(binding.horizontalScrollView) {
+            this.pageScroll(HorizontalScrollView.FOCUS_LEFT)
+        }
     }
 
     private fun ImageButton.displayPricingOptionsFragment(
