@@ -45,13 +45,22 @@ class ClothesTypeFragment : Fragment() {
 
         with(binding.chooseClothesTypeId) {
             setOnClickListener {
-                if (args.customer?.clothing_type != null) {
-                    val action =
-                        ClothesTypeFragmentDirections.actionClothesTypeFragmentToBodyTypeFragment(
+                val clothingType = args.customer?.clothing_type
+                if (clothingType != null) {
+                    if(clothingType == "men's") {
+                        val action = ClothesTypeFragmentDirections.actionClothesTypeFragmentToBodyTypeMenFragment2(
                             appointment = args.appointment,
                             customer = args.customer
                         )
-                    findNavController().navigate(action)
+                        findNavController().navigate(action)
+                    }else {
+                        val action =
+                            ClothesTypeFragmentDirections.actionClothesTypeFragmentToBodyTypeFragment(
+                                appointment = args.appointment,
+                                customer = args.customer
+                            )
+                        findNavController().navigate(action)
+                    }
                 } else {
                     Toast.makeText(context, "Please Select Men's or Women's", Toast.LENGTH_SHORT).show()
                 }

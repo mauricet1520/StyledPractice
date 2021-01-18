@@ -82,7 +82,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/petiteId"
+                android:id="@+id/muscularId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -117,7 +117,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/pearId"
+                android:id="@+id/huskyId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -136,10 +136,10 @@
                 android:fontFamily="@font/nunito_black"
                 android:text="Average"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/petiteId" />
+                app:layout_constraintTop_toBottomOf="@+id/muscularId" />
 
             <ImageButton
-                android:id="@+id/maternityId"
+                android:id="@+id/averageId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -158,12 +158,12 @@
                 android:layout_marginBottom="24dp"
                 android:fontFamily="@font/nunito_black"
                 android:text="Slim"
-                app:layout_constraintBottom_toTopOf="@+id/curvyId"
+                app:layout_constraintBottom_toTopOf="@+id/slimId"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pearId" />
+                app:layout_constraintTop_toBottomOf="@+id/huskyId" />
 
             <ImageButton
-                android:id="@+id/curvyId"
+                android:id="@+id/slimId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -176,6 +176,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
 
     <TextView
         android:id="@+id/textView64"

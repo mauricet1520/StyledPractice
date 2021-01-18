@@ -161,8 +161,7 @@ class ScheduleDateFragment : Fragment() {
                 staffMembers = staffTimeSlots
             })
 
-            binding.imageView12.visibility = View.INVISIBLE
-            binding.textDate.visibility = View.VISIBLE
+             binding.textDate.visibility = View.VISIBLE
 
             binding.textDate.text = param3
             Toast.makeText(context, "Date selected: $param1", Toast.LENGTH_LONG).show()

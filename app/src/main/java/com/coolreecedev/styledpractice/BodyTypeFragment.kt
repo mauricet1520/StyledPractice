@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -31,24 +32,62 @@ class BodyTypeFragment : Fragment() {
 
         binding = FragmentBodyTypeBinding.inflate(inflater, container, false)
 
+        with(binding.womenPickClothingNextButton) {
+            setOnClickListener {
+                val action =
+                    BodyTypeFragmentDirections.actionBodyTypeFragmentToWomenPickClothingTwoFragment(
+                        appointment = args.appointment,
+                        customer = args.customer
+                    )
+                findNavController().navigate(action)
+            }
+
+        }
+
 
         with(binding.athleticId) {
+            saveBodyType("Athletic")
+        }
 
-            val customer = args.customer
-            setOnClickListener {
+        with(binding.averageId) {
+            saveBodyType("Average")
+        }
 
-                customer?.body_type?.add("Athletic")
-                background = resources.getDrawable(R.color.colorAccent)
+        with(binding.curvyId) {
+            saveBodyType("Curvy")
+        }
 
-                    val action =
-                        BodyTypeFragmentDirections.actionBodyTypeFragmentToWomenPickClothingTwoFragment(
-                            appointment = args.appointment,
-                            customer = customer
-                        )
-                    findNavController().navigate(action)
-            }
+        with(binding.pearId) {
+            saveBodyType("Pear")
+        }
+
+        with(binding.curvyId) {
+            saveBodyType("Curvy")
+        }
+
+        with(binding.petiteId) {
+            saveBodyType("Petite")
+        }
+
+        with(binding.maternityId) {
+            saveBodyType("Maternity")
+        }
+
+        with(binding.slimId) {
+            saveBodyType("Slim")
+        }
+
+        with(binding.fullFiguredId) {
+            saveBodyType("Full Figured")
         }
         return binding.root
+    }
+
+    private fun ImageButton.saveBodyType(type: String) {
+        setOnClickListener {
+            args.customer?.body_type?.add(type)
+            background = resources.getDrawable(R.color.colorAccent)
+        }
     }
 
 }

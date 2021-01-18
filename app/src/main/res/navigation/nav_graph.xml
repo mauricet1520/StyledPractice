@@ -227,6 +227,9 @@
         <action
             android:id="@+id/action_clothesTypeFragment_to_bodyTypeFragment"
             app:destination="@id/bodyTypeFragment" />
+        <action
+            android:id="@+id/action_clothesTypeFragment_to_bodyTypeMenFragment2"
+            app:destination="@id/bodyTypeMenFragment" />
     </fragment>
     <fragment
         android:id="@+id/womenClothingFragment"
@@ -431,5 +434,54 @@
         android:id="@+id/bodyTypeMenFragment"
         android:name="com.coolreecedev.styledpractice.BodyTypeMenFragment"
         android:label="fragment_body_type_men"
-        tools:layout="@layout/fragment_body_type_men" />
+        tools:layout="@layout/fragment_body_type_men" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_bodyTypeMenFragment_to_menPickClothingFragment"
+            app:destination="@id/menPickClothingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menPickClothingFragment"
+        android:name="com.coolreecedev.styledpractice.MenPickClothingFragment"
+        android:label="fragment_men_pick_clothing"
+        tools:layout="@layout/fragment_men_pick_clothing" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_menPickClothingFragment_to_menPickClothingTwoFragment"
+            app:destination="@id/menPickClothingTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menPickClothingTwoFragment"
+        android:name="com.coolreecedev.styledpractice.MenPickClothingTwoFragment"
+        android:label="fragment_men_pick_clothing_two"
+        tools:layout="@layout/fragment_men_pick_clothing_two" >
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
 </navigation>
