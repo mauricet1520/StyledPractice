@@ -34,11 +34,11 @@ class BodyTypeMenFragment : Fragment() {
 
         binding = FragmentBodyTypeMenBinding.inflate(inflater, container, false)
 
-        with(binding.womenPickClothingNextButton) {
+        with(binding.bodyTypeMenNextButton) {
             setOnClickListener {
-                if (args.customer?.body_type.isNullOrEmpty()) {
+                if (args.customer?.body_type?.isNotEmpty()!!) {
                     val action =
-                        BodyTypeFragmentDirections.actionBodyTypeFragmentToWomenPickClothingTwoFragment(
+                        BodyTypeMenFragmentDirections.actionBodyTypeMenFragmentToMenPickClothingFragment(
                             appointment = args.appointment,
                             customer = args.customer
                         )

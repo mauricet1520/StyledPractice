@@ -483,5 +483,8 @@
             app:argType="com.coolreecedev.styledpractice.data.customer.Customer"
             app:nullable="true"
             android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_menPickClothingTwoFragment_to_printPatternsFragment"
+            app:destination="@id/printPatternsFragment" />
     </fragment>
 </navigation>

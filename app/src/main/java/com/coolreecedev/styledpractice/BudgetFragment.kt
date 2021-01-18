@@ -27,7 +27,8 @@ class BudgetFragment : Fragment() {
 
         with(binding.fiveHundredButton) {
             setOnClickListener {
-                this.background = resources.getDrawable(R.color.colorAccent)
+
+//                this.background = resources.getDrawable(R.color.colorAccent)
                 args.appointment?.budget = "500"
 
                 val intent = Intent(context, CameraActivity::class.java)
@@ -37,7 +38,7 @@ class BudgetFragment : Fragment() {
 
         with(binding.threeToFourHundredButton) {
             setOnClickListener {
-                this.background = resources.getDrawable(R.color.colorAccent)
+//                this.background = resources.getDrawable(R.color.colorAccent)
                 args.appointment?.budget = "300-499"
 
                 val intent = Intent(context, CameraActivity::class.java)
@@ -47,7 +48,7 @@ class BudgetFragment : Fragment() {
 
         with(binding.threeHundredButton) {
             setOnClickListener {
-                this.background = resources.getDrawable(R.color.colorAccent)
+//                this.background = resources.getDrawable(R.color.colorAccent)
                 args.appointment?.budget = "300"
 
                 val intent = Intent(context, CameraActivity::class.java)

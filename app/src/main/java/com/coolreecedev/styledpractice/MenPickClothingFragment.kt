@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.coolreecedev.styledpractice.data.Appointment
 import com.coolreecedev.styledpractice.data.customer.Customer
@@ -26,12 +27,29 @@ class MenPickClothingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        binding = FragmentMenPickClothingBinding.inflate(inflater, container, false)
+
         binding.tshirtsSpinnerId.onItemSelectedListener = TeeShirtsSpinnerListener()
         binding.dressShirtSpinnerId.onItemSelectedListener = DressShirtSpinnerListener()
-        binding = FragmentMenPickClothingBinding.inflate(inflater, container, false)
 
         customer = args.customer!!
         appointment = args.appointment!!
+
+        with(binding.menPickClothingNextButton) {
+            setOnClickListener {
+                if (customer.shirt_size == null && customer.dress_shirt_size == null) {
+                    android.widget.Toast.makeText(context, "Please choose both sizes", android.widget.Toast.LENGTH_SHORT).show()
+                } else {
+                    val action =
+                        MenPickClothingFragmentDirections.actionMenPickClothingFragmentToMenPickClothingTwoFragment(
+                            appointment = appointment,
+                            customer = customer
+                        )
+                    findNavController().navigate(action)
+                }
+            }
+        }
+
 
         return binding.root
     }

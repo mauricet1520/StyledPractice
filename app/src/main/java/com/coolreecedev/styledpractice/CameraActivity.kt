@@ -146,10 +146,9 @@ class CameraActivity : AppCompatActivity() {
                         Log.i(LOG_TAG, "user is null")
                     }
 
-
-
                     val msg = "Photo capture succeeded: $savedUri"
-                    Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(baseContext, "Thank you", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(baseContext, "Sign up completed", Toast.LENGTH_SHORT).show()
                     Log.d(TAG, msg)
                     startIntent()
                 }

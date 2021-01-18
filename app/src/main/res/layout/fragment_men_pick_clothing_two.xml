@@ -12,10 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginRight="64dp"
+        android:layout_marginRight="76dp"
         android:fontFamily="@font/nunito_black"
 
-        android:text="Dress Shirt"
+        android:text="Pants"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintRight_toRightOf="parent"
@@ -34,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/menPickClothingNextButton"
+        android:id="@+id/menPickClothingTwoNextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -99,7 +99,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <Spinner
-        android:id="@+id/tshirtsSpinnerId"
+        android:id="@+id/blazerSpinnerId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
@@ -115,18 +115,17 @@
         android:layout_height="200dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="40dp"
-        android:src="@drawable/dress_shirt"
+        android:src="@drawable/mens_pants"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView39"
-        tools:srcCompat="@drawable/mens_pants" />
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
     <Spinner
-        android:id="@+id/dressShirtSpinnerId"
+        android:id="@+id/pantsSpinnerId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="62dp"
-        android:entries="@array/spinner_top_info"
+        android:layout_marginEnd="36dp"
+        android:entries="@array/spinner_bottom_info"
         android:spinnerMode="dialog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView42" />
