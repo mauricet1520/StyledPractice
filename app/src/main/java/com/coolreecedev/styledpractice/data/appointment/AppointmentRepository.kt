@@ -38,6 +38,12 @@ class AppointmentRepository(val app: Application) {
         }
     }
 
+    fun updateAppointment(appointment: Appointment) {
+        CoroutineScope(Dispatchers.IO).launch {
+            updatedAppointmentService(appointment)
+        }
+    }
+
 
     @WorkerThread
     suspend fun callWebService(date: String, serviceName: String) {
@@ -65,6 +71,32 @@ class AppointmentRepository(val app: Application) {
 
             }
             timeSlotData.postValue(serviceData)
+
+        }
+    }
+
+    @WorkerThread
+    suspend fun updatedAppointmentService(appointment: Appointment) {
+        if (networkAvailable()) {
+            Log.i(LOG_TAG, "Calling WebService: $STRIPE_STYLED_BASE_URL")
+            Log.i(LOG_TAG, "Updating Appointment")
+
+            val gson = GsonBuilder()
+                .setLenient()
+                .create()
+
+            val retrofit = Retrofit.Builder()
+                .baseUrl(STRIPE_STYLED_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build()
+
+            val service = retrofit.create(AppointmentService::class.java)
+
+            val response = service.updateAppointment(appointment)
+
+
+//            Log.i(LOG_TAG, "Appointment Repository response code: ${response.code()}")
+
 
         }
     }

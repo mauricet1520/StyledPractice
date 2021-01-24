@@ -161,7 +161,7 @@ class ScheduleDateFragment : Fragment() {
                 staffMembers = staffTimeSlots
             })
 
-             binding.textDate.visibility = View.VISIBLE
+            binding.textDate.visibility = View.VISIBLE
 
             binding.textDate.text = param3
             Toast.makeText(context, "Date selected: $param1", Toast.LENGTH_LONG).show()
@@ -185,27 +185,7 @@ class ScheduleDateFragment : Fragment() {
         appointment?.start_time = startTime
         appointment?.end_time = endTime
         appointment?.user_appointment_time = "$param3 ${this.text}"
-        val staffTimeSlots = staffMembers.random()
-        if (staffTimeSlots.sevenToNineTimeSlotsAvailable) {
-            Log.i(
-                LOG_TAG,
-                "Random StaffMember: ${staffTimeSlots.staff.first_name} is available"
-            )
-            appointment?.setmore_staff_key = staffTimeSlots.staff.key
-        } else {
-            run loop@{
-                staffMembers.forEach {
-                    if (it.sevenToNineTimeSlotsAvailable) {
-                        appointment?.setmore_staff_key = it.staff.key
-                        Log.i(
-                            LOG_TAG,
-                            "Searched StaffMember: ${it.staff.first_name} is available"
-                        )
-                        return@loop
-                    }
-                }
-            }
-        }
+        getRandomStylist()
         clearButtonBackground(this)
 
         Log.i(
@@ -232,30 +212,88 @@ class ScheduleDateFragment : Fragment() {
         findNavController().navigate(action)
     }
 
-    private fun showTime(param1: String?, param2: String?) {
+    private fun Button.getRandomStylist() {
+        val staff = staffMembers.random()
+        when (this) {
+            binding.elevenOneButton -> {
+                checkAvailability(staff, staff.sevenToNineTimeSlotsAvailable, this)
+            }
+            binding.twelveTwoButton -> {
+                checkAvailability(staff, staff.eightToTenTimeSlotsAvailable, this)
+            }
+            binding.oneThreeButton -> {
+                checkAvailability(staff, staff.nineToElevenTimeSlotsAvailable, this)
+            }
+            binding.twoFourButton -> {
+                checkAvailability(staff, staff.tenToTwelveTimeSlotsAvailable, this)
+            }
+            binding.threeFiveButton -> {
+                checkAvailability(staff, staff.elevenToThirteenTimeSlotsAvailable, this)
+            }
+            binding.fourSixButton -> {
+                checkAvailability(staff, staff.twelveToFourteenTimeSlotsAvailable, this)
+            }
+            binding.fiveSevenButton -> {
+                checkAvailability(staff, staff.thirteenToFifteenTimeSlotsAvailable, this)
+            }
+            binding.sixEightButton -> {
+                checkAvailability(staff, staff.fourteenToSixteenTimeSlotsAvailable, this)
+            }
+        }
+    }
 
-        Log.i(LOG_TAG, "Showing times")
+    private fun checkAvailability(staff: StaffTimeSlots, available: Boolean, button: Button) {
+        if (available) {
+            Log.i(
+                LOG_TAG,
+                "Random StaffMember: ${staff.staff.first_name} is available"
+            )
+            appointment?.setmore_staff_key = staff.staff.key
+        } else {
+            button.getRandomStylist()
+        }
+//            val staff = staffMembers.random()
+//            checkAvailability(staff, )
+//            run loop@{
+//                staffMembers.forEach {
+//                    checkAvailability(it, )
+//                    if (available) {
+//                        appointment?.setmore_staff_key = it.staff.key
+//                        Log.i(
+//                            LOG_TAG,
+//                            "Searched StaffMember: ${it.staff.first_name} is available"
+//                        )
+//                        return@loop
+//                    }
+//                }
+//            }
+        }
 
-        val text_date = binding.textDate
-        val oneThreeButton = binding.oneThreeButton
-        val twelveTwoButton = binding.twelveTwoButton
-        val threeFiveButton = binding.threeFiveButton
-        val button = binding.fourSixButton
-        val button2 = binding.elevenOneButton
-        val button3 = binding.twoFourButton
-        val button4 = binding.fiveSevenButton
-        val sixEightButton = binding.sixEightButton
-        text_date.text = param2
-        text_date.visibility = View.VISIBLE
 
-        button.visibility = View.VISIBLE
-        button2.visibility = View.VISIBLE
-        button3.visibility = View.VISIBLE
-        button4.visibility = View.VISIBLE
-        sixEightButton.visibility = View.VISIBLE
-        oneThreeButton.visibility = View.VISIBLE
-        twelveTwoButton.visibility = View.VISIBLE
-        threeFiveButton.visibility = View.VISIBLE
+//    private fun showTime(param1: String?, param2: String?) {
+//
+//        Log.i(LOG_TAG, "Showing times")
+//
+//        val text_date = binding.textDate
+//        val oneThreeButton = binding.oneThreeButton
+//        val twelveTwoButton = binding.twelveTwoButton
+//        val threeFiveButton = binding.threeFiveButton
+//        val button = binding.fourSixButton
+//        val button2 = binding.elevenOneButton
+//        val button3 = binding.twoFourButton
+//        val button4 = binding.fiveSevenButton
+//        val sixEightButton = binding.sixEightButton
+//        text_date.text = param2
+//        text_date.visibility = View.VISIBLE
+//
+//        button.visibility = View.VISIBLE
+//        button2.visibility = View.VISIBLE
+//        button3.visibility = View.VISIBLE
+//        button4.visibility = View.VISIBLE
+//        sixEightButton.visibility = View.VISIBLE
+//        oneThreeButton.visibility = View.VISIBLE
+//        twelveTwoButton.visibility = View.VISIBLE
+//        threeFiveButton.visibility = View.VISIBLE
 
 
 //            when (param1) {
@@ -286,7 +324,7 @@ class ScheduleDateFragment : Fragment() {
 //                    Toast.makeText(context, "Date selected: $param1", Toast.LENGTH_LONG).show()
 //                }
 //            }
-    }
+//    }
 
     companion object {
         /**

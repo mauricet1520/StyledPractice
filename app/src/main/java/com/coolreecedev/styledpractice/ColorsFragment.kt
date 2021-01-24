@@ -30,8 +30,6 @@ class ColorsFragment : Fragment() {
         binding = FragmentColorsBinding.inflate(inflater, container, false)
 
         customerViewModel = ViewModelProviders.of(this).get(CustomerViewModel::class.java)
-
-
         Log.i(LOG_TAG, "appointment: ${args.appointment}")
         Log.i(LOG_TAG, "customer: ${args.customer}")
 
@@ -41,6 +39,7 @@ class ColorsFragment : Fragment() {
                     android.widget.Toast.makeText(context, "Please select one or more colors", android.widget.Toast.LENGTH_LONG).show()
                 } else {
                     customerViewModel.addCustomer(args.customer!!)
+
                     val action =
                         ColorsFragmentDirections.actionColorsFragmentToBudgetFragment(
                             appointment = args.appointment,

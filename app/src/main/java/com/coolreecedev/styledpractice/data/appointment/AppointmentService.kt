@@ -19,4 +19,7 @@ interface AppointmentService {
     @POST("createSetmoreCustomerAppointment")
     suspend fun createSetmoreCustomerAppointment(@Body styledCustomerAppointmentRequest: StyledCustomerAppointmentRequest
     ): Response<AppointmentDTO>
+
+    @POST("/updateAppointmentInFB")
+    suspend fun updateAppointment(@Body appointment: Appointment)
 }

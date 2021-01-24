@@ -22,6 +22,7 @@ import com.coolreecedev.styledpractice.data.payment.PaymentViewModel
 import com.coolreecedev.styledpractice.data.payment.StripeRequest
 import com.coolreecedev.styledpractice.databinding.FragmentPaymentBinding
 import com.coolreecedev.styledpractice.util.LOG_TAG
+import com.google.firebase.auth.FirebaseAuth
 import com.stripe.android.ApiResultCallback
 import com.stripe.android.PaymentIntentResult
 import com.stripe.android.Stripe
@@ -70,6 +71,7 @@ class PaymentFragment : Fragment() {
 
 
         appointmentViewModel.appointmentData.observe(viewLifecycleOwner, Observer {
+
             val customer = args.customer
 
             val appointment = args.appointment
@@ -86,6 +88,7 @@ class PaymentFragment : Fragment() {
             appointment?.city = it.city
             appointment?.state = it.state
             appointment?.stylist_id = it.setmore_staff_key
+            appointment?.setmore_customer_key = it.setmore_customer_key
 
             Log.i(LOG_TAG, "Appointment Id ${it.appointment_id}")
             customer?.appointment_ids = arrayListOf()
@@ -154,7 +157,9 @@ class PaymentFragment : Fragment() {
                                 address = args.customer?.address,
                                 postal_code = args.customer?.zip,
                                 city = args.customer?.city,
-                                state = args.customer?.state
+                                state = args.customer?.state,
+                                image_url = args.customer?.image_url
+
                             ),
                             createAppointmentRequest = CreateAppointmentRequest(
                                 staff_key = args.appointment?.setmore_staff_key,

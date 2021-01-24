@@ -49,8 +49,7 @@ class MenPickClothingFragment : Fragment() {
                 }
             }
         }
-
-
+        
         return binding.root
     }
 

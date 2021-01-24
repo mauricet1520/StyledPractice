@@ -487,4 +487,9 @@
             android:id="@+id/action_menPickClothingTwoFragment_to_printPatternsFragment"
             app:destination="@id/printPatternsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/appointmentDetailsFragment"
+        android:name="com.coolreecedev.styledpractice.AppointmentDetailsFragment"
+        android:label="fragment_appointment_details"
+        tools:layout="@layout/fragment_appointment_details" />
 </navigation>
