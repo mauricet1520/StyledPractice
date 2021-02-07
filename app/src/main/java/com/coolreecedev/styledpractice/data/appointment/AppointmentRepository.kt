@@ -20,6 +20,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.*
 
 class AppointmentRepository(val app: Application) {
 
@@ -41,6 +42,12 @@ class AppointmentRepository(val app: Application) {
     fun updateAppointment(appointment: Appointment) {
         CoroutineScope(Dispatchers.IO).launch {
             updatedAppointmentService(appointment)
+        }
+    }
+
+    fun getAppointment(appointmentId: String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            getAppointmentWebService(appointmentId)
         }
     }
 
@@ -135,6 +142,28 @@ class AppointmentRepository(val app: Application) {
 
         }
     }
+
+    @WorkerThread
+    suspend fun getAppointmentWebService(appointmentId: String) {
+        if (networkAvailable()) {
+
+            val gson = GsonBuilder()
+                .setLenient()
+                .create()
+
+            val retrofit = Retrofit.Builder()
+                .baseUrl(STRIPE_STYLED_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build()
+
+            val service = retrofit.create(AppointmentService::class.java)
+
+            val appointmentDTO = service.getAppointment(appointmentId).body()
+
+            appointmentViewModel.postValue(appointmentDTO)
+        }
+    }
+
     @Suppress("DEPRECATION")
     fun networkAvailable(): Boolean {
         val connectivityManager =

@@ -21,4 +21,8 @@ class AppointmentViewModel(app: Application): AndroidViewModel(app) {
     fun updateAppointment(appointment: Appointment) {
         appointmentRepository.updateAppointment(appointment)
     }
+
+    fun getAppointment(appointmentId: String) {
+        appointmentRepository.getAppointment(appointmentId)
+    }
 }

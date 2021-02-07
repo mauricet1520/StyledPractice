@@ -429,7 +429,11 @@
         android:id="@+id/appointmentLookupFragment"
         android:name="com.coolreecedev.styledpractice.AppointmentLookupFragment"
         android:label="fragment_appointment_lookup"
-        tools:layout="@layout/fragment_appointment_lookup" />
+        tools:layout="@layout/fragment_appointment_lookup" >
+        <action
+            android:id="@+id/action_appointmentLookupFragment_to_customerAppointmentFragment"
+            app:destination="@id/customerAppointmentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/bodyTypeMenFragment"
         android:name="com.coolreecedev.styledpractice.BodyTypeMenFragment"
@@ -492,4 +496,15 @@
         android:name="com.coolreecedev.styledpractice.AppointmentDetailsFragment"
         android:label="fragment_appointment_details"
         tools:layout="@layout/fragment_appointment_details" />
+    <fragment
+        android:id="@+id/customerAppointmentFragment"
+        android:name="com.coolreecedev.styledpractice.CustomerAppointmentFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" >
+        <argument
+            android:name="uuid"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+    </fragment>
 </navigation>

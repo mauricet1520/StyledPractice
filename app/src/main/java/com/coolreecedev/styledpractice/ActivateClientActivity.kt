@@ -39,6 +39,7 @@ class ActivateClientActivity : AppCompatActivity(),
     var RC_SIGN_IN = 1
     private lateinit var auth: FirebaseAuth
     private lateinit var stripe: Stripe
+    private lateinit var mZipCode: String
 
 
 
@@ -57,9 +58,14 @@ class ActivateClientActivity : AppCompatActivity(),
         setContentView(R.layout.activity_activate_client)
         stripe = Stripe(applicationContext, "pk_test_dGcgdptaqW6r4MnnqAZdktZ3")
 
+        mZipCode = ""
+        val user = FirebaseAuth.getInstance().currentUser
 
-
-        findNavController(R.id.nav_host).navigate(R.id.firstScreenFragment)
+        if (user != null) {
+            findNavController(R.id.nav_host).navigate(R.id.appointmentLookupFragment)
+        }else {
+            findNavController(R.id.nav_host).navigate(R.id.firstScreenFragment)
+        }
 
     }
 
@@ -76,7 +82,16 @@ class ActivateClientActivity : AppCompatActivity(),
             if (resultCode == Activity.RESULT_OK) {
                 // Successfully signed in
                 val user = FirebaseAuth.getInstance().currentUser
-                navigateTo(R.id.occasionFragment)
+
+                val uid = user!!.uid
+
+                Log.i(LOG_TAG, "Navigating to Occasion Fragment")
+
+
+                val action = ZipCodeFragmentDirections.actionZipCodeDestToOccasionFragment(zipCode = mZipCode,
+                    customer = Customer(uid = uid, first_name = user.displayName, email = user.email, zip = mZipCode, image_url = "${uid}.jpg")
+                )
+                findNavController(R.id.nav_host).navigate(action)
                 // ...
             } else {
                 navigateTo(R.id.firstScreenFragment)
@@ -93,6 +108,7 @@ class ActivateClientActivity : AppCompatActivity(),
     override fun onListFragmentInteraction(available: Boolean, zipCode: String?) {
         if (available && zipCode != null) {
             Toast.makeText(this, "Available", Toast.LENGTH_SHORT).show()
+            mZipCode = zipCode
 
             // Choose authentication providers
             val providers = arrayListOf(
@@ -101,7 +117,7 @@ class ActivateClientActivity : AppCompatActivity(),
 
             val user = FirebaseAuth.getInstance().currentUser
             if (user != null) {
-                user?.let {
+                user.let {
                     // Name, email address, and profile photo Url
                     val name = user.displayName
                     val email = user.email
@@ -116,6 +132,8 @@ class ActivateClientActivity : AppCompatActivity(),
                     val uid = user.uid
 
                     Log.i(LOG_TAG, "Navigating to Occasion Fragment")
+
+                    mZipCode = zipCode
 
                     val action = ZipCodeFragmentDirections.actionZipCodeDestToOccasionFragment(zipCode = zipCode,
                     customer = Customer(uid = uid, first_name = name, email = email, zip = zipCode, image_url = "${uid}.jpg")
@@ -339,6 +357,25 @@ class ActivateClientActivity : AppCompatActivity(),
 
     fun navigatePreviousScreen(view: View) {
         findNavController(R.id.nav_host).navigateUp()
+    }
+
+    fun logOut(view: View) {
+       FirebaseAuth.getInstance().signOut()
+        navigateTo(R.id.firstScreenFragment)
+        Toast.makeText(this, "Logging out...", Toast.LENGTH_SHORT).show()
+
+    }
+
+    fun viewAppointmentDetails(view: View) {
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            val action = AppointmentLookupFragmentDirections.actionAppointmentLookupFragmentToCustomerAppointmentFragment(user.uid)
+            findNavController(R.id.nav_host).navigate(action)
+        }
+    }
+
+    fun scheduleAppointment(view: View) {
+        navigateTo(R.id.zip_code_dest)
     }
 
 }

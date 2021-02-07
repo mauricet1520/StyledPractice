@@ -18,10 +18,17 @@ import retrofit2.converter.gson.GsonConverterFactory
 class CustomerRepository(val app: Application) {
 
     val customerData = MutableLiveData<Customer>()
+    val customerAppointmentData = MutableLiveData<CustomerDTO>()
 
     fun createCustomer(request: Customer) {
         CoroutineScope(Dispatchers.IO).launch {
             callWebService(request)
+        }
+    }
+
+    fun getCustomerAppointment(request: String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            callCustomerAppointmentWebService(request)
         }
     }
 
@@ -45,6 +52,32 @@ class CustomerRepository(val app: Application) {
             val serviceData = service.addCustomer(customer).body()
 
             customerData.postValue(serviceData)
+
+        }
+    }
+
+    @WorkerThread
+    suspend fun callCustomerAppointmentWebService(uid: String) {
+        if (networkAvailable()) {
+            Log.i(LOG_TAG, "Calling WebService: $STRIPE_STYLED_BASE_URL")
+
+            val gson = GsonBuilder()
+                .setLenient()
+                .create()
+
+            val retrofit = Retrofit.Builder()
+                .baseUrl(STRIPE_STYLED_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build()
+
+            val service = retrofit.create(CustomerService::class.java)
+
+            val serviceData = service.getCustomer(uid).body()
+
+            Log.i(LOG_TAG, "Data ${serviceData?.uid}")
+
+
+            customerAppointmentData.postValue(serviceData)
 
         }
     }

@@ -22,4 +22,7 @@ interface AppointmentService {
 
     @POST("/updateAppointmentInFB")
     suspend fun updateAppointment(@Body appointment: Appointment)
+
+    @GET("/getAppointment")
+    suspend fun getAppointment(@Query("appointmentId") appointmentId: String): Response<AppointmentDTO>
 }

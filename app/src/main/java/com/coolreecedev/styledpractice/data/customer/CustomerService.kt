@@ -12,4 +12,7 @@ interface CustomerService {
     @POST("/customer")
     suspend fun addCustomer(@Body customer: Customer
     ): Response<Customer>
+
+    @GET("/getCustomer")
+    suspend fun getCustomer(@Query("customerId") uid: String): Response<CustomerDTO>
 }

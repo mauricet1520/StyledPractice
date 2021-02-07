@@ -19,5 +19,6 @@ data class AppointmentDTO (
     var setmore_staff_key: String? = null,
     var setmore_service_key: String? = null,
     var setmore_customer_key: String? = null,
-    var stylist_id: String? = null
+    var stylist_id: String? = null,
+    var user_appointment_time: String? = null
 )
