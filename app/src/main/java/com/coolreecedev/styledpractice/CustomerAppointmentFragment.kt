@@ -67,12 +67,13 @@ class CustomerAppointmentFragment : Fragment() {
                 Log.i(LOG_TAG, "${it.appointment_id}")
                 if (view is RecyclerView) {
                     with(view) {
-                        layoutManager = when {
-                            columnCount <= 1 -> LinearLayoutManager(context)
-                            else -> GridLayoutManager(context, columnCount)
-                        }
+                        layoutManager = GridLayoutManager(requireContext(), 2)
+//                        layoutManager = when {
+//                            columnCount <= 1 -> LinearLayoutManager(context)
+//                            else -> GridLayoutManager(context, columnCount)
+//                        }
 
-                        adapter = MyCustomerAppointmentRecyclerViewAdapter(listOf(it))
+                        adapter = MyCustomerAppointmentRecyclerViewAdapter(requireContext(), listOf(it))
                     }
                 }
             } else {

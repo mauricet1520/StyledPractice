@@ -1,6 +1,6 @@
 package com.coolreecedev.styledpractice.data
 
-import com.google.gson.annotations.SerializedName
+import com.coolreecedev.styledpractice.util.STYLE_SERVICE_BASE_URL
 
 data class AppointmentDTO (
     var appointment_id: String? = null,
@@ -21,4 +21,8 @@ data class AppointmentDTO (
     var setmore_customer_key: String? = null,
     var stylist_id: String? = null,
     var user_appointment_time: String? = null
-)
+) {
+    val imageUrl
+        get() = STYLE_SERVICE_BASE_URL
+
+}
