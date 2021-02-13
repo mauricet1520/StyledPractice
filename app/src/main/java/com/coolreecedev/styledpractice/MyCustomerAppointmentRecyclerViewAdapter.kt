@@ -22,7 +22,8 @@ import com.coolreecedev.styledpractice.util.VIRTUAL_SERVICE_PHOTO_URL
  * TODO: Replace the implementation with code for your data type.
  */
 class MyCustomerAppointmentRecyclerViewAdapter(val context: Context,
-                                               private val values: List<AppointmentDTO>
+                                               private val values: List<AppointmentDTO>,
+                                               val itemListener: CustomerAppointmentItemListener
 ) : RecyclerView.Adapter<MyCustomerAppointmentRecyclerViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -41,6 +42,11 @@ class MyCustomerAppointmentRecyclerViewAdapter(val context: Context,
             "Virtual Service" -> loadPhotoUrl(item, holder, VIRTUAL_SERVICE_PHOTO_URL)
             "Seasonal Style" -> loadPhotoUrl(item, holder, SEASONAL_SERVICE_PHOTO_URL)
         }
+
+        holder.itemView.setOnClickListener {
+            itemListener.onItemClick(item)
+
+        }
     }
 
     private fun loadPhotoUrl(
@@ -52,6 +58,7 @@ class MyCustomerAppointmentRecyclerViewAdapter(val context: Context,
         Glide.with(context)
             .load(item.imageUrl + serviceUrl)
             .into(holder.styleImage)
+
     }
 
     override fun getItemCount(): Int = values.size
@@ -64,5 +71,9 @@ class MyCustomerAppointmentRecyclerViewAdapter(val context: Context,
         override fun toString(): String {
             return super.toString() + " '" + contentView.text + "'"
         }
+    }
+
+    interface CustomerAppointmentItemListener {
+        fun onItemClick(appointmentDTO: AppointmentDTO)
     }
 }

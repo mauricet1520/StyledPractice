@@ -7,6 +7,7 @@
     android:layout_height="wrap_content"
     android:padding="16dp"
     android:clickable="true"
+    android:background="@drawable/appointment_grid_item_background"
     android:focusable="true">
 
     <TextView

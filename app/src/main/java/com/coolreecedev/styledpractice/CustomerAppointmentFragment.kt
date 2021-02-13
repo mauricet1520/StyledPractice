@@ -1,5 +1,6 @@
 package com.coolreecedev.styledpractice
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -14,7 +15,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.coolreecedev.styledpractice.data.Appointment
+import com.coolreecedev.styledpractice.data.AppointmentDTO
 import com.coolreecedev.styledpractice.data.appointment.AppointmentViewModel
+import com.coolreecedev.styledpractice.data.customer.Customer
 import com.coolreecedev.styledpractice.data.customer.CustomerViewModel
 import com.coolreecedev.styledpractice.dummy.DummyContent
 import com.coolreecedev.styledpractice.ui.AvailableDateViewModel
@@ -23,9 +27,10 @@ import com.coolreecedev.styledpractice.util.LOG_TAG
 /**
  * A fragment representing a list of Items.
  */
-class CustomerAppointmentFragment : Fragment() {
+class CustomerAppointmentFragment : Fragment(), MyCustomerAppointmentRecyclerViewAdapter.CustomerAppointmentItemListener {
     private lateinit var customerViewModel: CustomerViewModel
     private lateinit var appointmentViewModel: AppointmentViewModel
+    private lateinit var customer: Customer
     private var columnCount = 1
     private val args: CustomerAppointmentFragmentArgs by navArgs()
 
@@ -48,10 +53,37 @@ class CustomerAppointmentFragment : Fragment() {
 
         customerViewModel.getCustomerAppointment(args.uuid!!)
 
-
         customerViewModel.customerAppointmentData.observe(viewLifecycleOwner, Observer {cust ->
 
             if (cust != null) {
+                customer = Customer(
+                    uid = cust.uid,
+                    setmore_customer_id = cust.setmore_customer_id,
+                    state = cust.state,
+                    shirt_size = cust.shirt_size,
+                    stripe_customer_id = cust.stripe_customer_id,
+                    blazer_size = cust.blazer_size,
+                    body_type = cust.body_type,
+                    bottom_size = cust.bottom_size,
+                    hubspot_customer_id = cust.hubspot_customer_id,
+                    jumper_romper_size = cust.jumper_romper_size,
+                    first_name = cust.first_name,
+                    last_name = cust.last_name,
+                    preferred_stores = cust.preferred_stores,
+                    product_ids = cust.product_ids,
+                    colors = cust.colors,
+                    top_size = cust.top_size,
+                    pants_size = cust.pants_size,
+                    phone = cust.phone,
+                    appointment_ids = cust.appointment_ids,
+                    city = cust.city,
+                    clothing_type = cust.clothing_type,
+                    address = cust.address,
+                    image_url = cust.image_url,
+                    email = cust.email,
+                    dress_shirt_size = cust.dress_shirt_size,
+                    dress_size = cust.dress_size
+                )
                 cust.appointment_ids!!.forEach {
                     appointmentViewModel.getAppointment(it)
                 }
@@ -73,7 +105,9 @@ class CustomerAppointmentFragment : Fragment() {
 //                            else -> GridLayoutManager(context, columnCount)
 //                        }
 
-                        adapter = MyCustomerAppointmentRecyclerViewAdapter(requireContext(), listOf(it))
+                        adapter = MyCustomerAppointmentRecyclerViewAdapter(requireContext(),
+                            listOf(it),
+                            this@CustomerAppointmentFragment )
                     }
                 }
             } else {
@@ -99,5 +133,40 @@ class CustomerAppointmentFragment : Fragment() {
                     putInt(ARG_COLUMN_COUNT, columnCount)
                 }
             }
+    }
+
+    override fun onItemClick(appointmentDTO: AppointmentDTO) {
+        val appointment = Appointment(
+            appointment_id = appointmentDTO.appointment_id,
+            street_address = appointmentDTO.street_address,
+            city = appointmentDTO.city,
+            zip = appointmentDTO.zip,
+            state = appointmentDTO.state,
+            cost = appointmentDTO.cost,
+            customer_id = appointmentDTO.customer_id,
+            setmore_customer_key = appointmentDTO.setmore_customer_key,
+            setmore_service_key = appointmentDTO.setmore_service_key,
+            setmore_appointment_key = appointmentDTO.setmore_appointment_key,
+            setmore_label = appointmentDTO.setmore_label,
+            start_time = appointmentDTO.start_time,
+            occasion = appointmentDTO.occasion,
+            setmore_staff_key = appointmentDTO.setmore_staff_key,
+            setmore_service_name = appointmentDTO.setmore_service_name,
+            status = appointmentDTO.status,
+            user_appointment_time = appointmentDTO.user_appointment_time,
+            stylist_id = appointmentDTO.stylist_id,
+            product_ids = appointmentDTO.product_ids,
+            image_url = appointmentDTO.imageUrl,
+            budget = appointmentDTO.budget
+        )
+        Log.i(LOG_TAG, "Appointment id: ${appointment.appointment_id}")
+        Log.i(LOG_TAG, "Customer id: ${customer.uid}")
+        val intent = Intent(context, ProfileAppointmentActivity::class.java)
+        intent.putExtra("appointment", appointment)
+        intent.putExtra("customer", customer)
+        startActivity(intent)
+//        val action = CustomerAppointmentFragmentDirections
+//            .actionCustomerAppointmentFragmentToAppointmentDetailsFragment(appointment)
+//        findNavController().navigate(action)
     }
 }
