@@ -516,4 +516,9 @@
             android:id="@+id/action_customerAppointmentFragment_to_appointmentDetailsFragment"
             app:destination="@id/appointmentDetailsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.coolreecedev.styledpractice.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" />
 </navigation>

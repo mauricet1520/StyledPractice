@@ -1,5 +1,6 @@
 package com.coolreecedev.styledpractice
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
@@ -104,8 +105,12 @@ class ProfileAppointmentActivity : AppCompatActivity() {
             .into(imageView2)
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-            Snackbar.make(view, "${customer.uid}", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            val intent = Intent(this, ActivateClientActivity::class.java)
+            intent.putExtra("checkout", true)
+            startActivity(intent)
+
+//            Snackbar.make(view, "${customer.uid}", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null).show()
         }
     }
 }

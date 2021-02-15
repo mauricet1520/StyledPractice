@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.bumptech.glide.util.LogTime
 import com.coolreecedev.styledpractice.data.availabledate.AvailableDate
 import com.coolreecedev.styledpractice.data.customer.Customer
 import com.coolreecedev.styledpractice.ui.AvailableDateFragment
@@ -58,10 +59,14 @@ class ActivateClientActivity : AppCompatActivity(),
         setContentView(R.layout.activity_activate_client)
         stripe = Stripe(applicationContext, "pk_test_dGcgdptaqW6r4MnnqAZdktZ3")
 
+        val checkout = intent.getBooleanExtra("checkout", false)
         mZipCode = ""
         val user = FirebaseAuth.getInstance().currentUser
 
-        if (user != null) {
+        if (user != null && checkout) {
+            findNavController(R.id.nav_host).navigate(R.id.checkoutFragment)
+            Toast.makeText(this, "Checkout time!", Toast.LENGTH_SHORT).show()
+        }else if (user != null && !checkout) {
             findNavController(R.id.nav_host).navigate(R.id.appointmentLookupFragment)
         }else {
             findNavController(R.id.nav_host).navigate(R.id.firstScreenFragment)
@@ -376,6 +381,11 @@ class ActivateClientActivity : AppCompatActivity(),
 
     fun scheduleAppointment(view: View) {
         navigateTo(R.id.zip_code_dest)
+    }
+
+    fun saveProduct(view: View) {
+        val intent = Intent(this, CameraActivity::class.java)
+        startActivity(intent)
     }
 
 }

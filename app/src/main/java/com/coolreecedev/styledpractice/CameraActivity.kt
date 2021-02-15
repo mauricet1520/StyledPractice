@@ -47,7 +47,7 @@ class CameraActivity : AppCompatActivity() {
         storage = FirebaseStorage.getInstance()
 
         if (allPermissionsGranted()) {
-            startCamera()
+            startCamera(false)
         } else {
             ActivityCompat.requestPermissions(
                 this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS
@@ -62,7 +62,7 @@ class CameraActivity : AppCompatActivity() {
         cameraExecutor = Executors.newSingleThreadExecutor()
     }
 
-    private fun startCamera() {
+    private fun startCamera(lenFacingFront: Boolean) {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
 
         cameraProviderFuture.addListener(Runnable {
@@ -76,9 +76,13 @@ class CameraActivity : AppCompatActivity() {
             imageCapture = ImageCapture.Builder()
                 .build()
 
-            // Select back camera
-            val cameraSelector =
-                CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_BACK).build()
+            val cameraSelector = if (lenFacingFront) {
+                CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_FRONT)
+                    .build()
+            }else {
+                CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_BACK)
+                    .build()
+            }
 
             try {
                 // Unbind use cases before rebinding
@@ -180,7 +184,7 @@ class CameraActivity : AppCompatActivity() {
     ) {
         if (requestCode == REQUEST_CODE_PERMISSIONS) {
             if (allPermissionsGranted()) {
-                startCamera()
+                startCamera(false)
             } else {
                 Toast.makeText(
                     this,

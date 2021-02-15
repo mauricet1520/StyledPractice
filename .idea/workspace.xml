@@ -6,20 +6,13 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="style-" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="runtime" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f6a6955-2739-46d5-9ff0-a69a94ad24fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_firebaseui_firebase_ui_storage_6_4_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/MyAppGlideModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ProfileAppointmentActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/backgroud_appointments_selected.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/appointment_grid_item_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/backgroud_appointments.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile_appointment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_scrolling.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_profile_appointment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CheckoutFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_checkout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -31,21 +24,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/StyledPractice.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/StyledPractice.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CustomerAppointmentFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CustomerAppointmentFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/MyCustomerAppointmentRecyclerViewAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/MyCustomerAppointmentRecyclerViewAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/AppointmentDTO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/AppointmentDTO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_appointment_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_appointment_details.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ActivateClientActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ActivateClientActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CameraActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CameraActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ProfileAppointmentActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ProfileAppointmentActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_camera.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_camera.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -346,11 +333,11 @@
     <state x="605" y="143" key="#com.intellij.ide.util.MemberChooser/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610147703913" />
     <state x="2614" y="54" key="#com.intellij.ide.util.MemberChooser/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613245646676" />
     <state x="605" y="143" key="#com.intellij.ide.util.MemberChooser/78.0.1458.864@78.0.1458.864" timestamp="1612743507418" />
-    <state x="536" y="215" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1612743751107">
-      <screen x="78" y="0" width="1458" height="864" />
+    <state x="2523" y="141" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1613260331071">
+      <screen x="1920" y="-118" width="1920" height="1040" />
     </state>
     <state x="536" y="215" key="#com.intellij.ide.util.TreeClassChooserDialog/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610205026993" />
-    <state x="2523" y="141" key="#com.intellij.ide.util.TreeClassChooserDialog/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1612715241844" />
+    <state x="2523" y="141" key="#com.intellij.ide.util.TreeClassChooserDialog/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613260331071" />
     <state x="536" y="215" key="#com.intellij.ide.util.TreeClassChooserDialog/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1610826776260" />
     <state x="536" y="215" key="#com.intellij.ide.util.TreeClassChooserDialog/78.0.1458.864@78.0.1458.864" timestamp="1612743751107" />
     <state x="553" y="79" width="522" height="695" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1609620862786">
@@ -361,40 +348,41 @@
       <screen x="1920" y="-118" width="1920" height="1040" />
     </state>
     <state x="2460" y="156" key="AndroidCreateResourceFileDialog/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1612733047335" />
-    <state x="671" y="246" key="AndroidCreateXmlResourceDialog" timestamp="1609908478052">
-      <screen x="78" y="0" width="1458" height="864" />
+    <state x="2701" y="178" key="AndroidCreateXmlResourceDialog" timestamp="1613258237575">
+      <screen x="1920" y="-118" width="1920" height="1040" />
     </state>
+    <state x="2701" y="178" key="AndroidCreateXmlResourceDialog/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613258237575" />
     <state x="671" y="246" key="AndroidCreateXmlResourceDialog/78.0.1458.864@78.0.1458.864" timestamp="1609908478052" />
     <state x="2616" y="148" key="AndroidProcessChooserDialog" timestamp="1613241862386">
       <screen x="1920" y="-118" width="1920" height="1040" />
     </state>
     <state x="2616" y="148" key="AndroidProcessChooserDialog/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613241862386" />
-    <state width="1877" height="296" key="GridCell.Tab.0.bottom" timestamp="1613245264410">
+    <state width="1877" height="296" key="GridCell.Tab.0.bottom" timestamp="1613255261687">
       <screen x="1920" y="-118" width="1920" height="1040" />
     </state>
     <state width="1413" height="314" key="GridCell.Tab.0.bottom/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610250091937" />
-    <state width="1877" height="296" key="GridCell.Tab.0.bottom/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613245264410" />
+    <state width="1877" height="296" key="GridCell.Tab.0.bottom/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613255261687" />
     <state width="1398" height="211" key="GridCell.Tab.0.bottom/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1611509105331" />
     <state width="1413" height="226" key="GridCell.Tab.0.bottom/78.0.1458.864@78.0.1458.864" timestamp="1612748359161" />
-    <state width="1877" height="296" key="GridCell.Tab.0.center" timestamp="1613245264409">
+    <state width="1877" height="296" key="GridCell.Tab.0.center" timestamp="1613255261686">
       <screen x="1920" y="-118" width="1920" height="1040" />
     </state>
     <state width="1413" height="314" key="GridCell.Tab.0.center/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610250091937" />
-    <state width="1877" height="296" key="GridCell.Tab.0.center/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613245264409" />
+    <state width="1877" height="296" key="GridCell.Tab.0.center/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613255261686" />
     <state width="1398" height="211" key="GridCell.Tab.0.center/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1611509105330" />
     <state width="1413" height="226" key="GridCell.Tab.0.center/78.0.1458.864@78.0.1458.864" timestamp="1612748359161" />
-    <state width="1877" height="296" key="GridCell.Tab.0.left" timestamp="1613245264409">
+    <state width="1877" height="296" key="GridCell.Tab.0.left" timestamp="1613255261686">
       <screen x="1920" y="-118" width="1920" height="1040" />
     </state>
     <state width="1413" height="314" key="GridCell.Tab.0.left/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610250091937" />
-    <state width="1877" height="296" key="GridCell.Tab.0.left/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613245264409" />
+    <state width="1877" height="296" key="GridCell.Tab.0.left/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613255261686" />
     <state width="1398" height="211" key="GridCell.Tab.0.left/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1611509105330" />
     <state width="1413" height="226" key="GridCell.Tab.0.left/78.0.1458.864@78.0.1458.864" timestamp="1612748359160" />
-    <state width="1877" height="296" key="GridCell.Tab.0.right" timestamp="1613245264410">
+    <state width="1877" height="296" key="GridCell.Tab.0.right" timestamp="1613255261687">
       <screen x="1920" y="-118" width="1920" height="1040" />
     </state>
     <state width="1413" height="314" key="GridCell.Tab.0.right/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610250091937" />
-    <state width="1877" height="296" key="GridCell.Tab.0.right/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613245264410" />
+    <state width="1877" height="296" key="GridCell.Tab.0.right/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613255261687" />
     <state width="1398" height="211" key="GridCell.Tab.0.right/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1611509105330" />
     <state width="1413" height="226" key="GridCell.Tab.0.right/78.0.1458.864@78.0.1458.864" timestamp="1612748359161" />
     <state width="1398" height="268" key="GridCell.Tab.1.bottom" timestamp="1609862030718">
@@ -438,11 +426,11 @@
     <state x="2473" y="79" width="839" height="646" key="find.popup/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613243176039" />
     <state x="498" y="164" width="637" height="536" key="find.popup/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1611006518684" />
     <state x="498" y="164" width="637" height="536" key="find.popup/78.0.1458.864@78.0.1458.864" timestamp="1609863052644" />
-    <state width="459" height="114" key="javadoc.popup.new" timestamp="1613246289536">
+    <state width="459" height="114" key="javadoc.popup.new" timestamp="1613262557410">
       <screen x="1920" y="-118" width="1920" height="1040" />
     </state>
     <state width="348" height="94" key="javadoc.popup.new/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610294517151" />
-    <state width="459" height="114" key="javadoc.popup.new/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613246289536" />
+    <state width="459" height="114" key="javadoc.popup.new/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613262557410" />
     <state width="348" height="94" key="javadoc.popup.new/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1611612237274" />
     <state width="348" height="94" key="javadoc.popup.new/78.0.1458.864@78.0.1458.864" timestamp="1612751061548" />
     <state x="151" y="329" width="672" height="677" key="run.anything.popup" timestamp="1610852441083">
@@ -451,11 +439,11 @@
     <state x="151" y="329" width="672" height="677" key="run.anything.popup/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610153772114" />
     <state x="151" y="329" width="672" height="677" key="run.anything.popup/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1610822499322" />
     <state x="151" y="329" width="672" height="677" key="run.anything.popup/78.0.1458.864@78.0.1458.864" timestamp="1610852441083" />
-    <state x="2320" y="160" width="885" height="679" key="search.everywhere.popup" timestamp="1613243503757">
+    <state x="2320" y="160" width="885" height="679" key="search.everywhere.popup" timestamp="1613259856133">
       <screen x="1920" y="-118" width="1920" height="1040" />
     </state>
     <state x="382" y="231" width="672" height="564" key="search.everywhere.popup/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610294354482" />
-    <state x="2320" y="160" width="885" height="679" key="search.everywhere.popup/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613243503757" />
+    <state x="2320" y="160" width="885" height="679" key="search.everywhere.popup/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613259856133" />
     <state x="382" y="231" width="672" height="564" key="search.everywhere.popup/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1611612138061" />
     <state x="382" y="231" width="672" height="564" key="search.everywhere.popup/78.0.1458.864@78.0.1458.864" timestamp="1612743532488" />
   </component>
@@ -464,12 +452,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ActivateClientActivity.kt</url>
-          <line>81</line>
+          <line>86</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ActivateClientActivity.kt</url>
-          <line>108</line>
+          <line>113</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">

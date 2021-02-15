@@ -237,6 +237,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="checkoutFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="193" />
+                            <option name="y" value="-348" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="clothesTypeFragment">
                     <value>
                       <LayoutPositions>
@@ -313,6 +325,15 @@
                             <option name="x" value="479" />
                             <option name="y" value="-683" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_customerAppointmentFragment_to_appointmentDetailsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
