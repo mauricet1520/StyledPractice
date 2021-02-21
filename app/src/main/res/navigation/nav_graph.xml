@@ -323,10 +323,20 @@
             app:destination="@id/budgetFragment" />
     </fragment>
     <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.coolreecedev.styledpractice.SettingsFragment"
+        android:id="@+id/productFragment"
+        android:name="com.coolreecedev.styledpractice.ProductFragment"
         android:label="fragment_settings_list"
-        tools:layout="@layout/fragment_settings_list" />
+        tools:layout="@layout/fragment_products_list" >
+        <action
+            android:id="@+id/action_productFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer" />
+    </fragment>
     <fragment
         android:id="@+id/accountSettingsFragment"
         android:name="com.coolreecedev.styledpractice.AccountSettingsFragment"
@@ -515,10 +525,28 @@
         <action
             android:id="@+id/action_customerAppointmentFragment_to_appointmentDetailsFragment"
             app:destination="@id/appointmentDetailsFragment" />
+        <action
+            android:id="@+id/action_customerAppointmentFragment_to_productFragment"
+            app:destination="@id/productFragment" />
     </fragment>
     <fragment
         android:id="@+id/checkoutFragment"
         android:name="com.coolreecedev.styledpractice.CheckoutFragment"
         android:label="fragment_checkout"
-        tools:layout="@layout/fragment_checkout" />
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <argument
+            android:name="appointment"
+            app:argType="com.coolreecedev.styledpractice.data.Appointment" />
+        <argument
+            android:name="customer"
+            app:argType="com.coolreecedev.styledpractice.data.customer.Customer" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.coolreecedev.styledpractice.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" />
 </navigation>

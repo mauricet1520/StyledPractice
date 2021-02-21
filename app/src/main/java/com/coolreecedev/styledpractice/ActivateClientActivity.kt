@@ -1,23 +1,27 @@
 package com.coolreecedev.styledpractice
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener
 import android.app.Dialog
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.DatePicker
-import android.widget.HorizontalScrollView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.camera.core.*
+import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.bumptech.glide.util.LogTime
+import com.coolreecedev.styledpractice.data.Appointment
 import com.coolreecedev.styledpractice.data.availabledate.AvailableDate
 import com.coolreecedev.styledpractice.data.customer.Customer
 import com.coolreecedev.styledpractice.ui.AvailableDateFragment
@@ -27,10 +31,16 @@ import com.coolreecedev.styledpractice.util.LOG_TAG
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import com.stripe.android.Stripe
+import kotlinx.android.synthetic.main.activity_camera.*
 import kotlinx.android.synthetic.main.fragment_schedule_date.*
 import kotlinx.android.synthetic.main.fragment_schedule_date.view.*
+import java.io.File
 import java.util.*
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
 
 class ActivateClientActivity : AppCompatActivity(),
     AvailableDateFragment.OnListFragmentInteractionListener,
@@ -41,6 +51,13 @@ class ActivateClientActivity : AppCompatActivity(),
     private lateinit var auth: FirebaseAuth
     private lateinit var stripe: Stripe
     private lateinit var mZipCode: String
+    private var preview: Preview? = null
+    private var imageCapture: ImageCapture? = null
+    private var imageAnalyzer: ImageAnalysis? = null
+    private var camera: Camera? = null
+    lateinit var storage: FirebaseStorage
+    private lateinit var outputDirectory: File
+    private lateinit var cameraExecutor: ExecutorService
 
 
 
@@ -59,12 +76,25 @@ class ActivateClientActivity : AppCompatActivity(),
         setContentView(R.layout.activity_activate_client)
         stripe = Stripe(applicationContext, "pk_test_dGcgdptaqW6r4MnnqAZdktZ3")
 
+        outputDirectory = getOutputDirectory()
+
+        cameraExecutor = Executors.newSingleThreadExecutor()
+
         val checkout = intent.getBooleanExtra("checkout", false)
+        val customer = intent.getParcelableExtra<Customer>("customer")
+        val appointment = intent.getParcelableExtra<Appointment>("appointment")
         mZipCode = ""
         val user = FirebaseAuth.getInstance().currentUser
 
         if (user != null && checkout) {
-            findNavController(R.id.nav_host).navigate(R.id.checkoutFragment)
+            val bundle = Bundle()
+            bundle.putParcelable("appointment", appointment)
+            bundle.putParcelable("customer", customer)
+
+            bundle.putString("transaction_number", UUID.randomUUID().toString())
+            findNavController(R.id.nav_host).navigate(R.id.checkoutFragment, bundle)
+            Log.i(LOG_TAG, "ActivateClientActivity: appointmentId: ${appointment?.appointment_id}")
+            Log.i(LOG_TAG, "ActivateClientActivity: customerUID: ${customer?.uid}")
             Toast.makeText(this, "Checkout time!", Toast.LENGTH_SHORT).show()
         }else if (user != null && !checkout) {
             findNavController(R.id.nav_host).navigate(R.id.appointmentLookupFragment)
@@ -384,9 +414,151 @@ class ActivateClientActivity : AppCompatActivity(),
     }
 
     fun saveProduct(view: View) {
-        val intent = Intent(this, CameraActivity::class.java)
-        startActivity(intent)
+        navigateTo(R.id.cameraFragment)
+//        val intent = Intent(this, CameraActivity::class.java)
+//        startActivity(intent)
     }
+
+    private fun startCamera(lenFacingFront: Boolean) {
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+
+        cameraProviderFuture.addListener(Runnable {
+            // Used to bind the lifecycle of cameras to the lifecycle owner
+            val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
+
+            // Preview
+            preview = Preview.Builder()
+                .build()
+
+            imageCapture = ImageCapture.Builder()
+                .build()
+
+            val cameraSelector = if (lenFacingFront) {
+                CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_FRONT)
+                    .build()
+            }else {
+                CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_BACK)
+                    .build()
+            }
+
+            try {
+                // Unbind use cases before rebinding
+                cameraProvider.unbindAll()
+
+                // Bind use cases to camera
+                camera = cameraProvider.bindToLifecycle(
+                    this, cameraSelector, preview, imageCapture
+                )
+                preview?.setSurfaceProvider(viewFinder.surfaceProvider)
+            } catch (exc: Exception) {
+                Log.e(LOG_TAG, "Use case binding failed", exc)
+            }
+
+        }, ContextCompat.getMainExecutor(this))
+    }
+
+    private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
+        ContextCompat.checkSelfPermission(
+            baseContext, it
+        ) == PackageManager.PERMISSION_GRANTED
+    }
+
+    fun getOutputDirectory(): File {
+        val mediaDir = externalMediaDirs.firstOrNull()?.let {
+            File(it, resources.getString(R.string.app_name)).apply { mkdirs() }
+        }
+        return if (mediaDir != null && mediaDir.exists())
+            mediaDir else filesDir
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int, permissions: Array<String>, grantResults:
+        IntArray
+    ) {
+        if (requestCode == REQUEST_CODE_PERMISSIONS) {
+            if (allPermissionsGranted()) {
+                startCamera(false)
+            } else {
+                Toast.makeText(
+                    this,
+                    "Permissions not granted by the user.",
+                    Toast.LENGTH_SHORT
+                ).show()
+                finish()
+            }
+        }
+    }
+
+    companion object {
+        private const val TAG = "CameraXBasic"
+        private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
+        private const val REQUEST_CODE_PERMISSIONS = 10
+        private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
+    }
+
+    private fun takePhoto() {
+        // Get a stable reference of the modifiable image capture use case
+        val user = FirebaseAuth.getInstance().currentUser!!
+        val imageCapture = imageCapture ?: return
+
+        // Create timestamped output file to hold the image
+        val photoFile = File(
+            outputDirectory,
+            user.uid + ".jpg"
+        )
+
+        // Create output options object which contains file + metadata
+        val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
+
+        // Setup image capture listener which is triggered after photo has
+        // been taken
+        imageCapture.takePicture(
+            outputOptions,
+            ContextCompat.getMainExecutor(this),
+            object : ImageCapture.OnImageSavedCallback {
+                override fun onError(exc: ImageCaptureException) {
+                    Log.e(LOG_TAG, "Photo capture failed: ${exc.message}", exc)
+                }
+
+                override fun onImageSaved(output: ImageCapture.OutputFileResults) {
+
+                    val savedUri = Uri.fromFile(photoFile)
+
+                    if (user != null) {
+
+                        val storageRef = storage.reference
+
+
+                        val imagesRef: StorageReference? =
+                            storageRef.child("customer/images/${savedUri.lastPathSegment}")
+
+
+                        val uploadTask = imagesRef?.putFile(savedUri)
+                        uploadTask?.addOnFailureListener {
+                            // Handle unsuccessful uploads
+                            Log.e(LOG_TAG, "Imaged failed to saved in FB", it)
+
+                        }?.addOnSuccessListener { taskSnapshot ->
+                            Log.i(LOG_TAG, "Imaged saved in FB")
+                            // taskSnapshot.metadata contains file metadata such as size, content-type, etc.
+                            // ...
+                        }
+                    } else {
+                        Log.i(LOG_TAG, "user is null")
+                    }
+
+                    val msg = "Photo capture succeeded: $savedUri"
+                    Toast.makeText(baseContext, "Thank you", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(baseContext, "Sign up completed", Toast.LENGTH_SHORT).show()
+                    Log.d(LOG_TAG, msg)
+                }
+            })
+    }
+
+    fun cameraCapturePhoto(view: View) {
+        takePhoto()
+    }
+
 
 }
 
@@ -420,6 +592,8 @@ class DatePickerFragment : DialogFragment(),
         Log.i(LOG_TAG, "Date selected: ${month.inc()}/$day/$year")
 //        findNavController().navigate(R.id.scheduleDateFragment, vargs)
     }
+
+
 }
 
 

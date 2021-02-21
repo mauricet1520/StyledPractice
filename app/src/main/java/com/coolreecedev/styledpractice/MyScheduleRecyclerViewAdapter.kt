@@ -58,8 +58,8 @@ class MyScheduleRecyclerViewAdapter(
     override fun getItemCount(): Int = mValues.size
 
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
-        val mIdView: TextView = mView.item_number
-        val mContentView: TextView = mView.content
+        val mIdView: TextView = mView.sku_number
+        val mContentView: TextView = mView.name
 
         override fun toString(): String {
             return super.toString() + " '" + mContentView.text + "'"

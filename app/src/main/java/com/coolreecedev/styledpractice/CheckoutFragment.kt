@@ -1,59 +1,82 @@
 package com.coolreecedev.styledpractice
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.coolreecedev.styledpractice.data.Appointment
+import com.coolreecedev.styledpractice.data.customer.Customer
+import com.coolreecedev.styledpractice.data.product.Product
+import com.coolreecedev.styledpractice.databinding.FragmentCheckoutBinding
+import com.coolreecedev.styledpractice.util.LOG_TAG
+import java.time.LocalDateTime
+import java.util.*
+import kotlin.math.cos
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val APPOINTMENT = "appointment"
+private const val CUSTOMER = "customer"
+private const val TRANSACTION_NUMBER = "transaction_number"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [CheckoutFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class CheckoutFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var appointment: Appointment? = null
+    private var customer: Customer? = null
+    private var transaction_number: String? = null
+
+    private lateinit var binding: FragmentCheckoutBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            appointment = it.getParcelable(APPOINTMENT)
+            customer = it.getParcelable(CUSTOMER)
+            transaction_number = it.getString(TRANSACTION_NUMBER)
         }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_checkout, container, false)
-    }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CheckoutFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CheckoutFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+        binding = FragmentCheckoutBinding.inflate(inflater, container, false)
+
+        Log.i(LOG_TAG, "appointmentId: ${appointment?.appointment_id}")
+        Log.i(LOG_TAG, "customerId: ${customer?.uid}")
+
+        with(binding.saveProductButton) {
+            setOnClickListener {
+                val sku = binding.skuTextInputEditText.text.toString()
+                val productName = binding.itemNameTextInputEditText.text.toString()
+                val cost = binding.costNameTextInputEditText.text.toString().toLong()
+
+                Product(
+                    cost = cost,
+                    transaction_number = transaction_number,
+                    firebase_appointment_id = appointment?.appointment_id,
+                    firebase_customer_id = customer?.uid,
+                    setmore_staff_key = appointment?.setmore_staff_key,
+                    sku_number = sku,
+                    setmore_appointment_key = appointment?.setmore_appointment_key,
+                    setmore_service_key = appointment?.setmore_service_key,
+                    setmore_customer_key = appointment?.setmore_customer_key,
+                    store_name = binding.storeNameTextInputEditText.text.toString(),
+                    item_type = binding.typeTextInputEditText.text.toString(),
+                    name = binding.itemNameTextInputEditText.text.toString(),
+                    sku_image_url = "${sku}.jpg",
+                    item_image_url = "$productName _$cost.jpg"
+                )
+                binding.costNameTextInputEditText
             }
+        }
+
+        binding.itemNameTextInputEditText.text
+
+        return binding.root
     }
 }
