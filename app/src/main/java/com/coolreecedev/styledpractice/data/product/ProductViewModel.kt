@@ -11,4 +11,8 @@ class ProductViewModel(app: Application): AndroidViewModel(app)  {
     fun getProductsInTransaction(transaction_number: String) {
         productRepository.getProductsInTransaction(transaction_number)
     }
+
+    fun saveProductInTransaction(transaction: Transaction) {
+        productRepository.saveProductInTransaction(transaction)
+    }
 }

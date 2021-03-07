@@ -28,6 +28,34 @@ class ProductRepository(val app: Application) {
     }
 
 
+    fun saveProductInTransaction(transaction: Transaction) {
+        CoroutineScope(Dispatchers.IO).launch {
+            callWebServiceSaveProductsInTransaction(transaction)
+        }
+    }
+
+    @WorkerThread
+    suspend fun callWebServiceSaveProductsInTransaction(transaction: Transaction) {
+        if (networkAvailable()) {
+            Log.i(LOG_TAG, "Calling WebService: $STRIPE_STYLED_BASE_URL")
+            val gson = GsonBuilder()
+                .setLenient()
+                .create()
+
+            val retrofit = Retrofit.Builder()
+                .baseUrl(STRIPE_STYLED_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build()
+
+            val service = retrofit.create(ProductService::class.java)
+
+            val serviceData = service.saveProductInTransaction(transaction)
+
+//            transactionData.postValue(serviceData)
+
+        }
+    }
+
     @WorkerThread
     suspend fun callWebServiceGetProductsInTransaction(transaction_number: String) {
         if (networkAvailable()) {

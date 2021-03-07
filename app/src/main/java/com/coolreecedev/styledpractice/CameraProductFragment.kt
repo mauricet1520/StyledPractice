@@ -197,8 +197,14 @@ class CameraProductFragment : Fragment() {
 //                    Toast.makeText(context, "Thank you", Toast.LENGTH_SHORT).show()
 //                    Toast.makeText(context, "Sign up completed", Toast.LENGTH_SHORT).show()
                     Log.d(TAG, msg)
+                    val bundle = Bundle()
+                    bundle.putParcelable(APPOINTMENT, appointment)
+                    bundle.putParcelable(CUSTOMER, customer)
 
-                    findNavController().navigate(R.id.productFragment)
+                    bundle.putString(TRANSACTION_NUMBER, transaction_number)
+                    bundle.putString(SKU_NUMBER, sku_number)
+
+                    findNavController().navigate(R.id.productFragment, bundle)
                 }
             })
     }

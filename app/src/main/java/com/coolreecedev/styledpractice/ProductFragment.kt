@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isEmpty
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -58,12 +59,15 @@ class ProductFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_products_list, container, false)
      productViewModel = ViewModelProviders.of(this).get(ProductViewModel::class.java)
 
-        // Set the adapter
-        productViewModel.getProductsInTransaction("12345")
+
+        if (transaction_number != null) {
+            productViewModel.getProductsInTransaction(transaction_number!!)
+        }
+
 
         productViewModel.transactionData.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
 
-            if (it.products != null) {
+            if (it != null) {
                 val recyclerView = view.list
 
                 with(recyclerView) {
@@ -80,9 +84,13 @@ class ProductFragment : Fragment() {
                         }
                         else -> GridLayoutManager(context, columnCount)
                     }
-                    adapter = MyItemRecyclerViewAdapter(
-                        it.products!!
-                    )
+                    if(it.products != null) {
+                        adapter = MyItemRecyclerViewAdapter(
+                            it.products!!
+                        )
+                    }else {
+                        adapter = MyItemRecyclerViewAdapter(mutableListOf(Product(name = "EmptyCart")))
+                    }
                 }
             }
 
