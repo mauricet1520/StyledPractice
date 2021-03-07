@@ -549,4 +549,9 @@
         android:name="com.coolreecedev.styledpractice.CameraFragment"
         android:label="fragment_camera"
         tools:layout="@layout/fragment_camera" />
+    <fragment
+        android:id="@+id/cameraProductFragment"
+        android:name="com.coolreecedev.styledpractice.CameraProductFragment"
+        android:label="fragment_camera_product"
+        tools:layout="@layout/fragment_camera_product" />
 </navigation>

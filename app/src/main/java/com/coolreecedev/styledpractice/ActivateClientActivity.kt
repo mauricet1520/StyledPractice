@@ -92,7 +92,7 @@ class ActivateClientActivity : AppCompatActivity(),
             bundle.putParcelable("customer", customer)
 
             bundle.putString("transaction_number", UUID.randomUUID().toString())
-            findNavController(R.id.nav_host).navigate(R.id.checkoutFragment, bundle)
+            findNavController(R.id.nav_host).navigate(R.id.productFragment, bundle)
             Log.i(LOG_TAG, "ActivateClientActivity: appointmentId: ${appointment?.appointment_id}")
             Log.i(LOG_TAG, "ActivateClientActivity: customerUID: ${customer?.uid}")
             Toast.makeText(this, "Checkout time!", Toast.LENGTH_SHORT).show()

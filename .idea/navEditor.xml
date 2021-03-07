@@ -249,6 +249,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="cameraProductFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="1158" />
+                            <option name="y" value="-340" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="checkoutFragment">
                     <value>
                       <LayoutPositions>

@@ -15,6 +15,10 @@ import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
+import com.coolreecedev.styledpractice.data.Appointment
+import com.coolreecedev.styledpractice.data.customer.Customer
+import com.coolreecedev.styledpractice.databinding.FragmentCheckoutBinding
 import com.coolreecedev.styledpractice.util.LOG_TAG
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -25,6 +29,10 @@ import java.io.File
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
+private const val APPOINTMENT = "appointment"
+private const val CUSTOMER = "customer"
+private const val TRANSACTION_NUMBER = "transaction_number"
+private const val SKU_NUMBER = "sku_number"
 
 class CameraFragment : Fragment() {
 
@@ -40,6 +48,22 @@ class CameraFragment : Fragment() {
     lateinit var flipCameraButton: Button
     var cameraFacing: Boolean = false
 
+    private var appointment: Appointment? = null
+    private var customer: Customer? = null
+    private var transaction_number: String? = null
+    private var sku_number: String? = null
+
+    private lateinit var binding: FragmentCheckoutBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+            appointment = it.getParcelable(APPOINTMENT)
+            customer = it.getParcelable(CUSTOMER)
+            transaction_number = it.getString(TRANSACTION_NUMBER)
+            sku_number = it.getString(SKU_NUMBER)
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -128,7 +152,7 @@ class CameraFragment : Fragment() {
         // Create timestamped output file to hold the image
         val photoFile = File(
             outputDirectory,
-            user.uid + ".jpg"
+            user.uid + "_$sku_number" + "_$transaction_number" + ".jpg"
         )
 
         // Create output options object which contains file + metadata
@@ -154,7 +178,7 @@ class CameraFragment : Fragment() {
 
 
                         val imagesRef: StorageReference? =
-                            storageRef.child("customer/images/${savedUri.lastPathSegment}")
+                            storageRef.child("customer/sku/${savedUri.lastPathSegment}")
 
 
                         val uploadTask = imagesRef?.putFile(savedUri)
@@ -172,9 +196,17 @@ class CameraFragment : Fragment() {
                     }
 
                     val msg = "Photo capture succeeded: $savedUri"
-                    Toast.makeText(context, "Thank you", Toast.LENGTH_SHORT).show()
-                    Toast.makeText(context, "Sign up completed", Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(context, "Thank you", Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(context, "Sign up completed", Toast.LENGTH_SHORT).show()
                     Log.d(TAG, msg)
+                    val bundle = Bundle()
+                    bundle.putParcelable(APPOINTMENT, appointment)
+                    bundle.putParcelable(CUSTOMER, customer)
+
+                    bundle.putString(TRANSACTION_NUMBER, transaction_number)
+                    bundle.putString(SKU_NUMBER, sku_number)
+
+                    findNavController().navigate(R.id.cameraProductFragment, bundle)
                 }
             })
     }

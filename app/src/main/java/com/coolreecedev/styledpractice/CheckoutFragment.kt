@@ -6,11 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import com.coolreecedev.styledpractice.data.Appointment
 import com.coolreecedev.styledpractice.data.customer.Customer
 import com.coolreecedev.styledpractice.data.product.Product
 import com.coolreecedev.styledpractice.databinding.FragmentCheckoutBinding
 import com.coolreecedev.styledpractice.util.LOG_TAG
+import kotlinx.android.synthetic.main.fragment_schedule.view.*
 import java.time.LocalDateTime
 import java.util.*
 import kotlin.math.cos
@@ -20,6 +22,7 @@ import kotlin.math.cos
 private const val APPOINTMENT = "appointment"
 private const val CUSTOMER = "customer"
 private const val TRANSACTION_NUMBER = "transaction_number"
+private const val SKU_NUMBER = "sku_number"
 
 
 class CheckoutFragment : Fragment() {
@@ -48,6 +51,7 @@ class CheckoutFragment : Fragment() {
 
         Log.i(LOG_TAG, "appointmentId: ${appointment?.appointment_id}")
         Log.i(LOG_TAG, "customerId: ${customer?.uid}")
+        Log.i(LOG_TAG, "transaction_number: $transaction_number")
 
         with(binding.saveProductButton) {
             setOnClickListener {
@@ -71,12 +75,17 @@ class CheckoutFragment : Fragment() {
                     sku_image_url = "${sku}.jpg",
                     item_image_url = "$productName _$cost.jpg"
                 )
-                binding.costNameTextInputEditText
+
+                val bundle = Bundle()
+                bundle.putParcelable(APPOINTMENT, appointment)
+                bundle.putParcelable(CUSTOMER, customer)
+
+                bundle.putString(TRANSACTION_NUMBER, transaction_number)
+                bundle.putString(SKU_NUMBER, sku)
+
+                findNavController().navigate(R.id.cameraFragment, bundle)
             }
         }
-
-        binding.itemNameTextInputEditText.text
-
         return binding.root
     }
 }

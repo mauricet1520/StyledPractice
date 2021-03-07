@@ -164,4 +164,6 @@ You are a VIP  - Very Individual Person – Your Style is individualized to You!
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="item_name">Item Name</string>
+    <string name="take_sku_photo">Take Sku Photo</string>
+    <string name="take_item_photo">Take Item Photo</string>
 </resources>
