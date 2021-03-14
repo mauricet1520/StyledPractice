@@ -61,7 +61,7 @@ class CheckoutFragment : Fragment() {
             setOnClickListener {
                 val sku = binding.skuTextInputEditText.text.toString()
                 val productName = binding.itemNameTextInputEditText.text.toString()
-                val cost = binding.costNameTextInputEditText.text.toString().toLong()
+                val cost = binding.costNameTextInputEditText.text.toString().toDouble()
 
                 val product =
                 Product(
@@ -77,9 +77,9 @@ class CheckoutFragment : Fragment() {
                     store_name = binding.storeNameTextInputEditText.text.toString(),
                     item_type = binding.typeTextInputEditText.text.toString(),
                     name = binding.itemNameTextInputEditText.text.toString(),
-                    sku_image_url = "gs://styled-by-love-e-qa.appspot.com/customer/sku/9EjU6TAFb6ddJJ3g6g8HVbafMv32_6669_e96bd142-b2dc-449e-9e02-9b053a9994d8.jpg",
-                    item_image_url = "$productName _$cost.jpg",
-                    firebase_stylist_id = "1234"
+                    sku_image_url = "gs://styled-by-love-e-qa.appspot.com/customer/products/_$sku _$transaction_number.jpg",
+                    item_image_url = "gs://styled-by-love-e-qa.appspot.com/customer/sku/_$sku _$transaction_number.jpg",
+                    firebase_stylist_id = appointment?.setmore_staff_key
                 )
 
                 val transaction = Transaction(transaction_number!!, 0.0, mutableListOf(product))

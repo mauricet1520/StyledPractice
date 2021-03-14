@@ -554,4 +554,9 @@
         android:name="com.coolreecedev.styledpractice.CameraProductFragment"
         android:label="fragment_camera_product"
         tools:layout="@layout/fragment_camera_product" />
+    <fragment
+        android:id="@+id/checkoutPaymentFragment"
+        android:name="com.coolreecedev.styledpractice.CheckoutPaymentFragment"
+        android:label="fragment_checkout_payment"
+        tools:layout="@layout/fragment_checkout_payment" />
 </navigation>

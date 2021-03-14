@@ -2,7 +2,7 @@ package com.coolreecedev.styledpractice.data.product
 
 data class Product (
     var date: String? = null,
-    var cost: Long? = null,
+    var cost: Double? = null,
     var transaction_number: String? = null,
     var store_name: String? = null,
     var item_type: String? = null,

@@ -64,7 +64,7 @@ class PaymentFragment : Fragment() {
             setOnClickListener {
                 Log.i(LOG_TAG, "Processing Payment")
                 Toast.makeText(requireContext(), "Validating Card", Toast.LENGTH_SHORT).show()
-                viewModel.createPaymentIntent(StripeRequest(3000, "test@email.com"))
+                viewModel.createPaymentIntent(StripeRequest(args.appointment!!.cost!!.toLong(), args.customer?.email!!))
             }
         }
 

@@ -152,7 +152,7 @@ class CameraFragment : Fragment() {
         // Create timestamped output file to hold the image
         val photoFile = File(
             outputDirectory,
-            user.uid + "_$sku_number" + "_$transaction_number" + ".jpg"
+            "_$sku_number" + "_$transaction_number" + ".jpg"
         )
 
         // Create output options object which contains file + metadata

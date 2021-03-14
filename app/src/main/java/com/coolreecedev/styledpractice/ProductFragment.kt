@@ -21,6 +21,7 @@ import com.coolreecedev.styledpractice.data.product.ProductViewModel
 import com.coolreecedev.styledpractice.databinding.FragmentCheckoutBinding
 import com.coolreecedev.styledpractice.databinding.FragmentProductsBinding
 import kotlinx.android.synthetic.main.fragment_account_settings.view.*
+import kotlinx.android.synthetic.main.fragment_products_list.*
 import kotlinx.android.synthetic.main.fragment_products_list.view.*
 import java.util.*
 
@@ -39,7 +40,7 @@ class ProductFragment : Fragment() {
     private val args: ProductFragmentArgs by navArgs()
     private lateinit var binding: FragmentProductsBinding
     private lateinit var productViewModel: ProductViewModel
-
+    private  var totalCost: Double = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,10 +65,24 @@ class ProductFragment : Fragment() {
             productViewModel.getProductsInTransaction(transaction_number!!)
         }
 
+       view.completeTransactionButton.setOnClickListener {
+            if (totalCost > 0) {
+                val bundle = Bundle()
+                bundle.putParcelable("appointment", appointment)
+                bundle.putParcelable("customer", customer)
+
+                bundle.putString("transaction_number", transaction_number)
+                bundle.putDouble("total_cost", totalCost)
+                findNavController().navigate(R.id.checkoutPaymentFragment, bundle)
+            }
+        }
+
 
         productViewModel.transactionData.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
 
             if (it != null) {
+                totalCost = it.totalCost
+
                 val recyclerView = view.list
 
                 with(recyclerView) {

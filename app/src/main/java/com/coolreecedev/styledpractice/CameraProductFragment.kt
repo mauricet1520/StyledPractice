@@ -150,7 +150,7 @@ class CameraProductFragment : Fragment() {
         // Create timestamped output file to hold the image
         val photoFile = File(
             outputDirectory,
-            user.uid + "_$sku_number" + "_$transaction_number" + ".jpg"
+            "_$sku_number" + "_$transaction_number" + ".jpg"
         )
 
         // Create output options object which contains file + metadata
@@ -186,16 +186,14 @@ class CameraProductFragment : Fragment() {
 
                         }?.addOnSuccessListener { taskSnapshot ->
                             Log.i(LOG_TAG, "Imaged saved in FB")
-                            // taskSnapshot.metadata contains file metadata such as size, content-type, etc.
-                            // ...
+
+                            taskSnapshot.uploadSessionUri
                         }
                     } else {
                         Log.i(LOG_TAG, "user is null")
                     }
 
                     val msg = "Photo capture succeeded: $savedUri"
-//                    Toast.makeText(context, "Thank you", Toast.LENGTH_SHORT).show()
-//                    Toast.makeText(context, "Sign up completed", Toast.LENGTH_SHORT).show()
                     Log.d(TAG, msg)
                     val bundle = Bundle()
                     bundle.putParcelable(APPOINTMENT, appointment)

@@ -11,6 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f6a6955-2739-46d5-9ff0-a69a94ad24fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CheckoutPaymentFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/checkout/CheckoutRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/checkout/CheckoutService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/checkout/CheckoutViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_checkout_payment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -19,14 +24,20 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CameraFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CameraFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CameraProductFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CameraProductFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CheckoutFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CheckoutFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/PaymentFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/PaymentFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ProductFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ProductFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/product/ProductRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/product/ProductRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/product/ProductService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/product/ProductService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/product/ProductViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/product/ProductViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/product/Product.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/data/product/Product.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_products_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_products_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +74,8 @@
         <option value="valueResourceFile" />
         <option value="Kotlin Interface" />
         <option value="resourceFile" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -105,6 +116,7 @@
       <recent name="com.coolreecedev.styledpractice.data.appointment" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.coolreecedev.styledpractice.data.checkout" />
       <recent name="com.coolreecedev.styledpractice.data.product" />
       <recent name="com.coolreecedev.styledpractice.data.customer" />
     </key>
@@ -338,11 +350,11 @@
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state x="553" y="79" width="522" height="695" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/78.0.1458.864@78.0.1458.864" timestamp="1609620862786" />
-    <state x="96" y="94" width="966" height="564" key="AVDManager" timestamp="1614987373492">
+    <state x="96" y="94" width="966" height="564" key="AVDManager" timestamp="1615243931651">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state x="2265" y="81" width="1272" height="678" key="AVDManager/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613914178126" />
-    <state x="96" y="94" width="966" height="564" key="AVDManager/78.0.1458.864@78.0.1458.864" timestamp="1614987373492" />
+    <state x="96" y="94" width="966" height="564" key="AVDManager/78.0.1458.864@78.0.1458.864" timestamp="1615243931651" />
     <state x="2460" y="156" key="AndroidCreateResourceFileDialog" timestamp="1612733047335">
       <screen x="1920" y="-118" width="1920" height="1040" />
     </state>
@@ -360,54 +372,54 @@
       <screen x="1920" y="-118" width="1920" height="1040" />
     </state>
     <state x="2660" y="156" key="FileChooserDialogImpl/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613399364351" />
-    <state width="1398" height="247" key="GridCell.Tab.0.bottom" timestamp="1615150300641">
+    <state width="1398" height="247" key="GridCell.Tab.0.bottom" timestamp="1615246023230">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state width="1413" height="314" key="GridCell.Tab.0.bottom/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610250091937" />
     <state width="1412" height="268" key="GridCell.Tab.0.bottom/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613945066149" />
     <state width="1398" height="211" key="GridCell.Tab.0.bottom/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1611509105331" />
-    <state width="1398" height="247" key="GridCell.Tab.0.bottom/78.0.1458.864@78.0.1458.864" timestamp="1615150300641" />
-    <state width="1398" height="247" key="GridCell.Tab.0.center" timestamp="1615150300641">
+    <state width="1398" height="247" key="GridCell.Tab.0.bottom/78.0.1458.864@78.0.1458.864" timestamp="1615246023230" />
+    <state width="1398" height="247" key="GridCell.Tab.0.center" timestamp="1615246023230">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state width="1413" height="314" key="GridCell.Tab.0.center/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610250091937" />
     <state width="1412" height="268" key="GridCell.Tab.0.center/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613945066149" />
     <state width="1398" height="211" key="GridCell.Tab.0.center/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1611509105330" />
-    <state width="1398" height="247" key="GridCell.Tab.0.center/78.0.1458.864@78.0.1458.864" timestamp="1615150300641" />
-    <state width="1398" height="247" key="GridCell.Tab.0.left" timestamp="1615150300641">
+    <state width="1398" height="247" key="GridCell.Tab.0.center/78.0.1458.864@78.0.1458.864" timestamp="1615246023230" />
+    <state width="1398" height="247" key="GridCell.Tab.0.left" timestamp="1615246023230">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state width="1413" height="314" key="GridCell.Tab.0.left/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610250091937" />
     <state width="1412" height="268" key="GridCell.Tab.0.left/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613945066149" />
     <state width="1398" height="211" key="GridCell.Tab.0.left/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1611509105330" />
-    <state width="1398" height="247" key="GridCell.Tab.0.left/78.0.1458.864@78.0.1458.864" timestamp="1615150300641" />
-    <state width="1398" height="247" key="GridCell.Tab.0.right" timestamp="1615150300641">
+    <state width="1398" height="247" key="GridCell.Tab.0.left/78.0.1458.864@78.0.1458.864" timestamp="1615246023230" />
+    <state width="1398" height="247" key="GridCell.Tab.0.right" timestamp="1615246023230">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state width="1413" height="314" key="GridCell.Tab.0.right/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610250091937" />
     <state width="1412" height="268" key="GridCell.Tab.0.right/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613945066149" />
     <state width="1398" height="211" key="GridCell.Tab.0.right/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1611509105330" />
-    <state width="1398" height="247" key="GridCell.Tab.0.right/78.0.1458.864@78.0.1458.864" timestamp="1615150300641" />
-    <state width="1398" height="262" key="GridCell.Tab.1.bottom" timestamp="1615148840107">
+    <state width="1398" height="247" key="GridCell.Tab.0.right/78.0.1458.864@78.0.1458.864" timestamp="1615246023230" />
+    <state width="1398" height="262" key="GridCell.Tab.1.bottom" timestamp="1615202936207">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state width="1412" height="268" key="GridCell.Tab.1.bottom/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613945066150" />
-    <state width="1398" height="262" key="GridCell.Tab.1.bottom/78.0.1458.864@78.0.1458.864" timestamp="1615148840107" />
-    <state width="1398" height="262" key="GridCell.Tab.1.center" timestamp="1615148840107">
+    <state width="1398" height="262" key="GridCell.Tab.1.bottom/78.0.1458.864@78.0.1458.864" timestamp="1615202936207" />
+    <state width="1398" height="262" key="GridCell.Tab.1.center" timestamp="1615202936207">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state width="1412" height="268" key="GridCell.Tab.1.center/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613945066150" />
-    <state width="1398" height="262" key="GridCell.Tab.1.center/78.0.1458.864@78.0.1458.864" timestamp="1615148840107" />
-    <state width="1398" height="262" key="GridCell.Tab.1.left" timestamp="1615148840107">
+    <state width="1398" height="262" key="GridCell.Tab.1.center/78.0.1458.864@78.0.1458.864" timestamp="1615202936207" />
+    <state width="1398" height="262" key="GridCell.Tab.1.left" timestamp="1615202936207">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state width="1412" height="268" key="GridCell.Tab.1.left/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613945066149" />
-    <state width="1398" height="262" key="GridCell.Tab.1.left/78.0.1458.864@78.0.1458.864" timestamp="1615148840107" />
-    <state width="1398" height="262" key="GridCell.Tab.1.right" timestamp="1615148840107">
+    <state width="1398" height="262" key="GridCell.Tab.1.left/78.0.1458.864@78.0.1458.864" timestamp="1615202936207" />
+    <state width="1398" height="262" key="GridCell.Tab.1.right" timestamp="1615202936207">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state width="1412" height="268" key="GridCell.Tab.1.right/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613945066150" />
-    <state width="1398" height="262" key="GridCell.Tab.1.right/78.0.1458.864@78.0.1458.864" timestamp="1615148840107" />
+    <state width="1398" height="262" key="GridCell.Tab.1.right/78.0.1458.864@78.0.1458.864" timestamp="1615202936207" />
     <state x="551" y="127" key="RollbackChangesDialog" timestamp="1609529778361">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
@@ -433,26 +445,26 @@
     <state x="2473" y="79" width="839" height="646" key="find.popup/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613908851322" />
     <state x="498" y="164" width="637" height="536" key="find.popup/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1611006518684" />
     <state x="498" y="164" width="637" height="536" key="find.popup/78.0.1458.864@78.0.1458.864" timestamp="1615130530530" />
-    <state width="348" height="94" key="javadoc.popup.new" timestamp="1615149820129">
+    <state width="348" height="94" key="javadoc.popup.new" timestamp="1615246165137">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state width="348" height="94" key="javadoc.popup.new/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610294517151" />
     <state width="459" height="114" key="javadoc.popup.new/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613944927628" />
     <state width="348" height="94" key="javadoc.popup.new/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1613423931428" />
-    <state width="348" height="94" key="javadoc.popup.new/78.0.1458.864@78.0.1458.864" timestamp="1615149820129" />
+    <state width="348" height="94" key="javadoc.popup.new/78.0.1458.864@78.0.1458.864" timestamp="1615246165137" />
     <state x="151" y="329" width="672" height="677" key="run.anything.popup" timestamp="1610852441083">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state x="151" y="329" width="672" height="677" key="run.anything.popup/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610153772114" />
     <state x="151" y="329" width="672" height="677" key="run.anything.popup/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1610822499322" />
     <state x="151" y="329" width="672" height="677" key="run.anything.popup/78.0.1458.864@78.0.1458.864" timestamp="1610852441083" />
-    <state x="382" y="231" width="672" height="564" key="search.everywhere.popup" timestamp="1615136599053">
+    <state x="382" y="231" width="672" height="564" key="search.everywhere.popup" timestamp="1615246020099">
       <screen x="78" y="0" width="1458" height="864" />
     </state>
     <state x="382" y="231" width="672" height="564" key="search.everywhere.popup/78.0.1458.864/-1920.0.1920.1040@78.0.1458.864" timestamp="1610294354482" />
     <state x="2320" y="160" width="885" height="679" key="search.everywhere.popup/78.0.1458.864/1920.-118.1920.1040@1920.-118.1920.1040" timestamp="1613943876168" />
     <state x="382" y="231" width="672" height="564" key="search.everywhere.popup/78.0.1458.864/1920.-118.1920.1040@78.0.1458.864" timestamp="1611612138061" />
-    <state x="382" y="231" width="672" height="564" key="search.everywhere.popup/78.0.1458.864@78.0.1458.864" timestamp="1615136599053" />
+    <state x="382" y="231" width="672" height="564" key="search.everywhere.popup/78.0.1458.864@78.0.1458.864" timestamp="1615246020099" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -473,19 +485,14 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/ProductFragment.kt</url>
-          <line>69</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CheckoutPaymentFragment.kt</url>
+          <line>103</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CheckoutFragment.kt</url>
-          <line>60</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CheckoutFragment.kt</url>
-          <line>65</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/coolreecedev/styledpractice/CheckoutPaymentFragment.kt</url>
+          <line>121</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
