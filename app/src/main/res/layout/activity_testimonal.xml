@@ -58,16 +58,18 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Carla"
+                    android:text="Dr Mildred"
                     android:textAppearance="?attr/textAppearanceHeadline6" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                    android:text=" “Good morning E. I was going to text you today to tell you she loved all the outfits and so did I. The shoot went great and I can’t wait to see the pictures. Thank you so much.” "
+                    android:textAlignment="center"
                     android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?android:attr/textColorSecondary" />
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textStyle="italic" />
 
             </LinearLayout>
 
@@ -98,9 +100,9 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="400dp"
+                        android:contentDescription="Dr. Candrice"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/candrice"
-                        android:contentDescription="candrice" />
+                        app:srcCompat="@drawable/candrice" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -112,16 +114,18 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Candrice"
+                            android:text="Dr Candrice"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                            android:text="“How you show up to the spa cuz you have Evonya and everyone else in sweats. Yaaaaasssss lol, love the dress. Very Comfy.”  “Usually, the only time I get compliments from people about my outfit is when Evonya has put it together for me. Evonya makes me look like I have a high-end budget on my strict budget with her clothing selections. I’m not a size 4, and I can still slay in her selections. From clothing to shoes to outerwear and even underwear, she has always delivered optimal service.” "
+                            android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary" />
+                            android:textColor="?android:attr/textColorSecondary"
+                            android:textStyle="italic" />
 
                     </LinearLayout>
 
@@ -174,9 +178,11 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                                android:text="@string/laura"
+                                android:textAlignment="center"
                                 android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary" />
+                                android:textColor="?android:attr/textColorSecondary"
+                                android:textStyle="italic" />
 
                         </LinearLayout>
 
@@ -228,9 +234,11 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                                android:text="“I seldom do this, but I really want to thank my stylist, Love E Easley, for all of her help over the years...Left to my own resources I would stick with comic book t-shirts and sneakers...but thanks to her, game is a bit better!” "
+                                android:textAlignment="center"
                                 android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary" />
+                                android:textColor="?android:attr/textColorSecondary"
+                                android:textStyle="italic" />
 
                         </LinearLayout>
 
@@ -282,9 +290,11 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                                android:text="“Evonya was a Godsend for me! I need her expertise and resources… and I needed her quickly. She was very responsive, professional, and knowledgeable. I look forward to working with her again.” "
+                                android:textAlignment="center"
                                 android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary" />
+                                android:textColor="?android:attr/textColorSecondary"
+                                android:textStyle="italic" />
 
                         </LinearLayout>
 

@@ -108,7 +108,6 @@
                 android:layout_marginBottom="24dp"
                 android:fontFamily="@font/nunito_black"
                 android:text="Husky"
-                app:layout_constraintBottom_toTopOf="@+id/pearId"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

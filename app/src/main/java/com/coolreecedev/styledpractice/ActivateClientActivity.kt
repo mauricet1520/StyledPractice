@@ -147,8 +147,8 @@ class ActivateClientActivity : AppCompatActivity(),
 
             // Choose authentication providers
             val providers = arrayListOf(
-                AuthUI.IdpConfig.EmailBuilder().build(),
-                AuthUI.IdpConfig.GoogleBuilder().build())
+                AuthUI.IdpConfig.EmailBuilder().build())
+//                AuthUI.IdpConfig.GoogleBuilder().build())
 
             val user = FirebaseAuth.getInstance().currentUser
             if (user != null) {
@@ -200,7 +200,6 @@ class ActivateClientActivity : AppCompatActivity(),
 
 
     override fun onListPaymentFragmentInteraction(success: Boolean) {
-//        findNavController(R.id.nav_host).navigate(R.id.budgetFragment)
     }
 
     override fun onListFragmentInteraction(item: AvailableDate?) {

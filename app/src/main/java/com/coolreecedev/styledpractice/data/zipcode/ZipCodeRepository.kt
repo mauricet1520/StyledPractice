@@ -118,7 +118,6 @@ class ZipCodeRepository(val app: Application) {
 
             withContext(Dispatchers.Main) {
                 Log.i(LOG_TAG, "Calling Local Database: $zipCode")
-//                Toast.makeText(app, "Calling Database $zipCode", Toast.LENGTH_SHORT).show()
             }
             Log.i(LOG_TAG, "Finish Calling Local Database: $zipCode")
         }

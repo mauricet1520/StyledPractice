@@ -31,7 +31,6 @@
         android:onClick="showHamburger"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_menu_black_40dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

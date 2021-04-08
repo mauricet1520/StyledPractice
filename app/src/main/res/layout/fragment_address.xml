@@ -98,6 +98,8 @@
             android:hint="Address">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:inputType="text"
+                android:maxLength="30"
                 android:id="@+id/street_address_edit_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -117,6 +119,8 @@
             android:hint="City">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:inputType="text"
+                android:maxLength="15"
                 android:id="@+id/city_edit_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -142,6 +146,8 @@
                 android:hint="State">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="text"
+                    android:maxLength="15"
                     android:id="@+id/state_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -160,6 +166,8 @@
                 android:hint="Zip">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="number"
+                    android:maxLength="15"
                     android:id="@+id/zipcode_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
