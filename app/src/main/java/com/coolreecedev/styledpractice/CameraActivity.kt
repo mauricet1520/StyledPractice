@@ -7,6 +7,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
@@ -35,6 +36,9 @@ class CameraActivity : AppCompatActivity() {
     private var camera: Camera? = null
     lateinit var storage: FirebaseStorage
     lateinit var user: FirebaseUser
+    lateinit var button: Button
+    var cameraFacing: Boolean = false
+
 
     private lateinit var outputDirectory: File
     private lateinit var cameraExecutor: ExecutorService
@@ -46,6 +50,7 @@ class CameraActivity : AppCompatActivity() {
 
         storage = FirebaseStorage.getInstance()
 
+        button = findViewById(R.id.button)
         if (allPermissionsGranted()) {
             startCamera(false)
         } else {
@@ -60,6 +65,16 @@ class CameraActivity : AppCompatActivity() {
         outputDirectory = getOutputDirectory()
 
         cameraExecutor = Executors.newSingleThreadExecutor()
+
+        button.setOnClickListener {
+            cameraFacing = if (cameraFacing) {
+                startCamera(false)
+                false
+            }else {
+                startCamera(true)
+                true
+            }
+        }
     }
 
     private fun startCamera(lenFacingFront: Boolean) {

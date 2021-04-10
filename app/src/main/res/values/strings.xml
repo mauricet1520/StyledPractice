@@ -46,6 +46,34 @@ You are a VIP  - Very Individual Person – Your Style is individualized to You!
         <item>"XXL+"</item>
     </string-array>
 
+    <string-array name="spinner_bottom_blazer">
+        <item>"Select"</item>
+        <item>"32s"</item>
+        <item>"32R"</item>
+        <item>"32L"</item>
+        <item>"34S"</item>
+        <item>"34R"</item>
+        <item>"34L"</item>
+        <item>"36S"</item>
+        <item>"36R"</item>
+        <item>"36L"</item>
+        <item>"38S"</item>
+        <item>"38R"</item>
+        <item>"38L"</item>
+        <item>"40S"</item>
+        <item>"40R"</item>
+        <item>"42S"</item>
+        <item>"42R"</item>
+        <item>"42L"</item>
+        <item>"44S"</item>
+        <item>"44R"</item>
+        <item>"44L"</item>
+        <item>"46S"</item>
+        <item>"46R"</item>
+        <item>"48+"</item>
+
+    </string-array>
+
     <string-array name="spinner_bottom_info">
         <item>"Choose Size"</item>
         <item>"0"</item>
@@ -58,6 +86,51 @@ You are a VIP  - Very Individual Person – Your Style is individualized to You!
         <item>"14"</item>
         <item>"16"</item>
         <item>"18+"</item>
+
+    </string-array>
+
+    <string-array name="spinner_bottom_waist">
+        <item>"Select"</item>
+        <item>"28"</item>
+        <item>"30"</item>
+        <item>"32"</item>
+        <item>"33"</item>
+        <item>"34"</item>
+        <item>"35"</item>
+        <item>"36"</item>
+        <item>"37"</item>
+        <item>"38"</item>
+        <item>"40"</item>
+        <item>"42"</item>
+        <item>"44+"</item>
+
+    </string-array>
+
+    <string-array name="spinner_bottom_sleeve">
+        <item>"Dress Shirt Size"</item>
+        <item>"32"</item>
+        <item>"33"</item>
+        <item>"34"</item>
+        <item>"35"</item>
+        <item>"36"</item>
+        <item>"37"</item>
+        <item>"38+"</item>
+
+
+    </string-array>
+
+    <string-array name="spinner_bottom_neck">
+        <item>"Neck Size"</item>
+        <item>"14"</item>
+        <item>"14.5"</item>
+        <item>"15"</item>
+        <item>"16"</item>
+        <item>"16.5"</item>
+        <item>"17"</item>
+        <item>"17.5"</item>
+        <item>"18"</item>
+        <item>"18.5"</item>
+        <item>"19+"</item>
 
     </string-array>
 

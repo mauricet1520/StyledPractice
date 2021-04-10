@@ -17,6 +17,8 @@ import com.coolreecedev.styledpractice.util.LOG_TAG
 
 private lateinit var customer: Customer
 private lateinit var appointment: Appointment
+private var overallDressShirtSize: String = ""
+
 
 class MenPickClothingFragment : Fragment() {
     private lateinit var binding: FragmentMenPickClothingBinding
@@ -31,6 +33,7 @@ class MenPickClothingFragment : Fragment() {
 
         binding.tshirtsSpinnerId.onItemSelectedListener = TeeShirtsSpinnerListener()
         binding.dressShirtSpinnerId.onItemSelectedListener = DressShirtSpinnerListener()
+        binding.dressShirtSpinnerId2.onItemSelectedListener = NeckSpinnerListener()
 
         customer = args.customer!!
         appointment = args.appointment!!
@@ -61,7 +64,19 @@ class MenPickClothingFragment : Fragment() {
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
             val o: String = parent?.getItemAtPosition(position) as String
             Log.i(LOG_TAG ,"Dress Shirt Size: $o")
-            customer.dress_shirt_size = o
+            customer.dress_shirt_size = overallDressShirtSize.plus("$o ")
+        }
+    }
+
+    private class NeckSpinnerListener: AdapterView.OnItemSelectedListener {
+        override fun onNothingSelected(parent: AdapterView<*>?) {
+            TODO("Not yet implemented")
+        }
+
+        override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            val o: String = parent?.getItemAtPosition(position) as String
+            Log.i(LOG_TAG ,"Dress Shirt Size: $o")
+            customer.dress_shirt_size = overallDressShirtSize.plus("$o ")
         }
     }
 
@@ -75,7 +90,6 @@ class MenPickClothingFragment : Fragment() {
             Log.i(LOG_TAG ,"Shirt Size: $o")
             customer.shirt_size = o
             customer.top_size = o
-
         }
     }
 

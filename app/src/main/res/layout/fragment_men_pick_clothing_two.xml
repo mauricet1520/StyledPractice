@@ -104,7 +104,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="26dp"
-        android:entries="@array/spinner_top_info"
+        android:entries="@array/spinner_bottom_blazer"
         android:spinnerMode="dialog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView16" />
@@ -125,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="36dp"
-        android:entries="@array/spinner_bottom_info"
+        android:entries="@array/spinner_bottom_waist"
         android:spinnerMode="dialog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView42" />

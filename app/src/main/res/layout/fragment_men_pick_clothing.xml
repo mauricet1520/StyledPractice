@@ -7,6 +7,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MenPickClothingFragment">
 
+    <Spinner
+        android:id="@+id/dressShirtSpinnerId2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:entries="@array/spinner_bottom_sleeve"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dressShirtSpinnerId" />
+
     <TextView
         android:id="@+id/textView53"
         android:layout_width="wrap_content"
@@ -125,7 +136,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
         android:layout_marginEnd="52dp"
-        android:entries="@array/spinner_top_info"
+        android:entries="@array/spinner_bottom_neck"
         android:spinnerMode="dialog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView42" />
