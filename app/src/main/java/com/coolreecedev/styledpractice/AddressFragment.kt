@@ -60,6 +60,7 @@ class AddressFragment : Fragment() {
                 appointment?.state = binding.stateEditText.text.toString()
                 customer?.state = binding.stateEditText.text.toString()
                 customer?.zip = appointment?.zip
+                customer?.phone = binding.phoneEditInput.text.toString()
 
                 val action =
                     AddressFragmentDirections.actionAddressFragmentToPaymentFragment(

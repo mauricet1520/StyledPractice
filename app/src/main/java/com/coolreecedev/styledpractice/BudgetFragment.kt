@@ -30,15 +30,10 @@ class BudgetFragment : Fragment() {
 
         appointmentViewModel = ViewModelProviders.of(this).get(AppointmentViewModel::class.java)
 
-
-
         with(binding.fiveHundredButton) {
             setOnClickListener {
-
-//                this.background = resources.getDrawable(R.color.colorAccent)
                 args.appointment?.budget = "500"
                 appointmentViewModel.updateAppointment(args.appointment!!)
-
 
                 val intent = Intent(context, CameraActivity::class.java)
                 startActivity(intent)

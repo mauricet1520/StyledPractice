@@ -76,6 +76,7 @@ class PaymentFragment : Fragment() {
 
             val appointment = args.appointment
 
+            appointment?.customer_id = FirebaseAuth.getInstance().uid
             appointment?.appointment_id = it.appointment_id
             appointment?.setmore_appointment_key = it.setmore_appointment_key
             appointment?.setmore_customer_key = it.setmore_customer_key
